@@ -156,14 +156,14 @@ let g:which_key_map.g = {
   \ 'name': '+git',
   \ 'b': [':Git blame', 'git blame'],
   \ 'c': [':Git commit', 'git commit'],
-  "\ 'd': [':Git diff', 'git diff'],
   \ 'd': [':Git diff', 'git diff'],
   \ 'l': [':Git log', 'git log'],
   \ 'r': [':Git rebase -i', 'git rebase'],
   \ 's': [':Git', 'git status'],
   \ 'B': [':GBrowse', 'open in browser'],
   \ 'h': [':GV', 'git history'],
-  \ 'H': [':GV!', 'git history for the file']
+  \ 'H': [':GV!', 'git history for the file'],
+  \ 'p': [':Git push', 'git push']
 \ }
 " c is for coc
 let g:which_key_map.c = {
