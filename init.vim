@@ -4,9 +4,7 @@ source $HOME/.config/nvim/modules/coc.vim
 source $HOME/.config/nvim/modules/nerdtree.vim
 source $HOME/.config/nvim/mappings/whichkey.vim
 source $HOME/.config/nvim/mappings/keys.vim
-
-colorscheme codedark
-set background=dark
+source $HOME/.config/nvim/themes/onedark.vim
 
 " rg make it search from the root directory (think)
 if executable('rg')

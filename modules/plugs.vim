@@ -23,7 +23,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdcommenter'
-Plug 'https://github.com/tomasiser/vim-code-dark.git'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 if has('nvim') || has('patch-8.0.902')
   Plug 'mhinz/vim-signify'
@@ -35,5 +34,6 @@ Plug 'junegunn/gv.vim'
 Plug 'mbbill/undotree'
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
+Plug 'joshdick/onedark.vim'
 
 call plug#end()
