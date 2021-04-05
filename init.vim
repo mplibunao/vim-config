@@ -34,7 +34,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
 Plug 'vim-utils/vim-man'
 Plug 'git@github.com:kien/ctrlp.vim.git'
-Plug 'mbbill/undotree'
 Plug 'liuchengxu/vim-which-key'
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -43,6 +42,14 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'https://github.com/tomasiser/vim-code-dark.git'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+if has('nvim') || has('patch-8.0.902')
+  Plug 'mhinz/vim-signify'
+else
+  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+endif
+Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/gv.vim'
+Plug 'mbbill/undotree'
 
 call plug#end()
 
@@ -52,6 +59,10 @@ set background=dark
 "--------------------------------------------------
 source $HOME/.config/nvim/modules/coc.vim
 source $HOME/.config/nvim/modules/nerdtree.vim
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
 
 " rg make it search from the root directory (think)
 if executable('rg')
@@ -141,6 +152,19 @@ let g:which_key_map.t = {
 \ }
 
 " g is for git 
+let g:which_key_map.g = {
+  \ 'name': '+git',
+  \ 'b': [':Git blame', 'git blame'],
+  \ 'c': [':Git commit', 'git commit'],
+  "\ 'd': [':Git diff', 'git diff'],
+  \ 'd': [':Git diff', 'git diff'],
+  \ 'l': [':Git log', 'git log'],
+  \ 'r': [':Git rebase -i', 'git rebase'],
+  \ 's': [':Git', 'git status'],
+  \ 'B': [':GBrowse', 'open in browser'],
+  \ 'h': [':GV', 'git history'],
+  \ 'H': [':GV!', 'git history for the file']
+\ }
 " c is for coc
 let g:which_key_map.c = {
   \ 'name': '+coc',
