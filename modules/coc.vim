@@ -5,7 +5,6 @@ let g:coc_global_extensions = [
       \ 'coc-graphql',
       \ 'coc-tsserver',
       \ 'coc-snippets',
-      \ 'coc-pairs',
       \ 'coc-eslint',
       \ 'coc-prettier',
    \ ]
@@ -13,17 +12,6 @@ let g:coc_global_extensions = [
 " Commands
 " prettier command for coc
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-
-" COC stuff
-" TextEdit might fail if hidden is not set.
-set hidden
-
-" Some servers have issues with backup files, see #649.
-set nobackup
-set nowritebackup
-
-" Give more space for displaying messages.
-set cmdheight=2
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c

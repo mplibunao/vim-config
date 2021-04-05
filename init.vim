@@ -1,68 +1,10 @@
-syntax on
-
-set noerrorbells
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set expandtab " always use spaces instead of tab characters
-set smartindent
-set smartcase
-set noswapfile
-set incsearch
-set timeoutlen=100
-set smarttab
-set cindent
-
-"--------------------------------------------------
-
-" Automatically install Plug
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-endif
-
-" Run PlugInstall if there are missing plugins
-autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-  \| PlugInstall --sync | source $MYVIMRC
-\| endif
-
-call plug#begin('~/.vim/plugged')
-
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jremmen/vim-ripgrep'
-Plug 'tpope/vim-fugitive'
-Plug 'leafgarland/typescript-vim'
-Plug 'vim-utils/vim-man'
-Plug 'git@github.com:kien/ctrlp.vim.git'
-Plug 'liuchengxu/vim-which-key'
-Plug 'scrooloose/nerdtree'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'ryanoasis/vim-devicons'
-Plug 'scrooloose/nerdcommenter'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'https://github.com/tomasiser/vim-code-dark.git'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-if has('nvim') || has('patch-8.0.902')
-  Plug 'mhinz/vim-signify'
-else
-  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
-endif
-Plug 'tpope/vim-rhubarb'
-Plug 'junegunn/gv.vim'
-Plug 'mbbill/undotree'
-
-call plug#end()
-
-colorscheme codedark
-set background=dark
-
-"--------------------------------------------------
+source $HOME/.config/nvim/modules/plugs.vim
+source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/modules/coc.vim
 source $HOME/.config/nvim/modules/nerdtree.vim
 
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
-set updatetime=300
+colorscheme codedark
+set background=dark
 
 " rg make it search from the root directory (think)
 if executable('rg')
@@ -71,7 +13,6 @@ endif
 
 " ctrl p make it ignore files in .gitignore
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-let mapleader = " "
 let g:netrw_browse_split = 2
 let g:netrw_banner = 0
 let g:netrw_winsiz = 25
@@ -135,7 +76,7 @@ let g:which_key_map['9'] = 'which_key_ignore'
 let g:which_key_map.p = {
   \ 'name': '+project',
   \ 'f': ['<C-p>', 'open file<C-p>'],
-  \ 't': ['NERDTreeToggle<CR>', 'open file tree<C-b>']
+  \ 't': [':NERDTreeToggle<CR>', 'open file tree<C-b>']
 \ } 
 
 " s is for show 
@@ -148,7 +89,9 @@ let g:which_key_map.s = {
 " t is for toggle
 let g:which_key_map.t = {
   \ 'name': '+toggle',
-  \ 'l': ['ChangeLineNumbering()', 'line number']
+  \ 'l': ['ChangeLineNumbering()', 'line number'],
+  \ 'p': ['<M-p>', 'auto-pairs'],
+  \ 's': [':set smartcase!', 'smartcase']
 \ }
 
 " g is for git 
