@@ -5,12 +5,15 @@ vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
 let g:which_key_map = {}
 
 " single mappings
+
 " search
 nnoremap <leader>/ :Rg<SPACE>
 " comment
 let g:which_key_map[';'] = ['<plug>NERDCommenterToggle', 'comment']
-" navigate to windows using space + window number
+" TAB in general mode will move to text buffer
+let g:which_key_map['<TAB>'] = [':bnext<CR>', 'Switch to next buffer']
 
+" navigate to windows using space + window number
 nnoremap <space>1 1<C-w>w
 nnoremap <space>2 2<C-w>w
 nnoremap <space>3 3<C-w>w
@@ -70,7 +73,7 @@ let g:which_key_map.g = {
 let g:which_key_map.c = {
   \ 'name': '+coc',
   \ 'd': ['<Plug>(coc-definition)', 'go to definition(gd)'],
-  \ 't': ['<Plug>(coc-type-definition)', 'type definition'],
+  \ 't': ['<Plug>(coc-type-definition)', 'type definition(gt)'],
   \ 'i': ['<Plug>(coc-implementation)', 'implementation'],
   \ 'r': ['<Plug>(coc-references)', 'references'],
   \ 'n': ['<Plug>(coc-diagnostic-prev)', 'next diagnostic'],
@@ -101,7 +104,7 @@ let g:which_key_map.r = {
       \ 's': ['<Plug>(coc-codeaction-selected)', 'refactor selected'],
       \ 'l': ['<Plug>(coc-codeaction)', 'refactor line'],
       \ 'a': ['<Plug>(coc-fix-current)', 'automatically fix current line']
-  \ },
+  \ }
 \ }
 
 
