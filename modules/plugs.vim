@@ -12,28 +12,43 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin('~/.vim/plugged')
 
+" auto complete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Grep
 Plug 'jremmen/vim-ripgrep'
-Plug 'tpope/vim-fugitive'
+" ts syntax
 Plug 'leafgarland/typescript-vim'
 Plug 'vim-utils/vim-man'
-Plug 'git@github.com:kien/ctrlp.vim.git'
+" spacemacs space combo
 Plug 'liuchengxu/vim-which-key'
+" File tree
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+" file type icons
 Plug 'ryanoasis/vim-devicons'
+" comment
 Plug 'scrooloose/nerdcommenter'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Git
 if has('nvim') || has('patch-8.0.902')
   Plug 'mhinz/vim-signify'
 else
   Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
 endif
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
-Plug 'mbbill/undotree'
+" language pack
 Plug 'sheerun/vim-polyglot'
+" Auto pairs for () [] {}
 Plug 'jiangmiao/auto-pairs'
+" Theme
 Plug 'joshdick/onedark.vim'
+" Status line
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+" FZF
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
 
 call plug#end()

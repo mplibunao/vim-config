@@ -7,7 +7,7 @@ let g:which_key_map = {}
 " single mappings
 
 " search
-nnoremap <leader>/ :Rg<SPACE>
+nnoremap <leader>/ :Rg<CR>
 " comment
 let g:which_key_map[';'] = ['<plug>NERDCommenterToggle', 'comment']
 " TAB in general mode will move to text buffer
@@ -36,8 +36,9 @@ let g:which_key_map['9'] = 'which_key_ignore'
 " p is for project
 let g:which_key_map.p = {
   \ 'name': '+project',
-  \ 'f': ['<C-p>', 'open file<C-p>'],
-  \ 't': [':NERDTreeToggle<CR>', 'open file tree<C-b>']
+  \ 'f': [':Files', 'open file<C-f>'],
+  \ 't': [':NERDTreeToggle<CR>', 'open file tree<C-b>'],
+  \ 'b': [':Buffers', 'open buffer']
 \ } 
 
 " s is for show 
@@ -80,7 +81,7 @@ let g:which_key_map.c = {
   \ 'p': ['<Plug>(coc-diagnostic-next)', 'previous diagnostic'],
   \ 'l': ['<C-u>CocList diagnostics<cr>', 'show all diagnostics'],
   \ 'e': ['<C-u>CocList extensions<cr>', 'manage extensions'],
-  \ 'c': ['<C-u>CocList commands<cr>', 'show commands'],
+  \ 'c': [':CocList commands', 'show commands'],
   \ 'o': ['<C-u>CocList outline<cr>', 'find symbol of current document'],
   \ 's': ['<C-u>CocList -I symbols<cr>', 'search workspace symbols'],
   \ 'N': ['<C-u>CocNext<CR>', 'do default action for next item'],
@@ -92,6 +93,7 @@ let g:which_key_map.c = {
 let g:which_key_map.r = {
   \ 'name': '+refactor',
   \ 'r': ['<Plug>(coc-rename)', 'rename(f2)'],
+  \ 'F': [':CocCommand workspace.renameCurrentFile', 'rename current file'],
   \ 'i': ["CocAction('runCommand', 'editor.action.organizeImport')", 'organize imports'],
   \ 'p': {
       \ 'name': '+prettier',
