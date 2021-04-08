@@ -1,6 +1,6 @@
-source $HOME/.config/nvim/modules/plugs.vim
+source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
-source $HOME/.config/nvim/modules/nerdtree.vim
+" source $HOME/.config/nvim/plug-config/nerdtree.vim
 source $HOME/.config/nvim/mappings/whichkey.vim
 source $HOME/.config/nvim/mappings/keys.vim
 source $HOME/.config/nvim/themes/onedark.vim
@@ -13,12 +13,6 @@ source $HOME/.config/nvim/plug-config/fzf.vim
 if executable('rg')
   let g:rg_derive_root='true'
 endif
-
-" ctrl p make it ignore files in .gitignore
-" let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-let g:netrw_browse_split = 2
-let g:netrw_banner = 0
-let g:netrw_winsiz = 25
 
 " j/k will move virtual lines (lines that wrap)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')

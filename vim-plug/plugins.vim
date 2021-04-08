@@ -14,16 +14,14 @@ call plug#begin('~/.vim/plugged')
 
 " auto complete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Grep
-Plug 'jremmen/vim-ripgrep'
 " ts syntax
 Plug 'leafgarland/typescript-vim'
 Plug 'vim-utils/vim-man'
 " spacemacs space combo
 Plug 'liuchengxu/vim-which-key'
 " File tree
-Plug 'scrooloose/nerdtree'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+" Plug 'scrooloose/nerdtree'
+"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " file type icons
 Plug 'ryanoasis/vim-devicons'
 " comment
@@ -50,5 +48,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
+" TS Syntax
+Plug 'HerringtonDarkholme/yats.vim'
 
 call plug#end()

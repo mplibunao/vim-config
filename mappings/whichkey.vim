@@ -6,12 +6,11 @@ let g:which_key_map = {}
 
 " single mappings
 
-" search
-nnoremap <leader>/ :Rg<CR>
 " comment
 let g:which_key_map[';'] = ['<plug>NERDCommenterToggle', 'comment']
-" TAB in general mode will move to text buffer
-let g:which_key_map['<TAB>'] = [':bnext<CR>', 'Switch to next buffer']
+
+" search
+let g:which_key_map['/'] = [':Rg', 'text Rg']
 
 " navigate to windows using space + window number
 nnoremap <space>1 1<C-w>w
@@ -34,18 +33,33 @@ let g:which_key_map['8'] = 'which_key_ignore'
 let g:which_key_map['9'] = 'which_key_ignore'
 
 " p is for project
+" \ 't': [':NERDTreeToggle', 'open file tree<C-b>'],
 let g:which_key_map.p = {
   \ 'name': '+project',
-  \ 'f': [':Files', 'open file<C-f>'],
-  \ 't': [':NERDTreeToggle<CR>', 'open file tree<C-b>'],
-  \ 'b': [':Buffers', 'open buffer']
+  \ 'f': [':Files'                                   , 'open file<C-f>'],
+  \ 'b': [':Buffers'                                 , 'open buffer'],
+  \ 'w': [':Windows'                                 , 'search windows'],
+  \ 't': [':CocCommand explorer'                     , 'open file tree<C-b>'],
+  \ 'T': [':CocCommand explorer --preset floating'   , 'open floating file tree']
 \ } 
 
-" s is for show 
+" s is for search 
 let g:which_key_map.s = {
-  \ 'name': '+show',
-  \ 'd': [':call <SID>show_documentation()<CR>', 'documentation'],
-  \ 'f': ["CocAction('fold', <f-args>)", 'fold']
+  \ 'name': '+search',
+  \ '/' : [':History/'     , 'search history'],
+  \ 'c' : [':Commands'     , 'command'],
+  \ 'a' : [':Ag'           , 'text Ag'],
+  \ 'b' : [':BLines'       , 'seach in current buffer'],
+  \ 'f' : [':Files'        , 'files'],
+  \ 'h' : [':History'      , 'file history'],
+  \ 'H' : [':History:'     , 'command history'],
+  \ 'l' : [':Lines'        , 'lines'] ,
+  \ 'p' : [':Helptags'     , 'help tags'] ,
+  \ 's' : [':Snippets'     , 'snippets'],
+  \ 'S' : [':Colors'       , 'color schemes'],
+  \ 't' : [':Rg'           , 'text Rg'],
+  \ 'y' : [':Filetypes'    , 'file types'],
+  \ 'z' : [':FZF'          , 'FZF']
 \ }
 
 " t is for toggle
@@ -59,16 +73,18 @@ let g:which_key_map.t = {
 " g is for git 
 let g:which_key_map.g = {
   \ 'name': '+git',
-  \ 'b': [':Git blame', 'git blame'],
-  \ 'c': [':Git commit', 'git commit'],
-  \ 'd': [':Git diff', 'git diff'],
-  \ 'l': [':Git log', 'git log'],
-  \ 'r': [':Git rebase -i', 'git rebase'],
-  \ 's': [':Git', 'git status'],
-  \ 'B': [':GBrowse', 'open in browser'],
-  \ 'h': [':GV', 'git history'],
-  \ 'H': [':GV!', 'git history for the file'],
-  \ 'p': [':Git push', 'git push']
+  \ 'b': [':Git blame'     ,'git blame'],
+  \ 'c': [':Git commit'    , 'git commit'],
+  \ 'd': [':Git diff'      , 'git diff'],
+  \ 'l': [':Git log'       , 'git log'],
+  \ 'r': [':Git rebase -i' , 'git rebase'],
+  \ 's': [':Git'           , 'git status'],
+  \ 'B': [':GBrowse'       , 'open in browser'],
+  \ 'h': [':Commits'       , 'git history'],
+  \ 'H': [':BCommit!'      , 'git history for the file'],
+  \ 'p': [':Git push'      , 'git push'],
+  \ 'f' : [':GFiles'       , 'show all git files'],
+  \ 'm' : [':GFiles?'      , 'modified git files']
 \ }
 " c is for coc
 let g:which_key_map.c = {
@@ -106,6 +122,15 @@ let g:which_key_map.r = {
       \ 's': ['<Plug>(coc-codeaction-selected)', 'refactor selected'],
       \ 'l': ['<Plug>(coc-codeaction)', 'refactor line'],
       \ 'a': ['<Plug>(coc-fix-current)', 'automatically fix current line']
+  \ }
+\ }
+
+" f is for files
+let g:which_key_map.f = {
+  \ 'name': '+files',
+  \ 'v': {
+    \ 'name': '+vim',
+    \ 'i': [':e $MYVIMRC', 'open init file']
   \ }
 \ }
 
