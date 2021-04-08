@@ -39,6 +39,7 @@ Plug 'junegunn/gv.vim'
 Plug 'sheerun/vim-polyglot'
 " Auto pairs for () [] {}
 Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/rainbow_parentheses.vim'
 " Theme
 Plug 'joshdick/onedark.vim'
 " Status line
@@ -50,5 +51,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 " TS Syntax
 Plug 'HerringtonDarkholme/yats.vim'
+" Color
+Plug 'norcalli/nvim-colorizer.lua'
 
 call plug#end()

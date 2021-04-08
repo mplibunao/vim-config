@@ -11,7 +11,7 @@
     "css"
   ]
   // explorer
-  "explorer.width": 40,
+  "explorer.width": 30,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": true,
   "explorer.keyMappings.global": {
