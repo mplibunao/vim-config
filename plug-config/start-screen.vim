@@ -17,6 +17,7 @@ let g:startify_bookmarks = [
             \ { 'z': '~/.zshrc' },
             \ { 'd': '~/Desktop' },
             \ { 's': '~/Desktop/stocks' },
+            \ { 'n': '~/Projects/notes' }
             \ ]
 
 " Automatically restart a session

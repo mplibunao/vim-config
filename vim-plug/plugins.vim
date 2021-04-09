@@ -52,7 +52,8 @@ Plug 'airblade/vim-rooter'
 " TS Syntax
 Plug 'HerringtonDarkholme/yats.vim'
 " Color
-Plug 'norcalli/nvim-colorizer.lua'
+" Plug 'norcalli/nvim-colorizer.lua'
 Plug 'mhinz/vim-startify'
+Plug 'justinmk/vim-sneak'
 
 call plug#end()
