@@ -1,3 +1,4 @@
+" Adds label to instances like vimium
 let g:sneak#label = 1
 
 " case insensitive sneak

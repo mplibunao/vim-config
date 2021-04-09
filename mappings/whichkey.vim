@@ -67,7 +67,8 @@ let g:which_key_map.t = {
   \ 'name': '+toggle',
   \ 'l': ['ChangeLineNumbering()', 'line number'],
   \ 'p': ['<M-p>'                , 'auto-pairs'],
-  \ 's': [':set smartcase!'      , 'smartcase']
+  \ 's': [':set smartcase!'      , 'smartcase'],
+  \ 'q': [':QuickScopeToggle'    , 'quick scope highlight']
 \ }
 
 " g is for git 
@@ -139,9 +140,9 @@ let g:which_key_map.S = {
 " f is for files
 let g:which_key_map.f = {
   \ 'name': '+files',
-  \ 'v': {
-    \ 'name': '+vim',
-    \ 'i': [':e $MYVIMRC', 'open init file']
+  \ 'e': {
+    \ 'name': '+emacs :P',
+    \ 'd': [':e $MYVIMRC', 'open init file']
   \ }
 \ }
 

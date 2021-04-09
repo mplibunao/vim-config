@@ -16,7 +16,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " ts syntax
 Plug 'leafgarland/typescript-vim'
-Plug 'vim-utils/vim-man'
 " spacemacs space combo
 Plug 'liuchengxu/vim-which-key'
 " File tree
@@ -54,6 +53,9 @@ Plug 'HerringtonDarkholme/yats.vim'
 " Color
 " Plug 'norcalli/nvim-colorizer.lua'
 Plug 'mhinz/vim-startify'
+" Jump to any location specified by 2 char
 Plug 'justinmk/vim-sneak'
+" Highlight unique characters in every word to help navigating w/ f,F,t,T
+Plug 'unblevable/quick-scope' 
 
 call plug#end()
