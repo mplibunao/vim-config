@@ -66,8 +66,8 @@ let g:which_key_map.s = {
 let g:which_key_map.t = {
   \ 'name': '+toggle',
   \ 'l': ['ChangeLineNumbering()', 'line number'],
-  \ 'p': ['<M-p>', 'auto-pairs'],
-  \ 's': [':set smartcase!', 'smartcase']
+  \ 'p': ['<M-p>'                , 'auto-pairs'],
+  \ 's': [':set smartcase!'      , 'smartcase']
 \ }
 
 " g is for git 
@@ -89,40 +89,51 @@ let g:which_key_map.g = {
 " c is for coc
 let g:which_key_map.c = {
   \ 'name': '+coc',
-  \ 'd': ['<Plug>(coc-definition)', 'go to definition(gd)'],
-  \ 't': ['<Plug>(coc-type-definition)', 'type definition(gt)'],
-  \ 'i': ['<Plug>(coc-implementation)', 'implementation'],
-  \ 'r': ['<Plug>(coc-references)', 'references'],
-  \ 'n': ['<Plug>(coc-diagnostic-prev)', 'next diagnostic'],
-  \ 'p': ['<Plug>(coc-diagnostic-next)', 'previous diagnostic'],
-  \ 'l': ['<C-u>CocList diagnostics<cr>', 'show all diagnostics'],
-  \ 'e': ['<C-u>CocList extensions<cr>', 'manage extensions'],
-  \ 'c': [':CocList commands', 'show commands'],
-  \ 'o': ['<C-u>CocList outline<cr>', 'find symbol of current document'],
-  \ 's': ['<C-u>CocList -I symbols<cr>', 'search workspace symbols'],
-  \ 'N': ['<C-u>CocNext<CR>', 'do default action for next item'],
-  \ 'P': ['<C-u>CocPrev<CR>', 'do default action for previous item'],
-  \ 'L': ['<C-u>CocListResume<CR>', 'resume latest coc list']
+  \ 'd': ['<Plug>(coc-definition)'       , 'go to definition(gd)'],
+  \ 't': ['<Plug>(coc-type-definition)'  , 'type definition(gt)'],
+  \ 'i': ['<Plug>(coc-implementation)'   , 'implementation'],
+  \ 'r': ['<Plug>(coc-references)'       , 'references'],
+  \ 'n': ['<Plug>(coc-diagnostic-prev)'  , 'next diagnostic'],
+  \ 'p': ['<Plug>(coc-diagnostic-next)'  , 'previous diagnostic'],
+  \ 'l': ['<C-u>CocList diagnostics<cr>' , 'show all diagnostics'],
+  \ 'e': ['<C-u>CocList extensions<cr>'  , 'manage extensions'],
+  \ 'c': [':CocList commands'            , 'show commands'],
+  \ 'o': ['<C-u>CocList outline<cr>'     , 'find symbol of current document'],
+  \ 's': ['<C-u>CocList -I symbols<cr>'  , 'search workspace symbols'],
+  \ 'N': ['<C-u>CocNext<CR>'             , 'do default action for next item'],
+  \ 'P': ['<C-u>CocPrev<CR>'             , 'do default action for previous item'],
+  \ 'L': ['<C-u>CocListResume<CR>'       , 'resume latest coc list']
 \ }
 
 " r is for refactor
 let g:which_key_map.r = {
   \ 'name': '+refactor',
-  \ 'r': ['<Plug>(coc-rename)', 'rename(f2)'],
-  \ 'F': [':CocCommand workspace.renameCurrentFile', 'rename current file'],
+  \ 'r': ['<Plug>(coc-rename)'                                     , 'rename(f2)'],
+  \ 'F': [':CocCommand workspace.renameCurrentFile'                , 'rename current file'],
   \ 'i': ["CocAction('runCommand', 'editor.action.organizeImport')", 'organize imports'],
   \ 'p': {
       \ 'name': '+prettier',
-      \ 'f': [':CocCommand prettier.formatFile', 'format file (:Prettier)'],
-      \ 's': ['<Plug>(coc-format-selected)', 'format selected region'],
-      \ 'b': ["CocAction('format')", 'format buffer'],
+      \ 'f': [':CocCommand prettier.formatFile'                    , 'format file (:Prettier)'],
+      \ 's': ['<Plug>(coc-format-selected)'                        , 'format selected region'],
+      \ 'b': ["CocAction('format')"                                , 'format buffer'],
   \ },
   \ 'f': {
       \ 'name': '+fix',
-      \ 's': ['<Plug>(coc-codeaction-selected)', 'refactor selected'],
-      \ 'l': ['<Plug>(coc-codeaction)', 'refactor line'],
-      \ 'a': ['<Plug>(coc-fix-current)', 'automatically fix current line']
+      \ 's': ['<Plug>(coc-codeaction-selected)'                    , 'refactor selected'],
+      \ 'l': ['<Plug>(coc-codeaction)'                             , 'refactor line'],
+      \ 'a': ['<Plug>(coc-fix-current)'                            , 'automatically fix current line']
   \ }
+\ }
+
+let g:which_key_map.S = {
+  \ 'name': '+Startify',
+  \ 'h': [':Startify', 'Home screen'],
+  \ 'l': [':SLoad', 'load a session'],
+  \ 's': [':SSave', 'save a session'],
+  \ 'S': [':SSave!', 'save a session (no prompt)'],
+  \ 'd': [':SDelete', 'delete a session'],
+  \ 'D': [':SDelete!', 'delete a session (no prompt)'],
+  \ 'c': [':SClose', 'close a session']
 \ }
 
 " f is for files
@@ -137,9 +148,9 @@ let g:which_key_map.f = {
 
 " w is for window 
 let g:which_key_map.w = {
-  \ 'd': [':q', 'quit'],
-  \ '/': [':vsplit', 'split window right'],
-  \ '-': [':split', 'split window below']
+  \ 'd': [':q'       , 'quit'],
+  \ '/': [':vsplit'  , 'split window right'],
+  \ '-': [':split'   , 'split window below']
 \ }
 
 call which_key#register('<Space>', "g:which_key_map")

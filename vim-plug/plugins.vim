@@ -53,5 +53,6 @@ Plug 'airblade/vim-rooter'
 Plug 'HerringtonDarkholme/yats.vim'
 " Color
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
