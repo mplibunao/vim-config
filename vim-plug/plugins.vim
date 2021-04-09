@@ -57,5 +57,7 @@ Plug 'mhinz/vim-startify'
 Plug 'justinmk/vim-sneak'
 " Highlight unique characters in every word to help navigating w/ f,F,t,T
 Plug 'unblevable/quick-scope' 
+" Terminal inside vim
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()

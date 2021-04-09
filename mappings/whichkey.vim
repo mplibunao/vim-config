@@ -12,6 +12,11 @@ let g:which_key_map[';'] = ['<plug>NERDCommenterToggle', 'comment']
 " search
 let g:which_key_map['/'] = [':Rg', 'text Rg']
 
+" terminal on buffer's current directory
+let g:which_key_map["'"] = [':FloatermNew! --wintype=split --height=10 --postition=bottom --cmd=cd %:p:h' , 'terminal']
+let g:which_key_map['>'] = [':FloatermNext', 'Switch to next terminal (f3)']
+let g:which_key_map['<'] = [':FloatermPrev', 'Switch to prev terminal (f4)']
+      
 " navigate to windows using space + window number
 nnoremap <space>1 1<C-w>w
 nnoremap <space>2 2<C-w>w
@@ -63,7 +68,7 @@ let g:which_key_map.s = {
 \ }
 
 " t is for toggle
-let g:which_key_map.t = {
+let g:which_key_map.T = {
   \ 'name': '+toggle',
   \ 'l': ['ChangeLineNumbering()', 'line number'],
   \ 'p': ['<M-p>'                , 'auto-pairs'],
@@ -109,7 +114,7 @@ let g:which_key_map.c = {
 " r is for refactor
 let g:which_key_map.r = {
   \ 'name': '+refactor',
-  \ 'r': ['<Plug>(coc-rename)'                                     , 'rename(f2)'],
+  \ 'r': ['<Plug>(coc-rename)'                                     , 'rename (f2)'],
   \ 'F': [':CocCommand workspace.renameCurrentFile'                , 'rename current file'],
   \ 'i': ["CocAction('runCommand', 'editor.action.organizeImport')", 'organize imports'],
   \ 'p': {
@@ -146,12 +151,35 @@ let g:which_key_map.f = {
   \ }
 \ }
 
-
 " w is for window 
 let g:which_key_map.w = {
   \ 'd': [':q'       , 'quit'],
   \ '/': [':vsplit'  , 'split window right'],
   \ '-': [':split'   , 'split window below']
 \ }
+
+let g:which_key_map.t = {
+      \ 'name' : '+terminal' ,
+      \ ',' : [
+        \ ':FloatermNew' ,
+        \ 'open floating terminal on project root'
+      \ ],
+      \ "'":  [
+        \  ':FloatermNew! --cmd=cd %:p:h' ,
+        \  'open floating terminal on buffer directory'
+      \ ],
+      \ ";":  [
+        \  ':FloatermNew --wintype=split --height=10 --postition=bottom',
+        \  'open split terminal on project root'
+      \ ],
+      \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
+      \ 'g' : [':FloatermNew lazygit'                           , 'git'],
+      \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
+      \ 'n' : [':FloatermNew node'                              , 'node'],
+      \ 't' : [':FloatermToggle'                                , 'toggle'],
+      \ 'b' : [':FloatermNew btm'                               , 'bottom'],
+      \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
+      \ 'i' : [':FloatermNew iex'                               , 'iex'],
+      \ }
 
 call which_key#register('<Space>', "g:which_key_map")
