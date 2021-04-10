@@ -84,13 +84,14 @@ let g:which_key_map.g = {
   \ 'd': [':Git diff'      , 'git diff'],
   \ 'l': [':Git log'       , 'git log'],
   \ 'r': [':Git rebase -i' , 'git rebase'],
-  \ 's': [':Git'           , 'git status'],
+  \ 's': [':LazyGit'       , 'lazygit'],
   \ 'B': [':GBrowse'       , 'open in browser'],
   \ 'h': [':Commits'       , 'git history'],
   \ 'H': [':BCommit!'      , 'git history for the file'],
   \ 'p': [':Git push'      , 'git push'],
-  \ 'f' : [':GFiles'       , 'show all git files'],
-  \ 'm' : [':GFiles?'      , 'modified git files']
+  \ 'f': [':GFiles'        , 'show all git files'],
+  \ 'm': [':GFiles?'       , 'modified git files'],
+  \ 'C': [':LazyGitConfig' , 'lazygit config']
 \ }
 " c is for coc
 let g:which_key_map.c = {

@@ -20,12 +20,13 @@ Plug 'leafgarland/typescript-vim'
 Plug 'liuchengxu/vim-which-key'
 " File tree
 " Plug 'scrooloose/nerdtree'
-"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " file type icons
 Plug 'ryanoasis/vim-devicons'
 " comment
 Plug 'scrooloose/nerdcommenter'
 " Git
+Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 if has('nvim') || has('patch-8.0.902')
   Plug 'mhinz/vim-signify'
 else
