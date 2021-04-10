@@ -52,7 +52,7 @@ Plug 'airblade/vim-rooter'
 " TS Syntax
 Plug 'HerringtonDarkholme/yats.vim'
 " Color
-" Plug 'norcalli/nvim-colorizer.lua'
+ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'mhinz/vim-startify'
 " Jump to any location specified by 2 char
 Plug 'justinmk/vim-sneak'
