@@ -174,7 +174,6 @@ let g:which_key_map.t = {
         \  'open split terminal on project root'
       \ ],
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
-      \ 'g' : [':FloatermNew lazygit'                           , 'git'],
       \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
       \ 'n' : [':FloatermNew node'                              , 'node'],
       \ 't' : [':FloatermToggle'                                , 'toggle'],
