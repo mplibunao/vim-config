@@ -170,3 +170,29 @@ let g:coc_explorer_global_presets = {
 nmap <C-b> :CocCommand explorer<CR>
 "nmap <space>f :CocCommand explorer --preset floating<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
+" CoC Explorer Settings
+" Use coc explorer when opening directory instead of netrw
+augroup MyCocExplorer
+  autocmd!
+  autocmd VimEnter * sil! au! F
+  " set window status line
+  autocmd FileType coc-explorer setl statusline=File-Explorer
+  "quit explorer whein it's the last
+  autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+  " Make sure nothing opened in coc-explorer buffer
+  autocmd BufEnter * if bufname('#') =~# "\[coc-explorer\]-." && winnr('$') > 1 | b# | endif
+  " open if directory specified or if buffer empty
+  autocmd VimEnter * let d = expand('%:p')
+    \ | if argc() == 0
+      \ | exe 'CocCommand explorer --quit-on-open --sources buffer+,file+'
+    \ | elseif isdirectory(d) || (bufname()=='')
+      \ | silent! bd
+      \ | exe 'CocCommand explorer --quit-on-open --sources buffer+,file+ ' . d
+      \ | exe 'cd ' . d
+    \ | else
+      \ | cd %:p:h
+    \ | endif
+  " cd after open
+  autocmd User CocExplorerOpenPost let dir = getcwd() | call CocActionAsync("runCommand", "explorer.doAction", "closest", {"name": "cd", "args": [dir]})
+augroup END
