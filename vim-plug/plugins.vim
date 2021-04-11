@@ -60,5 +60,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'unblevable/quick-scope' 
 " Terminal inside vim
 Plug 'voldikss/vim-floaterm'
+" Ranger
+Plug 'kevinhwang91/rnvimr'
 
 call plug#end()

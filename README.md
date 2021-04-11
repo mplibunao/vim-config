@@ -8,6 +8,7 @@
 - pbcopy/xclip or any paste stuff
 - pynvim
 - nodevim
+- ranger
 
 ### Setup instructions
 

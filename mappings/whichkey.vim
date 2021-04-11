@@ -44,7 +44,7 @@ let g:which_key_map.p = {
   \ 'f': [':Files'                                   , 'open file<C-f>'],
   \ 'b': [':Buffers'                                 , 'open buffer'],
   \ 'w': [':Windows'                                 , 'search windows'],
-  \ 't': [':CocCommand explorer'                     , 'open file tree<C-b>'],
+  \ 't': [':RnvimrToggle'                            , 'open file tree<C-b>'],
   \ 'T': [':CocCommand explorer --preset floating'   , 'open floating file tree']
 \ } 
 
@@ -105,6 +105,7 @@ let g:which_key_map.c = {
   \ 'l': ['<C-u>CocList diagnostics<cr>' , 'show all diagnostics'],
   \ 'e': ['<C-u>CocList extensions<cr>'  , 'manage extensions'],
   \ 'c': [':CocList commands'            , 'show commands'],
+  \ 'C': [':CocConfig'                   , 'coc config'],
   \ 'o': ['<C-u>CocList outline<cr>'     , 'find symbol of current document'],
   \ 's': ['<C-u>CocList -I symbols<cr>'  , 'search workspace symbols'],
   \ 'N': ['<C-u>CocNext<CR>'             , 'do default action for next item'],
