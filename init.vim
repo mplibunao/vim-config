@@ -1,4 +1,4 @@
-source $HOME/.config/nvim/vim-plug/plugins.vim
+source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
 " source $HOME/.config/nvim/plug-config/nerdtree.vim
 source $HOME/.config/nvim/mappings/whichkey.vim
@@ -14,6 +14,8 @@ source $HOME/.config/nvim/plug-config/sneak.vim
 source $HOME/.config/nvim/plug-config/quickscope.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/rnvimr.vim
+source $HOME/.config/nvim/plug-config/golden-ratio.vim
+
 
 " j/k will move virtual lines (lines that wrap)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')

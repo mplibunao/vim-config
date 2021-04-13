@@ -14,8 +14,6 @@ let g:which_key_map['/'] = [':Rg', 'text Rg']
 
 " terminal on buffer's current directory
 let g:which_key_map["'"] = [':FloatermNew! --wintype=split --height=10 --postition=bottom --cmd=cd %:p:h' , 'terminal']
-let g:which_key_map['>'] = [':FloatermNext', 'Switch to next terminal (f3)']
-let g:which_key_map['<'] = [':FloatermPrev', 'Switch to prev terminal (f4)']
       
 " navigate to windows using space + window number
 nnoremap <space>1 1<C-w>w
@@ -68,12 +66,13 @@ let g:which_key_map.s = {
 \ }
 
 " t is for toggle
-let g:which_key_map.T = {
+let g:which_key_map.t = {
   \ 'name': '+toggle',
-  \ 'l': ['ChangeLineNumbering()', 'line number'],
-  \ 'p': ['<M-p>'                , 'auto-pairs'],
-  \ 's': [':set smartcase!'      , 'smartcase'],
-  \ 'q': [':QuickScopeToggle'    , 'quick scope highlight']
+  \ 'l': ['ChangeLineNumbering()'      , 'line number'],
+  \ 'p': ['<M-p>'                      , 'auto-pairs'],
+  \ 's': [':set smartcase!'            , 'smartcase'],
+  \ 'q': [':QuickScopeToggle'          , 'quick scope highlight'],
+  \ 'g': ['<Plug>(golden_ratio_toggle)', 'golden-ratio']
 \ }
 
 " g is for git 
@@ -149,7 +148,10 @@ let g:which_key_map.f = {
   \ 'name': '+files',
   \ 'e': {
     \ 'name': '+emacs :P',
-    \ 'd': [':e $MYVIMRC', 'open init file']
+    \ 'd': [':e $MYVIMRC'        , 'open init file'],
+    \ 'i': [':PlugInstall'       , 'install plugs'],
+    \ 'c': [':PlugClean'         , 'clean plugs'],
+    \ 'w': [':WakaTimeToday'     , 'show total coding activity for today']
   \ }
 \ }
 
@@ -157,10 +159,11 @@ let g:which_key_map.f = {
 let g:which_key_map.w = {
   \ 'd': [':q'       , 'quit'],
   \ '/': [':vsplit'  , 'split window right'],
-  \ '-': [':split'   , 'split window below']
+  \ '-': [':split'   , 'split window below'],
+  \ '=': ['<C-W>='   , 'equalize windows']
 \ }
 
-let g:which_key_map.t = {
+let g:which_key_map.T = {
       \ 'name' : '+terminal' ,
       \ ',' : [
         \ ':FloatermNew' ,
@@ -181,6 +184,7 @@ let g:which_key_map.t = {
       \ 'b' : [':FloatermNew btm'                               , 'bottom'],
       \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
       \ 'i' : [':FloatermNew iex'                               , 'iex'],
+      \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
       \ }
 
 call which_key#register('<Space>', "g:which_key_map")
