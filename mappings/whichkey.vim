@@ -72,7 +72,7 @@ let g:which_key_map.t = {
   \ 'p': ['<M-p>'                      , 'auto-pairs'],
   \ 's': [':set smartcase!'            , 'smartcase'],
   \ 'q': [':QuickScopeToggle'          , 'quick scope highlight'],
-  \ 'g': ['<Plug>(golden_ratio_toggle)', 'golden-ratio']
+  \ 'g': [':GoldenRatioToggle', 'golden-ratio']
 \ }
 
 " g is for git 
