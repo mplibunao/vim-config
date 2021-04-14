@@ -1,7 +1,7 @@
 " set leader key
 let g:mapleader = "\<Space>"
 
-syntax enable                           " Enables syntax highlighing
+syntax on                               " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set wrap                                " Wrap lines visually
 set encoding=utf-8                      " The encoding displayed
@@ -25,8 +25,8 @@ set autoindent                          " Good auto indent
 set cindent                             " Automaticall indent braces
 set laststatus=0                        " Always display the status line
 set nonumber                            " No Line numbers
-set relativenumber                      " No relative line numbers
-set cursorline                          " Enable highlighting of the current line
+set norelativenumber                    " No relative line numbers (adds lag)
+set nocursorline                        " Enable highlighting of the current line (Adds lag)
 set background=dark                     " tell vim what the background color looks like
 set showtabline=2                       " Always show tabs
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
@@ -36,11 +36,17 @@ set updatetime=300                      " Faster completion
 set timeoutlen=100                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
+set ignorecase                          " ignores case when searching
 set smartcase                           " You search will be case sensitive if it contains an uppercase letter
 set noerrorbells                        " Disable error bells
 set vb t_vb=                            " Disable error bells
 set noswapfile                          " Disable swapfiles
 set incsearch                           " Highlight the searching string while typing
+"set regexpengine=1                      " For performance
+"set lazyredraw                          " redraw as few times as possible (for performance)
+"set synmaxcol=128  " avoid slow rendering for long lines
+"syntax sync minlines=64  " faster syntax hl
+
 "set autochdir                           " Your working directory will always be the same as your working directory
 
 

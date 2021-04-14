@@ -35,34 +35,42 @@ let g:which_key_map['7'] = 'which_key_ignore'
 let g:which_key_map['8'] = 'which_key_ignore'
 let g:which_key_map['9'] = 'which_key_ignore'
 
+":CocList snippets
+
 " p is for project
 " \ 't': [':NERDTreeToggle', 'open file tree<C-b>'],
 let g:which_key_map.p = {
   \ 'name': '+project',
   \ 'f': [':Files'                                   , 'open file<C-f>'],
-  \ 'b': [':Buffers'                                 , 'open buffer'],
   \ 'w': [':Windows'                                 , 'search windows'],
   \ 't': [':RnvimrToggle'                            , 'open file tree<C-b>'],
   \ 'T': [':CocCommand explorer --preset floating'   , 'open floating file tree']
 \ } 
 
+" b is for buffer
+let g:which_key_map.b = {
+  \ 'name': '+buffer',
+  \ 'b': [':Buffers'                                 , 'open buffer'],
+  \ 'd': [':bd'                                      , 'delete buffer'],
+\ }
+
 " s is for search 
 let g:which_key_map.s = {
   \ 'name': '+search',
-  \ '/' : [':History/'     , 'search history'],
-  \ 'c' : [':Commands'     , 'command'],
-  \ 'a' : [':Ag'           , 'text Ag'],
-  \ 'b' : [':BLines'       , 'seach in current buffer'],
-  \ 'f' : [':Files'        , 'files'],
-  \ 'h' : [':History'      , 'file history'],
-  \ 'H' : [':History:'     , 'command history'],
-  \ 'l' : [':Lines'        , 'lines'] ,
-  \ 'p' : [':Helptags'     , 'help tags'] ,
-  \ 's' : [':Snippets'     , 'snippets'],
-  \ 'S' : [':Colors'       , 'color schemes'],
-  \ 't' : [':Rg'           , 'text Rg'],
-  \ 'y' : [':Filetypes'    , 'file types'],
-  \ 'z' : [':FZF'          , 'FZF']
+  \ '/' : [':History/'         , 'search history'],
+  \ 'c' : [':Commands'         , 'command'],
+  \ 'a' : [':Ag'               , 'text Ag'],
+  \ 'b' : [':BLines'           , 'seach in current buffer'],
+  \ 'f' : [':Files'            , 'files'],
+  \ 'h' : [':History'          , 'file history'],
+  \ 'H' : [':History:'         , 'command history'],
+  \ 'l' : [':Lines'            , 'lines'] ,
+  \ 'p' : [':Helptags'         , 'help tags'] ,
+  \ 's' : [':CocList snippets' , 'snippets'],
+  \ 'S' : [':Colors'           , 'color schemes'],
+  \ 't' : [':Rg'               , 'text Rg'],
+  \ 'y' : [':Filetypes'        , 'file types'],
+  \ 'z' : [':FZF'              , 'FZF']
 \ }
 
 " t is for toggle
@@ -70,9 +78,9 @@ let g:which_key_map.t = {
   \ 'name': '+toggle',
   \ 'l': ['ChangeLineNumbering()'      , 'line number'],
   \ 'p': ['<M-p>'                      , 'auto-pairs'],
-  \ 's': [':set smartcase!'            , 'smartcase'],
+  "\ 's': ['SyntaxHighlighting()'       , 'syntax highlighting'],
   \ 'q': [':QuickScopeToggle'          , 'quick scope highlight'],
-  \ 'g': [':GoldenRatioToggle', 'golden-ratio']
+  \ 'g': [':GoldenRatioToggle'         , 'golden-ratio']
 \ }
 
 " g is for git 
@@ -92,6 +100,7 @@ let g:which_key_map.g = {
   \ 'm': [':GFiles?'       , 'modified git files'],
   \ 'C': [':LazyGitConfig' , 'lazygit config']
 \ }
+
 " c is for coc
 let g:which_key_map.c = {
   \ 'name': '+coc',

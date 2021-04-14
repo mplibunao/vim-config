@@ -10,14 +10,16 @@ let g:startify_lists = [
           \ ]
 
 let g:startify_bookmarks = [
+            \ { '1': '~/Projects/mg/slerp-controls' },
+            \ { '2': '~/Projects/mg/slerp-shop' },
+            \ { '3': '~/Projects/mg/slerp' },
+            \ { '4': '~/Projects/mg/propex/stacked-fe' },
             \ { 'a': '~/Projects/mg/alam/alam.edu' },
-            \ { 'p': '~/Projects' },
-            \ { 'm': '~/Projects/mg' },
-            \ { 'v': '~/.config/nvim/init.vim' },
-            \ { 'z': '~/.zshrc' },
             \ { 'd': '~/Desktop' },
-            \ { 's': '~/Desktop/stocks' },
-            \ { 'n': '~/Projects/notes' }
+            \ { 'n': '~/Projects/notes' },
+            \ { 'm': '~/Projects/mg' },
+            \ { 'p': '~/Projects' },
+            \ { 'z': '~/.zshrc' },
             \ ]
 
 " Automatically restart a session
