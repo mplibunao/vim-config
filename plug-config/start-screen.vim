@@ -16,6 +16,7 @@ let g:startify_bookmarks = [
             \ { '4': '~/Projects/mg/propex/stacked-fe' },
             \ { 'a': '~/Projects/mg/alam/alam.edu' },
             \ { 'd': '~/Desktop' },
+            \ { 'l': '~/Desktop/new_enterprise' },
             \ { 'n': '~/Projects/notes' },
             \ { 'm': '~/Projects/mg' },
             \ { 'p': '~/Projects' },

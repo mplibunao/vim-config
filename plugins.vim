@@ -83,4 +83,8 @@ Plug 'dstein64/vim-startuptime'
 
 " Snippets
 Plug 'honza/vim-snippets'
+
+" Interactive repl
+Plug 'metakirby5/codi.vim'
+
 call plug#end()

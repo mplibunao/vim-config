@@ -1,13 +1,13 @@
 " coc config
 let g:coc_global_extensions = [
       \ 'coc-json',
-      \ 'coc-elixir',
-      \ 'coc-graphql',
+      "\ 'coc-elixir',
+      "\ 'coc-graphql',
       \ 'coc-tsserver',
       \ 'coc-snippets',
       \ 'coc-eslint',
       \ 'coc-prettier',
-      \ 'coc-yaml'
+      "\ 'coc-yaml'
    \ ]
 
 " Commands
@@ -28,10 +28,13 @@ endif
 
 " Use tab to trigger completion with characters ahead and navigate
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+" Adds snippet functinality
 inoremap <silent><expr> <TAB>
-  \ pumvisible() ? "\<C-n>" :
-  \ <SID>check_back_space() ? "\<TAB>" :
-  \ coc#refresh()
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
@@ -130,7 +133,7 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+"set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Explorer
 "let g:coc_explorer_global_presets = {
