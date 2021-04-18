@@ -42,12 +42,15 @@ set noerrorbells                        " Disable error bells
 set vb t_vb=                            " Disable error bells
 set noswapfile                          " Disable swapfiles
 set incsearch                           " Highlight the searching string while typing
-"set regexpengine=1                      " For performance
-"set lazyredraw                          " redraw as few times as possible (for performance)
+set nocompatible                        " For vim wiki
+filetype plugin on                      " For vim wiki
+
+"set regexpengine=1                     " For performance
+"set lazyredraw                         " redraw as few times as possible (for performance)
 "set synmaxcol=128  " avoid slow rendering for long lines
 "syntax sync minlines=64  " faster syntax hl
 
-"set autochdir                           " Your working directory will always be the same as your working directory
+"set autochdir                          " Your working directory will always be the same as your working directory
 
 
 

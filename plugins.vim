@@ -51,6 +51,8 @@ Plug 'joshdick/onedark.vim'
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" Starts in project root directory
 Plug 'airblade/vim-rooter'
 
 " TS Syntax
@@ -59,13 +61,13 @@ Plug 'HerringtonDarkholme/yats.vim'
 " Color
 "Plug 'norcalli/nvim-colorizer.lua'
 
+" Home screen and sessions
 Plug 'mhinz/vim-startify'
 
 " Jump to any location specified by 2 char
 Plug 'justinmk/vim-sneak'
 
 " Highlight unique characters in every word to help navigating w/ f,F,t,T
-
 Plug 'unblevable/quick-scope' 
 
 " Terminal inside vim
@@ -77,8 +79,10 @@ Plug 'kevinhwang91/rnvimr'
 " Golden ratio
 Plug 'https://github.com/roman/golden-ratio'
 
+" Time tracking in vim
 Plug 'wakatime/vim-wakatime'
 
+" Measures vim startup time
 Plug 'dstein64/vim-startuptime'
 
 " Snippets
@@ -87,4 +91,11 @@ Plug 'honza/vim-snippets'
 " Interactive repl
 Plug 'metakirby5/codi.vim'
 
+" Wiki
+Plug 'vimwiki/vimwiki'
+
+" Distraction-free writing in Vim
+Plug 'junegunn/goyo.vim'
+
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
 call plug#end()

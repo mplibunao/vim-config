@@ -20,6 +20,7 @@ let g:startify_bookmarks = [
             \ { 'n': '~/Projects/notes' },
             \ { 'm': '~/Projects/mg' },
             \ { 'p': '~/Projects' },
+            \ { 'w': '~/vimwiki' },
             \ { 'z': '~/.zshrc' },
             \ ]
 
