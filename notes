@@ -1,53 +1,5 @@
-- Install vim wiki (use md)
-  - Move notes to wiki
-  - vim table https://www.youtube.com/watch?v=XdDUGAePASA
-  - https://vim.works/2019/03/16/using-markdown-in-vim/
-  - window swap https://github.com/wesQ3/vim-windowswap
-
-- Look into kitty
-  https://www.youtube.com/watch?v=TTzP2zYJn2k
-  https://sw.kovidgoyal.net/kitty/#quickstart
-  https://www.reddit.com/r/KittyTerminal
-  https://github.com/kovidgoyal/kitty/discussions/
-
-- goyo
-
-- https://github.com/romgrk/barbar.nvim
-- makefile
-  - https://opensource.com/article/18/8/what-how-makefile#:~:text=The%20make%20utility%20requires%20a,be%20installed%20using%20make%20install%20.
-- zathura for reading pdfs https://pwmt.org/projects/zathura/
-- slack https://github.com/erroneousboat/slack-term
-
-https://github.com/GideonWolfe/vim.reaper
-
 ### vim shortcuts
 ## All applicable with d (delete) as well
-c + w             - Change word
-c + t + character - delete everything til that character then go in insert mode
-C                 - Delete til end of the line then go to insert mode 
-
-.                 - Repeat last operation
-
-*                 - Move through the instances of the current word in the file
-
-0                 - go to start of the line
-^                 - go to first character in the line 
-
-t + character     - go in front of that character 
-T                 - searches backward
-f                 - go to that character
-F                 - searches backward
-;                 - find next instance of character within the line
-,                 - find previous instance of character within the line
-
-z                 - bring cursor to the middle of the screen
-A                 - bring cursor to end of line in insert mode
-I                 - bring cursor to start of the line in insert mode
-
-~                 - toggle to upper/lower case
-
-{                 - move up one hunk
-}                 - move down one hunk
 
 >> | <<           - indents in normal mode
 =                 - Autoindent

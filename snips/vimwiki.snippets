@@ -28,15 +28,21 @@ snippet frontmatter "create markdown frontmatter" b
 ---
 title: $1
 category: $2
-date: "`!v strftime("%Y-%m-%d")`" 
-author: "MP Libunao"
-updated: "`!v strftime("%Y-%m-%d")`"  
+date: `!v strftime("%Y-%m-%d")` 
+author: MP Libunao
+updated: `!v strftime("%Y-%m-%d")`  
 tags: [$3]
-intro
 ---
 endsnippet
 
-snippet 2col "2 column table" b
+snippet 2x1 "2x1 table" b
 | $1 | $2 |
 |----|----|
+|    |    |
+endsnippet
+
+snippet 3x1 "3x1 column table" b
+| $1 | $2 | $3 |
+|----|----|----|
+|    |    |    |
 endsnippet

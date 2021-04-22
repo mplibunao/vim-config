@@ -98,4 +98,9 @@ Plug 'vimwiki/vimwiki'
 Plug 'junegunn/goyo.vim'
 
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
+
+if has('nvim')
+  Plug 'machakann/vim-highlightedyank'
+endif
+
 call plug#end()

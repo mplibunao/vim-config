@@ -49,10 +49,11 @@ let g:which_key_map.f = {
   \ 'name': '+files',
   \ 'e': {
     \ 'name': '+emacs :P',
-    \ 'd': [':e $MYVIMRC'        , 'open init file'],
-    \ 'i': [':PlugInstall'       , 'install plugs'],
-    \ 'c': [':PlugClean'         , 'clean plugs'],
-    \ 'w': [':WakaTimeToday'     , 'show total coding activity for today']
+    \ 'c': [':PlugClean'                 , 'clean plugs'],
+    \ 'd': [':e $MYVIMRC'                , 'open init file'],
+    \ 'i': [':PlugInstall'               , 'install plugs'],
+    \ 'r': [':source $MYVIMRC'           , 'source vimrc'],
+    \ 'W': [':WakaTimeToday'             , 'show total coding activity for today']
   \ }
 \ }
 
@@ -154,7 +155,8 @@ let g:which_key_map.t = {
   \ 'C': [':Codi!'                     , 'turn off codi'],
   \ 'p': ['<M-p>'                      , 'auto-pairs'],
   \ 'q': [':QuickScopeToggle'          , 'quick scope highlight'],
-  \ 'g': [':GoldenRatioToggle'         , 'golden-ratio']
+  \ 'g': [':GoldenRatioToggle'         , 'golden-ratio'],
+  \ 'G': [':Goyo'                      , 'goyo']
 \ }
 
 " T is for terminal
@@ -182,6 +184,12 @@ let g:which_key_map.T = {
       \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
       \ }
 
+" q is for quitting
+let g:which_key_map.q = {
+  \ 'name': '+quit',
+  \ 'q': [':qa'   , 'Close all files'],
+  \ 'Q': [':qa!'  , 'Close all files without saving']
+\ }
 
 " r is for refactor
 let g:which_key_map.r = {
@@ -207,10 +215,57 @@ let g:which_key_map.r = {
 
 " w is for window 
 let g:which_key_map.w = {
+  \ 'name': '+window',
   \ 'd': [':q'       , 'quit'],
+  \ 'D': [':q!'      , 'quit without saving'],
   \ '/': [':vsplit'  , 'split window right'],
   \ '-': [':split'   , 'split window below'],
   \ '=': ['<C-W>='   , 'equalize windows']
 \ }
+
+" W is for wiki 
+let g:which_key_map.W = {
+  \ 'name': '+vimwiki',
+  \ 'd': {
+    \ 'name': '+diary',
+    \ 'i': ['<Plug>VimwikiDiaryIndex'             , 'diary index'],
+    \ 'm': ['<Plug>VimwikiMakeTomorrowDiaryNote'  , 'diary for tomorrow'],
+    \ 'n': ['<Plug>VimwikiDiaryNextDay'           , 'open next day'],
+    \ 'p': ['<Plug>VimwikiDiaryPrevDay'           , 'open prev day'],
+    \ 't': ['<Plug>VimwikiMakeDiaryNote'          , 'diary for today'],
+    \ 'T': ['<Plug>VimwikiTabMakeDiaryNote'       , 'diary for today in new tab'],
+    \ 'y': ['<Plug>VimwikiMakeYesterdayDiaryNote' , 'diary for yesterday'],
+  \ },
+  \ 'D': ['<Plug>VimwikiDeleteFile'               , 'delete current wiki file'],
+  \ 'h': [':help vimwiki'                         , 'help'],
+  \ 'l': {
+    \ 'name': '+links',
+    \ 'a': [':VimwikiGenerateLinks'               , 'insert links to all available wiki files'],
+    \ 'c': [':VimwikiCheckLinks'                  , 'check links'],
+    \ 'd': ['<Plug>VimwikiDiaryGenerateLinks'     , 'update diary links'],
+    \ 't': [':VimwikiTOC'                         , 'update table of contents'],
+  \ },
+  \ 'p': [':InstantMarkdownPreview'               , 'markdown preview'],
+  \ 'r': ['<Plug>VimwikiRenameFile'               , 'rename current wiki file'],
+  \ 'w': ['<Plug>VimwikiIndex'                    , 'wiki index'],
+  \ 'W': {                                        
+      \ 'name': '+wiki',                          
+      \ 'i': ['<Plug>VimwikiIndex'                , 'wiki index'],
+      \ 't': ['<Plug>VimwikiTabIndex'             , 'wiki in new tab'],
+  \ },
+  \ '=': ['<Plug>VimwikiAddHeaderLevel'           , 'add header level'],
+  \ '-': ['<Plug>VimwikiRemoveHeaderLevel'        , 'remove header level'],
+  \ 't': {
+    \ 'name': '+table',
+    \ 'l': ['<Plug>VimwikiTableMoveColumnLeft'    , 'move current column to left'],
+    \ 'r': ['<Plug>VimwikiTableMoveColumnRight'   , 'move current column to right'],
+    \ '1': [':VimwikiTable 1'                     , 'create table with 1 row'],
+    \ '2': [':VimwikiTable 2'                     , 'create table with 2 row'],
+    \ '3': [':VimwikiTable 3'                     , 'create table with 3 row'],
+    \ '4': [':VimwikiTable 4'                     , 'create table with 4 row'],
+    \ '5': [':VimwikiTable 5'                     , 'create table with 5 row'],
+  \ }
+\ }
+
 
 call which_key#register('<Space>', "g:which_key_map")

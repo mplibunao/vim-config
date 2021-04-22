@@ -1,6 +1,5 @@
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
-" source $HOME/.config/nvim/plug-config/nerdtree.vim
 source $HOME/.config/nvim/mappings/whichkey.vim
 source $HOME/.config/nvim/mappings/keys.vim
 source $HOME/.config/nvim/themes/onedark.vim
@@ -16,6 +15,7 @@ source $HOME/.config/nvim/plug-config/quickscope.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/rnvimr.vim
 source $HOME/.config/nvim/plug-config/snippets.vim
+source $HOME/.config/nvim/plug-config/vimwiki.vim
 
 " j/k will move virtual lines (lines that wrap)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
@@ -40,10 +40,10 @@ endfunction
 
 
 " Toggle syntax highlighting
-function! SyntaxHighlighting()
-if exists("g:syntax_on")
-    :syntax off
-else
-    :syntax on
-endif
-endfunction
+"function! SyntaxHighlighting()
+"if exists("g:syntax_on")
+    ":syntax off
+"else
+    ":syntax on
+"endif
+"endfunction
