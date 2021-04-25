@@ -53,7 +53,8 @@ let g:which_key_map.f = {
     \ 'd': [':e $MYVIMRC'                , 'open init file'],
     \ 'i': [':PlugInstall'               , 'install plugs'],
     \ 'r': [':source $MYVIMRC'           , 'source vimrc'],
-    \ 'W': [':WakaTimeToday'             , 'show total coding activity for today']
+    \ 'w': [':WakaTimeToday'             , 'show total coding activity for today'],
+    \ 'z': [':e ~/zshrc'                 , 'open zshrc']
   \ }
 \ }
 
@@ -111,6 +112,7 @@ let g:which_key_map.l = {
 let g:which_key_map.p = {
   \ 'name': '+project',
   \ 'f': [':Files'                                   , 'open file<C-f>'],
+  \ 'p': [':FzfSwitchProject'                        , 'switch project'],
   \ 'w': [':Windows'                                 , 'search windows'],
   \ 't': [':RnvimrToggle'                            , 'open file tree<C-b>'],
   \ 'T': [':CocCommand explorer --preset floating'   , 'open floating file tree']

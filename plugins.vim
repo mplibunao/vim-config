@@ -53,7 +53,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Starts in project root directory
-Plug 'airblade/vim-rooter'
+"Plug 'airblade/vim-rooter'
 
 " TS Syntax
 Plug 'HerringtonDarkholme/yats.vim'
@@ -102,5 +102,7 @@ Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
 if has('nvim')
   Plug 'machakann/vim-highlightedyank'
 endif
+
+Plug 'benwainwright/fzf-project'
 
 call plug#end()

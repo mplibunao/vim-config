@@ -10,19 +10,13 @@ let g:startify_lists = [
           \ ]
 
 let g:startify_bookmarks = [
-            \ { '1': '~/Projects/mg/slerp-controls' },
-            \ { '2': '~/Projects/mg/slerp-shop' },
-            \ { '3': '~/Projects/mg/slerp' },
-            \ { '4': '~/Projects/mg/propex/stacked-fe' },
             \ { 'a': '~/Projects/mg/alam/alam.edu' },
-            \ { 'b': '~/Projects/backroads' },
-            \ { 'c': '~/Projects/mdx-blog' },
             \ { 'd': '~/Desktop' },
-            \ { 'l': '~/Desktop/new_enterprise' },
-            \ { 'n': '~/Projects/notes' },
-            \ { 'm': '~/Projects/mg' },
+            \ { 'n': '~/Projects/personal/notes' },
             \ { 'p': '~/Projects' },
-            \ { 'r': '~/Projects/restaurant' },
+            \ { 'P': '~/Projects/mg/propex' },
+            \ { 's': '~/Projects/mg/_slerp' },
+            \ { 'S': '~/Desktop/stocks' },
             \ { 'w': '~/vimwiki' },
             \ { 'z': '~/.zshrc' },
             \ ]
