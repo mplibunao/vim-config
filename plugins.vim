@@ -99,9 +99,9 @@ Plug 'junegunn/goyo.vim'
 
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
 
-if has('nvim')
-  Plug 'machakann/vim-highlightedyank'
-endif
+"if has('nvim')
+  "Plug 'machakann/vim-highlightedyank'
+"endif
 
 Plug 'benwainwright/fzf-project'
 

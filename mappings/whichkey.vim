@@ -54,7 +54,8 @@ let g:which_key_map.f = {
     \ 'i': [':PlugInstall'               , 'install plugs'],
     \ 'r': [':source $MYVIMRC'           , 'source vimrc'],
     \ 'w': [':WakaTimeToday'             , 'show total coding activity for today'],
-    \ 'z': [':e ~/zshrc'                 , 'open zshrc']
+    \ 'z': [':e ~/.zshrc'                , 'open zshrc'],
+    \ 'Z': [':!source ~/.zshrc'          , 'source zshrc']
   \ }
 \ }
 

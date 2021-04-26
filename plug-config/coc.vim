@@ -1,13 +1,16 @@
 " coc config
 let g:coc_global_extensions = [
       \ 'coc-json',
-      "\ 'coc-elixir',
+      \ 'coc-elixir',
       "\ 'coc-graphql',
       \ 'coc-tsserver',
       \ 'coc-snippets',
       \ 'coc-eslint',
       \ 'coc-prettier',
       "\ 'coc-yaml'
+      \ 'coc-marketplace',
+      \ 'coc-yank',
+      "\ 'coc-tailwind-css'
    \ ]
 
 " Commands
