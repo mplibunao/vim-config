@@ -41,7 +41,8 @@ let g:which_key_map['9'] = 'which_key_ignore'
 let g:which_key_map.b = {
   \ 'name': '+buffer',
   \ 'b': [':Buffers'                                 , 'open buffer'],
-  \ 'd': [':bd'                                      , 'delete buffer'],
+  \ 'd': [':Bdelete'                                 , 'delete buffer'],
+  \ 'q': [':%bd'                                     , 'delete all buffers']
 \ }
 
 " f is for files

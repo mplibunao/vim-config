@@ -105,4 +105,6 @@ Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
 
 Plug 'benwainwright/fzf-project'
 
+Plug 'https://github.com/moll/vim-bbye'
+
 call plug#end()
