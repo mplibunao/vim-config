@@ -9,7 +9,6 @@
 - pynvim
 - nodevim
 - ranger
-- [instant-markdown-d](https://github.com/instant-markdown/vim-instant-markdown)
 
 ### Setup instructions
 
@@ -43,12 +42,3 @@ pip3 install pynvim
 - Install node neovim
 
 `npm i -g noevim`
-
-
-### Vim Wiki
-
-```
-Install markdown-preview mini server
-npm i -g instant-markdown-d
-```
-

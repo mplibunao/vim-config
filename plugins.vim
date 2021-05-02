@@ -97,7 +97,8 @@ Plug 'vimwiki/vimwiki'
 " Distraction-free writing in Vim
 Plug 'junegunn/goyo.vim'
 
-Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
+"Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 "if has('nvim')
   "Plug 'machakann/vim-highlightedyank'
@@ -106,5 +107,8 @@ Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
 Plug 'benwainwright/fzf-project'
 
 Plug 'https://github.com/moll/vim-bbye'
+
+Plug 'https://github.com/tpope/vim-dispatch'
+
 
 call plug#end()

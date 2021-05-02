@@ -154,13 +154,13 @@ let g:which_key_map.S = {
 " t is for toggle
 let g:which_key_map.t = {
   \ 'name': '+toggle',
-  \ 'l': ['ChangeLineNumbering()'      , 'line number'],
-  \ 'c': [':Codi'                      , 'turn on codi'],
-  \ 'C': [':Codi!'                     , 'turn off codi'],
-  \ 'p': ['<M-p>'                      , 'auto-pairs'],
-  \ 'q': [':QuickScopeToggle'          , 'quick scope highlight'],
-  \ 'g': [':GoldenRatioToggle'         , 'golden-ratio'],
-  \ 'G': [':Goyo'                      , 'goyo']
+  \ 'c': [':Codi'                       , 'turn on codi'],
+  \ 'C': [':Codi!'                      , 'turn off codi'],
+  \ 'g': [':GoldenRatioToggle'          , 'golden-ratio'],
+  \ 'G': [':Goyo'                       , 'goyo'],
+  \ 'l': ['ChangeLineNumbering()'       , 'line number'],
+  \ 'p': ['<M-p>'                       , 'auto-pairs'],
+  \ 'q': [':QuickScopeToggle'           , 'quick scope highlight']
 \ }
 
 " T is for terminal
@@ -249,7 +249,7 @@ let g:which_key_map.W = {
     \ 'd': ['<Plug>VimwikiDiaryGenerateLinks'     , 'update diary links'],
     \ 't': [':VimwikiTOC'                         , 'update table of contents'],
   \ },
-  \ 'p': [':InstantMarkdownPreview'               , 'markdown preview'],
+  \ 'p': ['<Plug>MarkdownPreviewToggle'           , 'markdown preview'],
   \ 'r': ['<Plug>VimwikiRenameFile'               , 'rename current wiki file'],
   \ 'w': ['<Plug>VimwikiIndex'                    , 'wiki index'],
   \ 'W': {                                        

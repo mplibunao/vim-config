@@ -11,13 +11,11 @@ let g:startify_lists = [
 
 let g:startify_bookmarks = [
             \ { 'a': '~/Projects/mg/alam/alam.edu' },
-            \ { 'd': '~/Desktop' },
+            \ { 'd': '~/Projects/personal/dotfiles' },
+            \ { 'D': '~/Desktop' },
             \ { 'n': '~/Projects/personal/notes' },
             \ { 'p': '~/Projects' },
-            \ { 'P': '~/Projects/mg/propex' },
-            \ { 's': '~/Projects/mg/_slerp' },
-            \ { 'S': '~/Desktop/stocks' },
-            \ { 'w': '~/vimwiki' },
+            \ { 's': '~/Desktop/stocks' },
             \ { 'z': '~/.zshrc' },
             \ ]
 
