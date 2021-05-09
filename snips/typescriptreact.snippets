@@ -67,12 +67,21 @@ snippet impd "es6 Import default" b
 import $2 from '$1';
 endsnippet
 
-snippet exp "Description" b
+snippet exp "named export" b
 export * from './$1'
 endsnippet
 
-snippet async "Description" b
+snippet async "async function" b
 const $1 = async () => {
+	try {
 
+	} catch (err) {
+
+	}
 }
+endsnippet
+
+
+snippet tsignore "ts-ignore" b
+// @ts-ignore
 endsnippet

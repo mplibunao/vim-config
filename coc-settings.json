@@ -13,6 +13,12 @@
 
   // snippets
   "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
+  "snippets.extends": {
+    "typescript": ["typescriptreact"],
+    "javascript": ["typescriptreact"],
+    "javascriptreact": ["typescriptreact"],
+    "vimwiki": ["markdown"]
+  },
 
   // explorer
   "explorer.width": 30,

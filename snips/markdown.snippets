@@ -1,9 +1,22 @@
-snippet meta(data)? "Markdown metadata front matter"
+snippet front "Markdown metadata front matter"
 ---
 title: $1
-date "`!v strftime("%Y-%m-%d")`"
-image: "$2"
-author: "$3"
-tags: [$4]
+category: $2
+date `!v strftime("%Y-%m-%d")`
+author: MP Libunao
+updated: `!v strftime("%Y-%m-%d")` 
+tags: [$2, $3]
 ---
+endsnippet
+
+snippet 2x1 "2x1 table" b
+| $1 | $2 |
+|----|----|
+|    |    |
+endsnippet
+
+snippet 3x1 "3x1 column table" b
+| $1 | $2 | $3 |
+|----|----|----|
+|    |    |    |
 endsnippet

@@ -17,6 +17,7 @@ let g:startify_bookmarks = [
             \ { 'p': '~/Projects' },
             \ { 's': '~/Desktop/stocks' },
             \ { 'z': '~/.zshrc' },
+            \ { 'r': '~/Projects/personal/reddit-clone' },
             \ ]
 
 " Automatically restart a session

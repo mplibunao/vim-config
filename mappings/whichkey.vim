@@ -35,8 +35,6 @@ let g:which_key_map['7'] = 'which_key_ignore'
 let g:which_key_map['8'] = 'which_key_ignore'
 let g:which_key_map['9'] = 'which_key_ignore'
 
-":CocList snippets
-
 " b is for buffer
 let g:which_key_map.b = {
   \ 'name': '+buffer',
@@ -113,11 +111,30 @@ let g:which_key_map.l = {
 " \ 't': [':NERDTreeToggle', 'open file tree<C-b>'],
 let g:which_key_map.p = {
   \ 'name': '+project',
-  \ 'f': [':Files'                                   , 'open file<C-f>'],
+  \ 'f': [':Files'                                   , 'open file<c-f>'],
   \ 'p': [':FzfSwitchProject'                        , 'switch project'],
   \ 'w': [':Windows'                                 , 'search windows'],
-  \ 't': [':RnvimrToggle'                            , 'open file tree<C-b>'],
-  \ 'T': [':CocCommand explorer --preset floating'   , 'open floating file tree']
+  \ 't': [':RnvimrToggle'                            , 'open file tree<c-b>'],
+  \ 'T': {
+    \ 'name': '+tab',
+    \ 'n': [':tabnew %'                                , 'open current file in a new tab'],
+    \ 'N': [':- tabnew %'                              , 'open current file in a prev tab'],
+    \ 'l': [':tabs'                                    , 'list all tabs'],
+    \ 'm': [':tabmove +'                               , 'move tab forward'],
+    \ 'M': [':tabmove -'                               , 'move tab backward']
+  \ },
+\ } 
+
+let g:which_key_map.P = {
+  \ 'name': '+Project',
+  \ 't': {
+    \ 'name': '+tab',
+    \ 'n': [':tabnew %'                                , 'open current file in a new tab'],
+    \ 'N': [':- tabnew %'                              , 'open current file in a prev tab'],
+    \ 'l': [':tabs'                                    , 'list all tabs'],
+    \ 'm': [':tabmove +'                               , 'move tab forward'],
+    \ 'M': [':tabmove -'                               , 'move tab backward']
+  \ },
 \ } 
 
 
@@ -165,28 +182,28 @@ let g:which_key_map.t = {
 
 " T is for terminal
 let g:which_key_map.T = {
-      \ 'name' : '+terminal' ,
-      \ ',' : [
-        \ ':FloatermNew' ,
-        \ 'open floating terminal on project root'
-      \ ],
-      \ "'":  [
-        \  ':FloatermNew! --cmd=cd %:p:h' ,
-        \  'open floating terminal on buffer directory'
-      \ ],
-      \ ";":  [
-        \  ':FloatermNew --wintype=split --height=10 --postition=bottom',
-        \  'open split terminal on project root'
-      \ ],
-      \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
-      \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
-      \ 'n' : [':FloatermNew node'                              , 'node'],
-      \ 't' : [':FloatermToggle'                                , 'toggle'],
-      \ 'b' : [':FloatermNew btm'                               , 'bottom'],
-      \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
-      \ 'i' : [':FloatermNew iex'                               , 'iex'],
-      \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
-      \ }
+  \ 'name' : '+terminal' ,
+  \ ',' : [
+    \ ':FloatermNew' ,
+    \ 'open floating terminal on project root'
+  \ ],
+  \ "'":  [
+    \  ':FloatermNew! --cmd=cd %:p:h' ,
+    \  'open floating terminal on buffer directory'
+  \ ],
+  \ ";":  [
+    \  ':FloatermNew --wintype=split --height=10 --postition=bottom',
+    \  'open split terminal on project root'
+  \ ],
+  \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
+  \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
+  \ 'n' : [':FloatermNew node'                              , 'node'],
+  \ 't' : [':FloatermToggle'                                , 'toggle'],
+  \ 'b' : [':FloatermNew btm'                               , 'bottom'],
+  \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
+  \ 'i' : [':FloatermNew iex'                               , 'iex'],
+  \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
+\ }
 
 " q is for quitting
 let g:which_key_map.q = {
@@ -261,13 +278,13 @@ let g:which_key_map.W = {
   \ '-': ['<Plug>VimwikiRemoveHeaderLevel'        , 'remove header level'],
   \ 't': {
     \ 'name': '+table',
-    \ 'l': ['<Plug>VimwikiTableMoveColumnLeft'    , 'move current column to left'],
-    \ 'r': ['<Plug>VimwikiTableMoveColumnRight'   , 'move current column to right'],
     \ '1': [':VimwikiTable 1'                     , 'create table with 1 row'],
     \ '2': [':VimwikiTable 2'                     , 'create table with 2 row'],
     \ '3': [':VimwikiTable 3'                     , 'create table with 3 row'],
     \ '4': [':VimwikiTable 4'                     , 'create table with 4 row'],
     \ '5': [':VimwikiTable 5'                     , 'create table with 5 row'],
+    \ 'l': ['<Plug>VimwikiTableMoveColumnLeft'    , 'move current column to left'],
+    \ 'r': ['<Plug>VimwikiTableMoveColumnRight'   , 'move current column to right'],
   \ }
 \ }
 

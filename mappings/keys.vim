@@ -9,5 +9,12 @@ vnoremap > >gv
 " TAB in general mode will move to text buffer
 nnoremap <space><tab> <C-^>
 
+
+" Console.log whole line
+nnoremap <leader>,l 0v$hy<esc>oconsole.log("<c-r>"", <c-r>"); // eslint-disable-line no-console<esc>
+
+" Console.log selected text
+vnoremap <leader>,l y<esc>oconsole.log("<c-r>"", <c-r>"); // eslint-disable-line no-console<esc>
+
 " search
 "nnoremap <space>/ :Rg<CR>

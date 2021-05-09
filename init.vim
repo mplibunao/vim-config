@@ -1,4 +1,5 @@
 source $HOME/.config/nvim/plugins.vim
+source $HOME/.config/nvim/functions/index.vim
 source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/mappings/whichkey.vim
 source $HOME/.config/nvim/mappings/keys.vim
@@ -22,24 +23,6 @@ source $HOME/.config/nvim/plug-config/markdown-preview.vim
 " j/k will move virtual lines (lines that wrap)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
-
-" Toggle line numbers
-function! ChangeLineNumbering()
-if &number == 0 && &relativenumber == 0
-    setlocal number!
-    echo "nu:1/rnu:0"
-elseif &number == 1 && &relativenumber == 0
-    setlocal relativenumber!
-    echo "nu:1/rnu:1"
-elseif &number == 1 && &relativenumber == 1
-    setlocal number!
-    echo "nu:0/rnu:1"
-else
-    setlocal relativenumber!
-    echo "nu:0/rnu:0"
-endif
-endfunction
-
 
 " Toggle syntax highlighting
 "function! SyntaxHighlighting()

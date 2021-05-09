@@ -86,7 +86,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'dstein64/vim-startuptime'
 
 " Snippets
-Plug 'honza/vim-snippets'
+"Plug 'honza/vim-snippets'
 
 " Interactive repl
 Plug 'metakirby5/codi.vim'
@@ -109,6 +109,8 @@ Plug 'benwainwright/fzf-project'
 Plug 'https://github.com/moll/vim-bbye'
 
 Plug 'https://github.com/tpope/vim-dispatch'
+
+Plug 'dhruvasagar/vim-table-mode'
 
 
 call plug#end()

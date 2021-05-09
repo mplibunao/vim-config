@@ -13,9 +13,10 @@ let g:mkdp_refresh_slow = 1
 " default is 0
 let g:mkdp_echo_preview_url = 0
 
-"function! g:Open_browser(url)
-  "let g:open_browser_command = "!google-chrome " . a:url . " &" 
-  "silent exec g:open_browser_command
-"endfunction
+function! g:Open_browser(url)
+  let g:open_browser_command = "!google-chrome " . a:url . " &" 
+  silent exec g:open_browser_command
+  echo g:open_browser_command
+endfunction
 
-"let g:mkdp_browserfunc = 'g:Open_browser'
+let g:mkdp_browserfunc = 'g:Open_browser'

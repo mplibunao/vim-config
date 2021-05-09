@@ -5,7 +5,7 @@ let g:rnvimr_ex_enable = 1
 let g:rnvimr_enable_picker = 1
 
 " Make Ranger to hide the files included in gitignore when show_hidden=False
-let g:rnvimr_hide_gitignore = 0
+let g:rnvimr_hide_gitignore = 1
 
 " Disable Rnvimr to import user config
 " let g:nvimr_vanilla = 1
