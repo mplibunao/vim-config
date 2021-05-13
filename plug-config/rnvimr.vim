@@ -7,5 +7,8 @@ let g:rnvimr_enable_picker = 1
 " Make Ranger to hide the files included in gitignore when show_hidden=False
 let g:rnvimr_hide_gitignore = 1
 
+" Make Neovim wipe the buffers corresponding to the files deleted by Ranger
+let g:rnvimr_enable_bw = 1
+
 " Disable Rnvimr to import user config
 " let g:nvimr_vanilla = 1

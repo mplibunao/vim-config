@@ -1,8 +1,7 @@
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/functions/index.vim
 source $HOME/.config/nvim/general/settings.vim
-source $HOME/.config/nvim/mappings/whichkey.vim
-source $HOME/.config/nvim/mappings/keys.vim
+source $HOME/.config/nvim/mappings/index.vim
 source $HOME/.config/nvim/themes/onedark.vim
 source $HOME/.config/nvim/plug-config/coc.vim
 "source $HOME/.config/nvim/themes/airline.vim
@@ -23,12 +22,3 @@ source $HOME/.config/nvim/plug-config/markdown-preview.vim
 " j/k will move virtual lines (lines that wrap)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
-
-" Toggle syntax highlighting
-"function! SyntaxHighlighting()
-"if exists("g:syntax_on")
-    ":syntax off
-"else
-    ":syntax on
-"endif
-"endfunction

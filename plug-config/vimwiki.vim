@@ -6,4 +6,4 @@ let g:vimwiki_list = [{'path': '~/vimwiki/',
 let g:vimwiki_table_mappings = 0
 
 " Only mark md files inside vimwiki as vimwiki
-let g:vimwiki_global_ext = 0
+let g:vimwiki_global_ext = 1

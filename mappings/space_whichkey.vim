@@ -35,6 +35,7 @@ let g:which_key_map['7'] = 'which_key_ignore'
 let g:which_key_map['8'] = 'which_key_ignore'
 let g:which_key_map['9'] = 'which_key_ignore'
 
+
 " b is for buffer
 let g:which_key_map.b = {
   \ 'name': '+buffer',
@@ -48,13 +49,14 @@ let g:which_key_map.f = {
   \ 'name': '+files',
   \ 'e': {
     \ 'name': '+emacs :P',
-    \ 'c': [':PlugClean'                 , 'clean plugs'],
-    \ 'd': [':e $MYVIMRC'                , 'open init file'],
-    \ 'i': [':PlugInstall'               , 'install plugs'],
-    \ 'r': [':source $MYVIMRC'           , 'source vimrc'],
-    \ 'w': [':WakaTimeToday'             , 'show total coding activity for today'],
-    \ 'z': [':e ~/.zshrc'                , 'open zshrc'],
-    \ 'Z': [':!source ~/.zshrc'          , 'source zshrc']
+    \ 'c': [':PlugClean'                     , 'clean plugs'],
+    \ 'd': [':e $MYVIMRC'                    , 'open init file'],
+    \ 'i': [':PlugInstall'                   , 'install plugs'],
+    \ 'r': [':source $MYVIMRC'               , 'source vimrc'],
+    \ 'R': [':e ~/.config/ranger/rifle.conf' , 'open ranger rifle config'],
+    \ 'w': [':WakaTimeToday'                 , 'show total coding activity for today'],
+    \ 'z': [':e ~/.zshrc'                    , 'open zshrc'],
+    \ 'Z': [':!source ~/.zshrc'              , 'source zshrc']
   \ }
 \ }
 
@@ -81,30 +83,44 @@ let g:which_key_map.g = {
 " l is for language server 
 let g:which_key_map.l = {
   \ 'name': '+coc',
-  \ 'A': ['<Plug>(coc-codeaction-selected)'            , 'code action selected'],
-  \ 'a': ['<Plug>(coc-codeaction)'                     , 'code action'],
-  \ 'd': ['<Plug>(coc-definition)'                     , 'go to definition(gd)'],
-  \ 't': ['<Plug>(coc-type-definition)'                , 'type definition(gt)'],
-  \ 'i': ['<Plug>(coc-implementation)'                 , 'implementation'],
-  \ 'r': ['<Plug>(coc-references)'                     , 'references'],
-  \ 'n': ['<Plug>(coc-diagnostic-prev)'                , 'next diagnostic'],
-  \ 'p': ['<Plug>(coc-diagnostic-next)'                , 'previous diagnostic'],
-  \ 'l': ['<C-u>CocList diagnostics<cr>'               , 'show all diagnostics'],
-  \ 'e': ['<C-u>CocList extensions<cr>'                , 'manage extensions'],
-  \ 'c': [':CocList commands'                          , 'show commands'],
-  \ 'C': [':CocConfig'                                 , 'coc config'],
+  \ 'a': {
+    \ 'name': '+action',
+    \ 'a': ['<Plug>(coc-codeaction)'                               , 'code action'],
+    \ 's': ['<Plug>(coc-codeaction-selected)'                      , 'code action selected'],
+    \ 'q': ['<Plug>(coc-fix-current)'                              , 'automatically fix current line'],
+    \ 'n': [':CocNext'                                             , 'do default action for next item'],
+    \ 'p': [':CocPrev'                                             , 'do default action for previous item'],
+  \ },
+  \ 'c': [':CocList commands'                                      , 'show commands'],
+  \ 'C': [':CocConfig'                                             , 'coc config'],
+  \ 'd': {
+    \ 'name': '+diagnostics',
+    \ 'd': [':CocList diagnostics'                                 , 'show all diagnostics'],
+    \ 'p': ['<Plug>(coc-diagnostic-next)'                          , 'previous diagnostic (,]'],
+    \ 'n': ['<Plug>(coc-diagnostic-prev)'                          , 'next diagnostic (,])'],
+  \ },
+  \ 'e': [':CocList extensions'                                    , 'manage extensions'],
+  \ 'g': {
+    \ 'name': '+go to',
+    \ 'd': ['<Plug>(coc-definition)'                               , 'go to definition (gd)'],
+    \ 'y': ['<Plug>(coc-type-definition)'                          , 'type definition (gy)'],
+    \ 'i': ['<Plug>(coc-implementation)'                           , 'implementation (gi)'],
+    \ 'r': ['<Plug>(coc-references)'                               , 'references (gr)'],
+  \ },
+  \ 'l': [':CocListResume'                                         , 'resume latest coc list'],
+  \ 'i': ["CocAction('runCommand', 'editor.action.organizeImport')", 'organize imports'],
+  \ 'O': ['<C-u>CocList outline<cr>'                               , 'find symbol of current document'],
+  \ 'p': [':CocCommand prettier.formatFile'                        , 'format file (:Prettier)'],
+  \ 'r': ['<Plug>(coc-rename)'                                     , 'rename (f2)'],
+  \ 'R': [':CocCommand workspace.renameCurrentFile'                , 'rename current file'],
   \ 's': {
     \ 'name': '+snippets',
-    \ 'l' : [':CocList snippets' , 'snippets']         ,
-    \ 'c': ['<Plug>(coc-convert-snippet)'              , 'convert selected to snippet'],
-    \ 'e': [':CocCommand snippets.editSnippets'        , 'edit snipets'],
-    \ 'o': [':CocCommand snippets.openSnippetFiles'    , 'open snippet files'],
+    \ 'l' : [':CocList snippets'                                   , 'snippets'],
+    \ 'c': ['<Plug>(coc-convert-snippet)'                          , 'convert selected to snippet'],
+    \ 'e': [':CocCommand snippets.editSnippets'                    , 'edit snipets'],
+    \ 'o': [':CocCommand snippets.openSnippetFiles'                , 'open snippet files'],
   \ },
-  \ 'O': ['<C-u>CocList outline<cr>'                   , 'find symbol of current document'],
-  \ 'S': ['<C-u>CocList -I symbols<cr>'                , 'search workspace symbols'],
-  \ 'N': ['<C-u>CocNext<CR>'                           , 'do default action for next item'],
-  \ 'P': ['<C-u>CocPrev<CR>'                           , 'do default action for previous item'],
-  \ 'L': ['<C-u>CocListResume<CR>'                     , 'resume latest coc list']
+  \ 'S': [':CocList -I symbols'                                    , 'search workspace symbols'],
 \ }
 
 " p is for project
@@ -211,27 +227,6 @@ let g:which_key_map.q = {
   \ 'q': [':qa'   , 'Close all files'],
   \ 'Q': [':qa!'  , 'Close all files without saving']
 \ }
-
-" r is for refactor
-let g:which_key_map.r = {
-  \ 'name': '+refactor',
-  \ 'r': ['<Plug>(coc-rename)'                                     , 'rename (f2)'],
-  \ 'F': [':CocCommand workspace.renameCurrentFile'                , 'rename current file'],
-  \ 'i': ["CocAction('runCommand', 'editor.action.organizeImport')", 'organize imports'],
-  \ 'p': {
-      \ 'name': '+prettier',
-      \ 'f': [':CocCommand prettier.formatFile'                    , 'format file (:Prettier)'],
-      \ 's': ['<Plug>(coc-format-selected)'                        , 'format selected region'],
-      \ 'b': ["CocAction('format')"                                , 'format buffer'],
-  \ },
-  \ 'f': {
-      \ 'name': '+fix',
-      \ 's': ['<Plug>(coc-codeaction-selected)'                    , 'refactor selected'],
-      \ 'l': ['<Plug>(coc-codeaction)'                             , 'refactor line'],
-      \ 'a': ['<Plug>(coc-fix-current)'                            , 'automatically fix current line']
-  \ }
-\ }
-
 
 
 " w is for window 
