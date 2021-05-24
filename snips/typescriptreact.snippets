@@ -24,18 +24,15 @@
 #
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
-
 snippet useEffect "react useEffect" b
 useEffect(() => {
 
 }, [$1])
 endsnippet
 
-
 snippet log "console.log" b
 console.log('$1', $1)
 endsnippet
-
 
 snippet tsxeaf "typecript type react exported arrow function" b
 export type $1Props = {}
@@ -47,7 +44,6 @@ export const $1 = (props: $1Props): JSX.Element => {
 export default $1 
 endsnippet
 
-
 snippet tsxieaf "typecript interface react exported arrow function" b
 export type $1Props = {}
 
@@ -57,7 +53,6 @@ export const $1 = (props: $1Props): JSX.Element => {
 
 export default $1 
 endsnippet
-
 
 snippet impc "es6 Import const" b
 import { $2 } from '$1';
@@ -71,6 +66,10 @@ snippet exp "named export" b
 export * from './$1'
 endsnippet
 
+snippet react "import react" b
+import React from 'react'
+endsnippet
+
 snippet async "async function" b
 const $1 = async () => {
 	try {
@@ -81,7 +80,16 @@ const $1 = async () => {
 }
 endsnippet
 
-
 snippet tsignore "ts-ignore" b
 // @ts-ignore
+endsnippet
+
+snippet sct "Self Closing tag"
+<$1 />
+endsnippet
+
+snippet oct "Open Close tag"
+<$1>
+	$2
+</$1>
 endsnippet

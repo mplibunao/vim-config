@@ -10,7 +10,9 @@ let g:coc_global_extensions = [
       "\ 'coc-yaml'
       \ 'coc-marketplace',
       \ 'coc-yank',
-      "\ 'coc-tailwind-css'
+      \ 'coc-tailwindcss',
+      \ 'coc-emmet'
+      "\ 'coc-tailwind-intellisense'
    \ ]
 
 " Commands

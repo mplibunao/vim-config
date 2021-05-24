@@ -46,7 +46,7 @@ set nocompatible                        " For vim wiki
 filetype plugin on                      " For vim wiki
 
 "set regexpengine=1                     " For performance
-"set lazyredraw                         " redraw as few times as possible (for performance)
+set lazyredraw                         " redraw as few times as possible (for performance)
 "set synmaxcol=128  " avoid slow rendering for long lines
 "syntax sync minlines=64  " faster syntax hl
 

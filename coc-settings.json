@@ -15,25 +15,39 @@
   "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
   "snippets.extends": {
     "typescript": ["typescriptreact"],
-    "javascript": ["typescriptreact"],
+    "javascript": ["typescriptreact", "javascriptreact"],
     "javascriptreact": ["typescriptreact"],
     "vimwiki": ["markdown"]
   },
 
-  "languageserver": {
-    "graphql": {
-      "command": "graphql-lsp",
-      "args": ["server", "-m", "stream"],
-      // customize filetypes to your needs
-      "filetypes": [
-        "typescript",
-        "typescriptreact",
-        "graphql",
-        "javascript",
-        "javascriptreact"
-      ]
-    }
+  // bigger diagnostic windows
+  "diagnostic.maxWindowHeight": 160,
+  "diagnostic.maxWindowWidth": 160,
+  "suggest.detailMaxLength": 160,
+  "suggest.maxPreviewWidth": 160,
+  "signature.maxWindowWidth": 80,
+  "signature.maxWindowHeight": 8,
+  "coc.preferences.previewMaxHeight": 16,
+
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
   }
+
+  // "languageserver": {
+  //   "graphql": {
+  //     "command": "graphql-lsp",
+  //     "args": ["server", "-m", "stream"],
+  //     // customize filetypes to your needs
+  //     "filetypes": [
+  //       "typescript",
+  //       "typescriptreact",
+  //       "graphql",
+  //       "javascript",
+  //       "javascriptreact"
+  //     ]
+  //   }
+  // }
 
   // explorer
   // "explorer.width": 30,
