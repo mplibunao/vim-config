@@ -24,8 +24,13 @@
 #
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
+snippet jsxusestate "react useState" b
+const [$1, set_$1] = useState($2)
+endsnippet
 
 snippet jsxeaf "react exported arrow function" b
+import React from 'react'
+
 export const $1 = (props) => {
 	return <div>$1</div>
 }

@@ -10,7 +10,7 @@ let g:which_key_map = {}
 let g:which_key_map[';'] = ['<plug>NERDCommenterToggle', 'comment']
 
 " search
-let g:which_key_map['/'] = [':Rg', 'text Rg']
+let g:which_key_map['/'] = [':RG', 'text Rg']
 
 " terminal on buffer's current directory
 let g:which_key_map["'"] = [':FloatermNew! --wintype=split --height=10 --postition=bottom --cmd=cd %:p:h' , 'terminal']
@@ -216,7 +216,8 @@ let g:which_key_map.T = {
   \ 'n' : [':FloatermNew node'                              , 'node'],
   \ 't' : [':FloatermToggle'                                , 'toggle'],
   \ 'b' : [':FloatermNew btm'                               , 'bottom'],
-  \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
+  \ 's' : [':FloatermNew slack-term'                        , 'slack'],
+  "\ 's' : [':FloatermNew ncdu'                             , 'ncdu'],
   \ 'i' : [':FloatermNew iex'                               , 'iex'],
   \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
 \ }

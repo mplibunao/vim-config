@@ -110,4 +110,6 @@ Plug 'dhruvasagar/vim-table-mode'
 
 Plug 'mattn/emmet-vim'
 
+Plug 'jparise/vim-graphql'
+
 call plug#end()

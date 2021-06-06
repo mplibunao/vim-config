@@ -30,11 +30,17 @@ useEffect(() => {
 }, [$1])
 endsnippet
 
+snippet tsxusestate "tsx useState" b
+const [$1, set_$1] = useState<$2>($3)
+endsnippet
+
 snippet log "console.log" b
 console.log('$1', $1)
 endsnippet
 
 snippet tsxeaf "typecript type react exported arrow function" b
+import React from 'react'
+
 export type $1Props = {}
 
 export const $1 = (props: $1Props): JSX.Element => {
@@ -45,6 +51,8 @@ export default $1
 endsnippet
 
 snippet tsxieaf "typecript interface react exported arrow function" b
+import React from 'react'
+
 export type $1Props = {}
 
 export const $1 = (props: $1Props): JSX.Element => {
@@ -93,3 +101,14 @@ snippet oct "Open Close tag"
 	$2
 </$1>
 endsnippet
+
+snippet apollomutation "Apollo mutation" b
+const [$1, { loading }] = useMutation($2)
+endsnippet
+
+snippet apolloquery "Apollo useQuery" b
+const { data, loading } = useQuery($1)
+endsnippet
+
+snippet apollosubscription "Apollo useSubscription" b
+const { data } = useSubscription($1)
