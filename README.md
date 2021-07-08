@@ -35,13 +35,26 @@
 
 `:checkhealth`
 
+
+- Install node neovim
+
+`npm i -g noevim` or `yarn add global neovim`
+
+## Python stuff
+
+- [Point python to python3](https://dev.to/malwarebo/how-to-set-python3-as-a-default-python-version-on-mac-4jjf)
+
+```
+# Check where python3 is installed first
+ls -l /usr/local/bin/python*
+
+# Create a symlink to python
+ln -s -f /usr/local/bin/python3.9 usr/bin/python
+```
+
 - Install pynvim
 
 ```
 sudo apt install python3-pip
 pip3 install pynvim
 ```
-
-- Install node neovim
-
-`npm i -g noevim` or `yarn add global neovim`
