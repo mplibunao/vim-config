@@ -2,13 +2,16 @@
 
 ### Requirements
 
-- neovim
-- ripgrep
-- lazydocker
+- [neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim#install-from-package)
+- [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
+- [lazydocker](https://github.com/jesseduffield/lazydocker/blob/master/README.md)
 - pbcopy/xclip or any paste stuff
+- ranger
+- [lazygit](https://github.com/jesseduffield/lazygit#installation)
+- [bottom](https://github.com/ClementTsang/bottom)
+- [python stuff](https://docs.python-guide.org/starting/install3/osx/)
 - pynvim
 - nodevim
-- ranger
 
 ### Setup instructions
 
@@ -30,7 +33,7 @@
 
 - Run health check
 
-`:healthcheck`
+`:checkhealth`
 
 - Install pynvim
 
@@ -41,4 +44,4 @@ pip3 install pynvim
 
 - Install node neovim
 
-`npm i -g noevim`
+`npm i -g noevim` or `yarn add global neovim`

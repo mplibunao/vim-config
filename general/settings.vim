@@ -52,6 +52,7 @@ set lazyredraw                         " redraw as few times as possible (for pe
 
 "set autochdir                          " Your working directory will always be the same as your working directory
 
+set pyx=3
 
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
