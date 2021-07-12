@@ -49,14 +49,16 @@ let g:which_key_map.f = {
   \ 'name': '+files',
   \ 'e': {
     \ 'name': '+emacs :P',
-    \ 'c': [':PlugClean'                     , 'clean plugs'],
-    \ 'd': [':e $MYVIMRC'                    , 'open init file'],
-    \ 'i': [':PlugInstall'                   , 'install plugs'],
-    \ 'r': [':source $MYVIMRC'               , 'source vimrc'],
-    \ 'R': [':e ~/.config/ranger/rifle.conf' , 'open ranger rifle config'],
-    \ 'w': [':WakaTimeToday'                 , 'show total coding activity for today'],
-    \ 'z': [':e ~/.zshrc'                    , 'open zshrc'],
-    \ 'Z': [':!source ~/.zshrc'              , 'source zshrc']
+    \ 'c': [':PlugClean'                                , 'clean plugs'],
+    \ 'd': [':e ~/Projects/personal/dotfiles/README.md' , 'open DOTFILES README'],
+    \ 'v': [':e $MYVIMRC'                               , 'open VIM init file'],
+    \ 'i': [':PlugInstall'                              , 'install plugs'],
+    \ 'k': [':e ~/.config/kitty/kitty.conf'             , 'open KITTY config'],
+    \ 'r': [':source $MYVIMRC'                          , 'source vimrc'],
+    \ 'R': [':e ~/.config/ranger/rifle.conf'            , 'open RANGER rifle config'],
+    \ 'w': [':WakaTimeToday'                            , 'show total coding activity for today'],
+    \ 'z': [':e ~/.zshrc'                               , 'open ZSHRC'],
+    \ 'Z': [':!source ~/.zshrc'                         , 'source ZSHRC']
   \ }
 \ }
 
