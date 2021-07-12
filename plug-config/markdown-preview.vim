@@ -19,4 +19,10 @@ function! g:Open_browser(url)
   echo g:open_browser_command
 endfunction
 
-let g:mkdp_browserfunc = 'g:Open_browser'
+function! g:Open_browser_mac(url)
+  let g:open_browser_command = "!open " . a:url . " &" 
+  silent exec g:open_browser_command
+  echo g:open_browser_command
+endfunction
+
+let g:mkdp_browserfunc = 'g:Open_browser_mac'
