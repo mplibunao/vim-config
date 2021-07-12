@@ -14,6 +14,8 @@ let g:startify_bookmarks = [
             \ { 'd': '~/Projects/personal/dotfiles' },
             \ { 'D': '~/Desktop' },
             \ { 'n': '~/Projects/personal/notes' },
+            \ { 't': '~/.config/kitty' },
+            \ { 'v': '~/.config/nvim' },
             \ { 'p': '~/Projects' },
             \ { 's': '~/Desktop/stocks' },
             \ { 'z': '~/.zshrc' },
