@@ -4,6 +4,12 @@ let g:mapleader = "\<Space>"
 syntax on                               " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set wrap                                " Wrap lines visually
+set linebreak                           " don't wrap in the middle of a word
+set nolist                              " For wrapping as well
+set textwidth=80                        " Hard wrap at 80 characters (usual terminal width and for readability)
+set colorcolumn=80                      " Show visual indicator for 80 char border
+highlight ColorColumn guibg=Black       " make border black in gui vims
+highlight ColorColumn ctermbg=0         " make border black in terminal vim
 set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
@@ -44,6 +50,7 @@ set noswapfile                          " Disable swapfiles
 set incsearch                           " Highlight the searching string while typing
 set nocompatible                        " For vim wiki
 filetype plugin on                      " For vim wiki
+set whichwrap+=<,>,h,l                  " move left/right on end of the line goes to next line
 
 "set regexpengine=1                     " For performance
 set lazyredraw                         " redraw as few times as possible (for performance)

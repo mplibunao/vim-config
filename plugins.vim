@@ -46,8 +46,8 @@ Plug 'joshdick/onedark.vim'
 
 " Status line
 "!!!! Disable this soon and consider learning how to write your own statusline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -60,8 +60,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'HerringtonDarkholme/yats.vim'
 
 " Color
-"!!!!! Disable this is the future as it may cause slowdown
-Plug 'norcalli/nvim-colorizer.lua'
+"Plug 'norcalli/nvim-colorizer.lua'
 
 " Home screen and sessions
 Plug 'mhinz/vim-startify'
