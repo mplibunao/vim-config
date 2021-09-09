@@ -34,7 +34,7 @@ snippet tsxusestate "tsx useState" b
 const [$1, set_$1] = useState<$2>($3)
 endsnippet
 
-snippet log "console.log" b
+snippet consolelog "console.log" b
 console.log('$1', $1)
 endsnippet
 
@@ -43,7 +43,7 @@ import React from 'react'
 
 export type $1Props = {}
 
-export const $1 = (props: $1Props): JSX.Element => {
+export const $1 = (_props: $1Props): JSX.Element => {
 	return <div>$1</div>
 }
 
@@ -55,7 +55,19 @@ import React from 'react'
 
 export interface $1Props {}
 
-export const $1 = (props: $1Props): JSX.Element => {
+export const $1 = (_props: $1Props): JSX.Element => {
+	return <div>$1</div>
+}
+
+export default $1 
+endsnippet
+
+snippet tsxieaf "typecript interface react.fc" b
+import React from 'react'
+
+export interface $1Props {}
+
+export const $1: React.FC<$1Props> = () => {
 	return <div>$1</div>
 }
 
@@ -78,13 +90,19 @@ snippet react "import react" b
 import React from 'react'
 endsnippet
 
-snippet async "async function" b
-const $1 = async () => {
+snippet tsxasync "export async function" b
+export const $1 = async () => {
 	try {
 
 	} catch (err) {
 
 	}
+}
+endsnippet
+
+snippet tsxfunc "export function" b
+export const $1 = () => {
+	$2
 }
 endsnippet
 
@@ -112,3 +130,8 @@ endsnippet
 
 snippet apollosubscription "Apollo useSubscription" b
 const { data } = useSubscription($1)
+endsnippet
+
+snippet jsthrow "Throw new error" b
+throw new Error($1)
+endsnippet
