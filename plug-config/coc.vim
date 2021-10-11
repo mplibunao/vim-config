@@ -1,8 +1,8 @@
 " coc config
 let g:coc_global_extensions = [
       \ 'coc-json',
-      \ 'coc-elixir',
-      \ 'coc-graphql',
+      "\ 'coc-elixir',
+      "\ 'coc-graphql',
       \ 'coc-tsserver',
       \ 'coc-snippets',
       \ 'coc-eslint',
@@ -11,8 +11,9 @@ let g:coc_global_extensions = [
       \ 'coc-marketplace',
       \ 'coc-yank',
       \ 'coc-tailwindcss',
-      \ 'coc-emmet'
-      "\ 'coc-tailwind-intellisense'
+      \ 'coc-emmet',
+      \ 'coc-react-refactor',
+      \ 'coc-tabnine'
    \ ]
 
 " Commands

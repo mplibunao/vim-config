@@ -21,8 +21,12 @@
   },
 
   // bigger diagnostic windows
+  // https://github.com/neoclide/coc.nvim/blob/master/doc/coc.txt
   "diagnostic.maxWindowHeight": 160,
   "diagnostic.maxWindowWidth": 160,
+  "diagnostic.messageTarget": "float",
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
   "suggest.detailMaxLength": 160,
   "suggest.maxPreviewWidth": 160,
   "signature.maxWindowWidth": 80,
