@@ -13,7 +13,9 @@ let g:which_key_map[';'] = ['<plug>NERDCommenterToggle', 'comment']
 let g:which_key_map['/'] = [':RG', 'text Rg']
 
 " terminal on buffer's current directory
-let g:which_key_map["'"] = [':FloatermNew! --wintype=split --height=10 --postition=bottom --cmd=cd %:p:h' , 'terminal']
+"let g:which_key_map["'"] = [':FloatermNew! --wintype=split --height=0.1 --postition=bottom --cmd=cd %:p:h' , 'terminal in cwd']
+let g:which_key_map["'"] = [':FloatermNew! --height=0.9 --width=0.9 --cmd=cd %:p:h' , 'terminal in cwd']
+let g:which_key_map[","] = [':FloatermNew --height=0.9 --width=0.9' , 'terminal in project root']
       
 " navigate to windows using space + window number
 nnoremap <space>1 1<C-w>w
@@ -113,7 +115,8 @@ let g:which_key_map.l = {
   \ 'i': ["CocAction('runCommand', 'editor.action.organizeImport')", 'organize imports'],
   \ 'O': ['<C-u>CocList outline<cr>'                               , 'find symbol of current document'],
   \ 'p': [':CocCommand prettier.formatFile'                        , 'format file (:Prettier)'],
-  \ 'r': ['<Plug>(coc-rename)'                                     , 'rename (f2)'],
+  \ 'r': ["CocAction('runCommand', 'editor.action.restart')"       , 'restart (f2)'],
+  "\ 'r': ['<Plug>(coc-rename)'                                     , 'rename (f2)'],
   \ 'R': [':CocCommand workspace.renameCurrentFile'                , 'rename current file'],
   \ 's': {
     \ 'name': '+snippets',
@@ -210,18 +213,18 @@ let g:which_key_map.T = {
     \  'open floating terminal on buffer directory'
   \ ],
   \ ";":  [
-    \  ':FloatermNew --wintype=split --height=10 --postition=bottom',
+    \  ':FloatermNew --wintype=split --height=0.1 --postition=bottom',
     \  'open split terminal on project root'
   \ ],
-  \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
-  \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
-  \ 'n' : [':FloatermNew node'                              , 'node'],
-  \ 't' : [':FloatermToggle'                                , 'toggle'],
-  \ 'b' : [':FloatermNew btm'                               , 'bottom'],
-  \ 's' : [':FloatermNew slack-term'                        , 'slack'],
-  "\ 's' : [':FloatermNew ncdu'                             , 'ncdu'],
-  \ 'i' : [':FloatermNew iex'                               , 'iex'],
-  \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
+  \ 'f' : [':FloatermNew fzf'                                , 'fzf'],
+  \ 'd' : [':FloatermNew --height=0.99 --width=0.99 lazydocker', 'docker'],
+  \ 'n' : [':FloatermNew node'                               , 'node'],
+  \ 't' : [':FloatermToggle'                                 , 'toggle'],
+  \ 'b' : [':FloatermNew btm'                                , 'bottom'],
+  \ 's' : [':FloatermNew slack-term'                         , 'slack'],
+  "\ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
+  \ 'i' : [':FloatermNew iex'                                , 'iex'],
+  \ 'r' : [':FloatermNew ranger'                             , 'ranger'],
 \ }
 
 " q is for quitting
