@@ -52,11 +52,13 @@
 			"initializationOptions": {},
 			"settings": {}
 		},
-    "bash": {
-      "command": "bash-language-server",
-      "args": ["start"],
-      "filetypes": ["sh"]
-    },
+    // already included in coc-sh
+    //"bash": {
+      //"command": "bash-language-server",
+      //"args": ["start"],
+      //"filetypes": ["sh"]
+    //},
+    // kinda clunky with monorepos
     //"graphql": {
        //"command": "graphql-lsp",
        //"args": ["server", "-m", "stream"],
@@ -74,6 +76,12 @@
       "filetypes": ["dockerfile"],
       "args": ["--stdio"]
     }
+    // install failed
+    //"sql": {
+      //"command": "sql-language-server",
+      //"args" : ["up", "--method", "stdio"],
+      //"filetypes": ["sql", "mysql"]
+    //}
   }
 
   // explorer
