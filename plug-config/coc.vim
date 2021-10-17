@@ -2,18 +2,21 @@
 let g:coc_global_extensions = [
       \ 'coc-json',
       "\ 'coc-elixir',
-      "\ 'coc-graphql',
       \ 'coc-tsserver',
       \ 'coc-snippets',
       \ 'coc-eslint',
       \ 'coc-prettier',
-      "\ 'coc-yaml'
+      \ 'coc-yaml',
+      \ 'coc-deno',
+      \ 'coc-sh',
       \ 'coc-marketplace',
       \ 'coc-yank',
       \ 'coc-tailwindcss',
       \ 'coc-emmet',
       \ 'coc-react-refactor',
-      \ 'coc-tabnine'
+      \ 'coc-tabnine',
+      \ 'coc-markdownlint',
+      \ 'coc-css'
    \ ]
 
 " Commands

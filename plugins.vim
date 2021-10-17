@@ -78,7 +78,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'kevinhwang91/rnvimr'
 
 " Golden ratio
-Plug 'https://github.com/roman/golden-ratio'
+"Plug 'https://github.com/roman/golden-ratio'
 
 " Time tracking in vim
 Plug 'wakatime/vim-wakatime'
@@ -105,12 +105,10 @@ Plug 'benwainwright/fzf-project'
 
 Plug 'https://github.com/moll/vim-bbye'
 
-Plug 'https://github.com/tpope/vim-dispatch'
+"Plug 'https://github.com/tpope/vim-dispatch'
 
 Plug 'dhruvasagar/vim-table-mode'
 
 Plug 'mattn/emmet-vim'
-
-Plug 'jparise/vim-graphql'
 
 call plug#end()
