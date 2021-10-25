@@ -37,6 +37,9 @@ Plug 'tpope/vim-rhubarb'
 " language pack
 Plug 'sheerun/vim-polyglot'
 
+" Ansible ls
+Plug 'yaegassy/coc-ansible', {'do': 'yarn install --frozen-lockfile'}
+
 " Auto pairs for () [] {}
 Plug 'jiangmiao/auto-pairs'
 "Plug 'junegunn/rainbow_parentheses.vim'
@@ -66,7 +69,7 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhinz/vim-startify'
 
 " Jump to any location specified by 2 char
-Plug 'justinmk/vim-sneak'
+"Plug 'justinmk/vim-sneak'
 
 " Highlight unique characters in every word to help navigating w/ f,F,t,T
 Plug 'unblevable/quick-scope' 

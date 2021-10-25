@@ -16,7 +16,8 @@ let g:coc_global_extensions = [
       \ 'coc-react-refactor',
       \ 'coc-tabnine',
       \ 'coc-markdownlint',
-      \ 'coc-css'
+      \ 'coc-css',
+      \ 'coc-pyright'
    \ ]
 
 " Commands

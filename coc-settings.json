@@ -11,7 +11,12 @@
     "css",
     "markdown",
     "scss",
-    "less"
+    "less",
+    "terraform",
+    "tf",
+    "yaml",
+    "yml",
+    "python"
   ],
 
   // snippets
