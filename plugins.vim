@@ -46,11 +46,12 @@ Plug 'jiangmiao/auto-pairs'
 
 " Theme
 Plug 'joshdick/onedark.vim'
+"Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " Status line
 "!!!! Disable this soon and consider learning how to write your own statusline
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -101,6 +102,7 @@ Plug 'vimwiki/vimwiki'
 " Distraction-free writing in Vim
 Plug 'junegunn/goyo.vim'
 
+Plug 'folke/twilight.nvim'
 "Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
@@ -113,5 +115,9 @@ Plug 'https://github.com/moll/vim-bbye'
 Plug 'dhruvasagar/vim-table-mode'
 
 Plug 'mattn/emmet-vim'
+
+"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+
+"Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
 call plug#end()
