@@ -101,6 +101,8 @@ augroup mygroup
     autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
     " Update signature help on jump placeholder
     autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+    " organize import
+    autocmd BufWritePre * :call CocAction('runCommand', 'editor.action.organizeImport')
 augroup end
 
 " Map function and class text objects
