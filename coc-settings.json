@@ -87,7 +87,14 @@
       //"args" : ["up", "--method", "stdio"],
       //"filetypes": ["sql", "mysql"]
     //}
-  }
+  },
+
+  // import-cost
+  //"codeLens.enable": true,
+  "importCost.debug": true,
+  "importCost.typescriptExtensions": [
+    "\\.tsx?$"
+  ]
 
   // explorer
   // "explorer.width": 30,
