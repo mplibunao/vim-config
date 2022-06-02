@@ -23,7 +23,12 @@ let g:fzf_tags_command = 'ctags -R'
 let g:fzf_layout = {'up':'~96%', 'window': { 'width': 0.9, 'height': 0.9,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
 
 let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline --height 96%'
-let $FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore-vcs --glob "!{node_modules/*,.git/*,dist/*}"'
+" Shows gitignored files but hides specific directories
+" Unfortunately does not work nicely for monorepos
+"let $FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore-vcs --glob "!{node_modules/*,.git/*,dist/*}"'
+" Ignores local .gitignore (usually more strict for smaller image size)
+" Follows .gitignore_global as long as you run `git config --global core.excludesfile ~/.gitignore_global` or set in your ~/.gitconfig
+let $FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-require-git'
 
 
 " Customize fzf colors to match your color scheme
