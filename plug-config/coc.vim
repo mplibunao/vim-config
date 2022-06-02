@@ -17,9 +17,9 @@ let g:coc_global_extensions = [
       \ 'coc-tabnine',
       \ 'coc-markdownlint',
       \ 'coc-css',
-      \ 'coc-pyright',
-      \ 'coc-import-cost',
-      \ 'coc-sql'
+      "\ 'coc-pyright',
+      "\ 'coc-import-cost',
+      "\ 'coc-sql'
    \ ]
 
 " Commands
