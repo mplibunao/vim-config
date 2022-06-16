@@ -60,7 +60,8 @@ let g:which_key_map.f = {
     \ 'R': [':e ~/.config/ranger/rifle.conf'            , 'open RANGER rifle config'],
     \ 'w': [':WakaTimeToday'                            , 'show total coding activity for today'],
     \ 'z': [':e ~/.zshrc'                               , 'open ZSHRC'],
-    \ 'Z': [':!source ~/.zshrc'                         , 'source ZSHRC']
+    \ 'Z': [':!exec zsh'                                , 'reload zsh (exec zsh)']
+    "\ 'Z': [':!source ~/.zshrc'                        , 'source ZSHRC']
   \ }
 \ }
 
