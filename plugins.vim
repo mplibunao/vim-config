@@ -58,7 +58,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Starts in project root directory
-"Plug 'airblade/vim-rooter'
+" I probably disabled this but didn't clean my plugs
+Plug 'airblade/vim-rooter'
 
 " TS Syntax
 Plug 'HerringtonDarkholme/yats.vim'

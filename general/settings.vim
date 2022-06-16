@@ -61,6 +61,8 @@ set lazyredraw                         " redraw as few times as possible (for pe
 "syntax sync minlines=64  " faster syntax hl
 
 "set autochdir                          " Your working directory will always be the same as your working directory
+"This is changes the directory everytime you open a file so if you open in a
+"nested directory you're cwd will now be set there
 
 set pyx=3
 
