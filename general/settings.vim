@@ -49,7 +49,7 @@ set vb t_vb=                            " Disable error bells
 set noswapfile                          " Disable swapfiles
 set incsearch                           " Highlight the searching string while typing
 set nocompatible                        " For vim wiki
-filetype plugin on                      " For vim wiki
+filetype plugin on                      " For vim wiki, nerdcommenter
 set whichwrap+=<,>,h,l                  " move left/right on end of the line goes to next line
 autocmd BufRead,BufNewFile *.md setlocal spell " Spell check
 autocmd FileType gitcommit setlocal spell      " spell check
@@ -59,6 +59,9 @@ set complete+=kspell                           " Autocomplete
 set lazyredraw                         " redraw as few times as possible (for performance)
 "set synmaxcol=128  " avoid slow rendering for long lines
 "syntax sync minlines=64  " faster syntax hl
+"
+
+setlocal foldmethod=syntax              " Automatic folding by syntax
 
 "set autochdir                          " Your working directory will always be the same as your working directory
 "This is changes the directory everytime you open a file so if you open in a
