@@ -12,3 +12,4 @@ let g:rnvimr_enable_bw = 0
 
 " Disable Rnvimr to import user config
 " let g:nvimr_vanilla = 1
+
