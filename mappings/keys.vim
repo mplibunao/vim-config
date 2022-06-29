@@ -10,9 +10,11 @@ vnoremap > >gv
 nnoremap <space><tab> <C-^>
 
 " Console.log whole line
+" ,l
 nnoremap ,l 0v$hy<esc>oconsole.log("<c-r>"", <c-r>"); // eslint-disable-line no-console<esc>
 
 " Console.log selected text
+" ,l on visual mode
 vnoremap ,l y<esc>oconsole.log("<c-r>"", <c-r>"); // eslint-disable-line no-console<esc>
 
 " search

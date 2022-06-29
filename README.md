@@ -1,5 +1,11 @@
 ### My neovim config
 
+### Cheatsheet
+
+- [cheatsheet](cheatsheet.md)
+- [mappings space_whichkey vim](mappings/space_whichkey.vim)
+- [mappings comma_whichkey vim](mappings/comma_whichkey.vim)
+
 ### Requirements
 
 - [neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim#install-from-package)
