@@ -101,7 +101,7 @@ Plug 'metakirby5/codi.vim'
 Plug 'vimwiki/vimwiki'
 
 " Distraction-free writing in Vim
-Plug 'junegunn/goyo.vim'
+"Plug 'junegunn/goyo.vim'
 
 Plug 'folke/twilight.nvim'
 "Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
@@ -116,6 +116,9 @@ Plug 'https://github.com/moll/vim-bbye'
 Plug 'dhruvasagar/vim-table-mode'
 
 Plug 'mattn/emmet-vim'
+
+" Fill entire screen with split (toggle)
+Plug 'https://github.com/szw/vim-maximizer'
 
 "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
