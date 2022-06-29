@@ -56,6 +56,8 @@ let g:which_key_map.f = {
     \ 'v': [':e $MYVIMRC'                               , 'open VIM init file'],
     \ 'i': [':PlugInstall'                              , 'install plugs'],
     \ 'k': [':e ~/.config/kitty/kitty.conf'             , 'open KITTY config'],
+    \ 'l': [':e ~/.config/ranger/rc.conf'               , 'open RANGER rc.conf'],
+    \ 'p': [':e ~/.p10k.zsh'                            , 'open .p10k.zsh'],
     \ 'r': [':source $MYVIMRC'                          , 'source vimrc'],
     \ 'R': [':e ~/.config/ranger/rifle.conf'            , 'open RANGER rifle config'],
     \ 'w': [':WakaTimeToday'                            , 'show total coding activity for today'],
