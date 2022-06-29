@@ -3,10 +3,11 @@ inoremap <c-u> <ESC>viwUi
 nnoremap <c-u> viwU<Esc>
 
 " Better tabbing (won't lose selection)
+" < and > to increase/decrease indentation
 vnoremap < <gv
 vnoremap > >gv
 
-" TAB in general mode will move to text buffer
+" Space tab in normal mode will move to text buffer
 nnoremap <space><tab> <C-^>
 
 " Console.log whole line

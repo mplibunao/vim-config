@@ -2,9 +2,10 @@
 
 ### Cheatsheet
 
-- [cheatsheet](cheatsheet.md)
+- [cheatsheets](cheatsheets.md)
 - [mappings space_whichkey vim](mappings/space_whichkey.vim)
 - [mappings comma_whichkey vim](mappings/comma_whichkey.vim)
+- [mappings keys vim](mappings/keys.vim)
 
 ### Requirements
 
