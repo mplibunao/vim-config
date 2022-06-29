@@ -243,11 +243,34 @@ let g:which_key_map.q = {
 " w is for window 
 let g:which_key_map.w = {
   \ 'name': '+window',
-  \ 'd': [':q'       , 'quit'],
-  \ 'D': [':q!'      , 'quit without saving'],
-  \ '/': [':vsplit'  , 'split window right'],
-  \ '-': [':split'   , 'split window below'],
-  \ '=': ['<C-W>='   , 'equalize windows']
+  \ 'c': [':only'                  , 'close all splits except current one <C-W> o'],
+  \ 'd': [':q'                     , 'quit'],
+  \ 'D': [':q!'                    , 'quit without saving'],
+  \ 'h': ['<C-W>H'                , 'move active to left <C-W> H'],
+  \ 'j': ['<C-W>J'                , 'move active to bottom <C-W> J'],
+  \ 'k': ['<C-W>K'                , 'move active to top <C-W> K'],
+  \ 'l': ['<C-W>L'                , 'move active to right <C-W> L'],
+  \ 'r': {
+    \ 'name': '+resize',
+    \ 'h': {
+      \ 'name': '+height',
+      \ '+': [':resize +1'         , 'increase height by 1 line (<ctrl-w> +)'],
+      \ '-': [':resize -1'         , 'decrease height by 1 line (<ctrl-w> +)']
+    \ },
+    \ 'w': {
+      \ 'name': '+width',
+      \ '+': [':vertical resize +1', 'increase height by 1 line (<ctrl-w> +)'],
+      \ '-': [':vertical resize -1', 'increase height by 1 line (<ctrl-w> +)']
+    \ },
+  \ },
+  \ 'R': {
+    \ 'name': '+rotate',
+    \ '/': ['<C-W>R'              , 'rotate splits to right/down'],
+    \ '-': ['<C-W>r'              , 'rotate splits to left/up'],
+  \ },
+  \ '/': [':vsplit'                , 'split window right'],
+  \ '-': [':split'                 , 'split window below'],
+  \ '=': ['<C-W>='                 , 'equalize windows']
 \ }
 
 " W is for wiki 
