@@ -1,6 +1,4 @@
 
-[[toc]]
-
 ### Notes
 
 - Lots of missing things here as I like to use `which-key` for my shortcuts which act as documentation for me
