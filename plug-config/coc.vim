@@ -1,7 +1,7 @@
 " coc config
 let g:coc_global_extensions = [
       \ 'coc-json',
-      "\ 'coc-elixir',
+      \ 'coc-elixir',
       \ 'coc-tsserver',
       \ 'coc-snippets',
       \ 'coc-eslint',
@@ -17,9 +17,10 @@ let g:coc_global_extensions = [
       \ 'coc-tabnine',
       \ 'coc-markdownlint',
       \ 'coc-css',
-      "\ 'coc-pyright',
+      \ 'coc-pyright',
       "\ 'coc-import-cost',
-      "\ 'coc-sql'
+      \ 'coc-sql',
+      \ 'coc-git'
    \ ]
 
 " Commands
@@ -102,7 +103,7 @@ augroup mygroup
     " Update signature help on jump placeholder
     autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
     " organize import
-    autocmd FileType typescript,javascript BufWritePre * :call CocAction('runCommand', 'editor.action.organizeImport')
+    autocmd FileType typescript BufWritePre * :call CocAction('runCommand', 'editor.action.organizeImport')
 augroup end
 
 " Map function and class text objects

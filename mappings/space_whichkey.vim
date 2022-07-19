@@ -51,19 +51,33 @@ let g:which_key_map.f = {
   \ 'name': '+files',
   \ 'e': {
     \ 'name': '+emacs :P',
-    \ 'c': [':PlugClean'                                , 'clean plugs'],
     \ 'd': [':e ~/Projects/personal/dotfiles/README.md' , 'open DOTFILES README'],
-    \ 'v': [':e $MYVIMRC'                               , 'open VIM init file'],
-    \ 'i': [':PlugInstall'                              , 'install plugs'],
-    \ 'k': [':e ~/.config/kitty/kitty.conf'             , 'open KITTY config'],
-    \ 'l': [':e ~/.config/ranger/rc.conf'               , 'open RANGER rc.conf'],
-    \ 'p': [':e ~/.p10k.zsh'                            , 'open .p10k.zsh'],
-    \ 'r': [':source $MYVIMRC'                          , 'source vimrc'],
-    \ 'R': [':e ~/.config/ranger/rifle.conf'            , 'open RANGER rifle config'],
     \ 'w': [':WakaTimeToday'                            , 'show total coding activity for today'],
-    \ 'z': [':e ~/.zshrc'                               , 'open ZSHRC'],
-    \ 'Z': [':!exec zsh'                                , 'reload zsh (exec zsh)']
-    "\ 'Z': [':!source ~/.zshrc'                        , 'source ZSHRC']
+    \ 'k': {
+      \ 'name': '+kitty',
+      \ 'c': [':e /Users/mp/vimwiki/TIL/kitty'            , 'cheatsheet'],
+      \ 'k': [':e ~/.config/kitty/kitty.conf'             , 'open KITTY config'],
+      \ 't': [':e ~/.config/kitty/theme.conf'             , 'open KITTY theme']
+    \ },
+    \ 'r': {
+      \ 'name': '+ranger',
+      \ 'r': [':e ~/.config/ranger/rc.conf'               , 'open RANGER rc.conf'],
+      \ 'R': [':e ~/.config/ranger/rifle.conf'            , 'open RANGER rifle config']
+    \ },
+    \ 'v': {
+      \ 'name': '+vim',
+      \ 'c': [':e /Users/mp/vimwiki/TIL/vim/cheatsheet.md', 'cheatsheet'],
+      \ 'i': [':PlugInstall'                              , 'install plugs'],
+      \ 'r': [':source $MYVIMRC'                          , 'source vimrc'],
+      \ 'R': [':PlugClean'                                , 'Remove unused plugs'],
+      \ 'v': [':e $MYVIMRC'                               , 'open VIM init file']
+    \ },
+    \ 'z': {
+      \ 'name': '+zsh',
+      \ 'p': [':e ~/.p10k.zsh'                            , 'open .p10k.zsh'],
+      \ 'r': [':!exec zsh'                                , 'reload zsh (exec zsh)'],
+      \ 'z': [':e ~/.zshrc'                               , 'open ZSHRC']
+    \ }
   \ }
 \ }
 
@@ -195,6 +209,7 @@ let g:which_key_map.S = {
 " t is for toggle
 let g:which_key_map.t = {
   \ 'name': '+toggle',
+  \ 'b': [':BlamerToggle'                       , 'toggle blamer (git lens)'],
   \ 'c': [':Codi'                       , 'turn on codi'],
   \ 'C': [':Codi!'                      , 'turn off codi'],
   \ 'g': [':MaximizerToggle'        , 'golden-ratio'],
@@ -203,7 +218,7 @@ let g:which_key_map.t = {
   \ 'l': ['ChangeLineNumbering()'       , 'line number'],
   \ 'p': ['<M-p>'                       , 'auto-pairs'],
   \ 'q': [':QuickScopeToggle'           , 'quick scope highlight'],
-  \ 't': [':Twilight'                   , 'twilight']
+  "\ 't': [':Twilight'                   , 'twilight']
 \ }
 
 " T is for terminal

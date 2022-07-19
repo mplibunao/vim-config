@@ -47,35 +47,35 @@
     "typescript": "typescriptreact"
   },
 
+  // git lens
+  "git.addGBlameToVirtualText": true,
+
   "languageserver": {
     "terraform": {
-			"command": "terraform-ls",
-			"args": ["serve"],
-			"filetypes": [
-				"terraform",
-				"tf"
-			],
-			"initializationOptions": {},
-			"settings": {}
-		},
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": ["terraform", "tf", "hcl"],
+      "initializationOptions": {},
+      "settings": {}
+    },
     // already included in coc-sh
     //"bash": {
-      //"command": "bash-language-server",
-      //"args": ["start"],
-      //"filetypes": ["sh"]
+    //"command": "bash-language-server",
+    //"args": ["start"],
+    //"filetypes": ["sh"]
     //},
     // kinda clunky with monorepos
     //"graphql": {
-       //"command": "graphql-lsp",
-       //"args": ["server", "-m", "stream"],
-       //// customize filetypes to your needs
-       //"filetypes": [
-         //"typescript",
-         //"typescriptreact",
-         //"graphql",
-         //"javascript",
-         //"javascriptreact"
-       //]
+    //"command": "graphql-lsp",
+    //"args": ["server", "-m", "stream"],
+    //// customize filetypes to your needs
+    //"filetypes": [
+    //"typescript",
+    //"typescriptreact",
+    //"graphql",
+    //"javascript",
+    //"javascriptreact"
+    //]
     //},
     "dockerfile": {
       "command": "docker-langserver",
@@ -84,9 +84,9 @@
     }
     // install failed
     //"sql": {
-      //"command": "sql-language-server",
-      //"args" : ["up", "--method", "stdio"],
-      //"filetypes": ["sql", "mysql"]
+    //"command": "sql-language-server",
+    //"args" : ["up", "--method", "stdio"],
+    //"filetypes": ["sql", "mysql"]
     //}
   }
 
@@ -94,7 +94,7 @@
   //"codeLens.enable": true,
   //"importCost.debug": true,
   //"importCost.typescriptExtensions": [
-    //"\\.tsx?$"
+  //"\\.tsx?$"
   //]
 
   // explorer
