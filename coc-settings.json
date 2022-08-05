@@ -17,7 +17,8 @@
     "yaml",
     "yml",
     "python",
-    "docker"
+    "docker",
+    "md"
   ],
 
   // snippets
@@ -28,6 +29,12 @@
     "javascriptreact": ["typescriptreact"],
     "vimwiki": ["markdown"]
   },
+
+  // prettier config
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.useTabs": true,
 
   // bigger diagnostic windows
   // https://github.com/neoclide/coc.nvim/blob/master/doc/coc.txt
