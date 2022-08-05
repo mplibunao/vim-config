@@ -30,7 +30,7 @@ let $FZF_DEFAULT_OPTS = '--color=dark --color=fg:-1,bg:-1,hl:#c678dd,fg+:#ffffff
 "let $FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore-vcs --glob "!{node_modules/*,.git/*,dist/*}"'
 " Ignores local .gitignore (usually more strict for smaller image size)
 " Follows .gitignore_global as long as you run `git config --global core.excludesfile ~/.gitignore_global` or set in your ~/.gitconfig
-let $FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-require-git'
+let $FZF_DEFAULT_COMMAND='rg --files --hidden --no-require-git'
 
 
 " Customize fzf colors to match your color scheme
@@ -56,14 +56,15 @@ command! -bang -nargs=? -complete=dir Files
 " Get text in files with Rg
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   'rg --column --line-number --no-heading --color=always --smart-case --files'.shellescape(<q-args>), 1,
   \   fzf#vim#with_preview(), <bang>0)
 
 " THIS IS WHAT WE USE FOR RG
 " Ripgrep advanced
 "    
+" --no-ignore-vcs : don't follow gitignore
 function! RipgrepFzf(query, fullscreen)
-  let command_fmt = 'rg --column --line-number --no-heading --color=always --hidden --no-require-git --follow --smart-case %s || true'
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --hidden --no-require-git --glob "!{node_modules/**,.git/**,dist/**,yarn.lock}" --smart-case %s || true'
   let initial_command = printf(command_fmt, shellescape(a:query))
   let reload_command = printf(command_fmt, '{q}')
   let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
