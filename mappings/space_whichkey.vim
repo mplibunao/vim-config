@@ -74,8 +74,12 @@ let g:which_key_map.f = {
     \ },
     \ 'z': {
       \ 'name': '+zsh',
+      \ 'a': [':e ~/.zsh_config/aliases.zsh'              , 'open zsh aliases'],
+      \ 'e': [':e ~/.zsh_config/env.zsh'                  , 'open zsh env'],
+      \ 'f': [':e ~/.zsh_config/functions.zsh'            , 'open zsh functions'],
       \ 'p': [':e ~/.p10k.zsh'                            , 'open .p10k.zsh'],
       \ 'r': [':!exec zsh'                                , 'reload zsh (exec zsh)'],
+      \ 's': [':e ~/.sensitive_env.zsh'                   , 'open sensitive zsh env'],
       \ 'z': [':e ~/.zshrc'                               , 'open ZSHRC']
     \ }
   \ }
