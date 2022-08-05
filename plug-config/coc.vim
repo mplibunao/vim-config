@@ -20,7 +20,7 @@ let g:coc_global_extensions = [
       \ 'coc-pyright',
       "\ 'coc-import-cost',
       \ 'coc-sql',
-      \ 'coc-git'
+      "\ 'coc-git'
    \ ]
 
 " Commands

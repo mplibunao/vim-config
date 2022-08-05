@@ -48,7 +48,7 @@
   },
 
   // git lens
-  "git.addGBlameToVirtualText": true,
+  //"git.addGBlameToVirtualText": true,
 
   "languageserver": {
     "terraform": {

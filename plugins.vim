@@ -25,12 +25,12 @@ Plug 'scrooloose/nerdcommenter'
 
 " Git
 Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
-" coc-git has this
-"if has('nvim') || has('patch-8.0.902')
-  "Plug 'mhinz/vim-signify'
-"else
-  "Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
-"endif
+" coc-git has this (but is buggy)
+if has('nvim') || has('patch-8.0.902')
+  Plug 'mhinz/vim-signify'
+else
+  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+endif
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 "Plug 'junegunn/gv.vim'
