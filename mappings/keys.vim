@@ -20,3 +20,8 @@ vnoremap ,l y<esc>oconsole.log("<c-r>"", <c-r>"); // eslint-disable-line no-cons
 
 " search
 "nnoremap <space>/ :Rg<CR>
+
+" Toggle fold 
+nnoremap <silent> <Space>tf @=(foldlevel('.')?'za':"\<Space>")<CR>
+"vnoremap <Space>tf zf
+vnoremap <Space>tf za

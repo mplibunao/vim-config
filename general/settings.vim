@@ -62,6 +62,7 @@ set lazyredraw                         " redraw as few times as possible (for pe
 "
 
 setlocal foldmethod=syntax              " Automatic folding by syntax
+set foldlevelstart=20
 
 "set autochdir                          " Your working directory will always be the same as your working directory
 "This is changes the directory everytime you open a file so if you open in a
