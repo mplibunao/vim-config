@@ -1,151 +1,160 @@
 {
-  "suggest.noselect": false,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
-    "typescript",
-    "typescriptreact",
-    "json",
-    "javascriptreact",
-    "typescript.tsx",
-    "graphql",
-    "css",
-    "markdown",
-    "scss",
-    "less",
-    "terraform",
-    "tf",
-    "yaml",
-    "yml",
-    "python",
-    "docker",
-    "md"
-  ],
+	"suggest.noselect": false,
+	"coc.preferences.formatOnSaveFiletypes": [
+		"javascript",
+		"typescript",
+		"typescriptreact",
+		"json",
+		"javascriptreact",
+		"typescript.tsx",
+		"graphql",
+		"css",
+		"markdown",
+		"scss",
+		"less",
+		"terraform",
+		"tf",
+		"yaml",
+		"yml",
+		"python",
+		"docker",
+		"md"
+	],
 
-  // snippets
-  "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
-  "snippets.extends": {
-    "typescript": ["typescriptreact"],
-    "javascript": ["typescriptreact", "javascriptreact"],
-    "javascriptreact": ["typescriptreact"],
-    "vimwiki": ["markdown"]
-  },
+	// snippets
+	"snippets.userSnippetsDirectory": "~/.config/nvim/snips",
+	"snippets.extends": {
+		"typescript": ["typescriptreact"],
+		"javascript": ["typescriptreact", "javascriptreact"],
+		"javascriptreact": ["typescriptreact"],
+		"vimwiki": ["markdown"]
+	},
 
-  // prettier config
-  "prettier.semi": true,
-  "prettier.singleQuote": true,
-  "prettier.jsxSingleQuote": true,
-  "prettier.useTabs": true,
+	// tsserver
+	// should be shortest but on backend it keeps giving me alias path even though I've removed it
+	"typescript.preferences.importModuleSpecifier": "non-relative",
 
-  // bigger diagnostic windows
-  // https://github.com/neoclide/coc.nvim/blob/master/doc/coc.txt
-  "diagnostic.maxWindowHeight": 160,
-  "diagnostic.maxWindowWidth": 160,
-  "diagnostic.messageTarget": "float",
-  "diagnostic.virtualText": true,
-  "diagnostic.virtualTextCurrentLineOnly": false,
-  "suggest.detailMaxLength": 160,
-  "suggest.maxPreviewWidth": 160,
-  "signature.maxWindowWidth": 80,
-  "signature.maxWindowHeight": 8,
-  "coc.preferences.previewMaxHeight": 16,
+	// tw
+	"tailwindCSS.emmetCompletions": true,
 
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact",
-    "typescript": "typescriptreact"
-  },
+	// prettier config
+	"prettier.semi": true,
+	"prettier.singleQuote": true,
+	"prettier.jsxSingleQuote": true,
+	"prettier.useTabs": true,
 
-  // git lens
-  //"git.addGBlameToVirtualText": true,
+	// bigger diagnostic windows
+	// https://github.com/neoclide/coc.nvim/blob/master/doc/coc.txt
+	"diagnostic.maxWindowHeight": 160,
+	"diagnostic.maxWindowWidth": 160,
+	"diagnostic.messageTarget": "float",
+	"diagnostic.virtualText": true,
+	"diagnostic.virtualTextCurrentLineOnly": false,
+	"suggest.detailMaxLength": 160,
+	"suggest.maxPreviewWidth": 160,
+	"signature.maxWindowWidth": 80,
+	"signature.maxWindowHeight": 8,
+	"coc.preferences.previewMaxHeight": 16,
 
-  "languageserver": {
-    "terraform": {
-      "command": "terraform-ls",
-      "args": ["serve"],
-      "filetypes": ["terraform", "tf", "hcl"],
-      "initializationOptions": {},
-      "settings": {}
-    },
-    // already included in coc-sh
-    //"bash": {
-    //"command": "bash-language-server",
-    //"args": ["start"],
-    //"filetypes": ["sh"]
-    //},
-    // kinda clunky with monorepos
-    //"graphql": {
-    //"command": "graphql-lsp",
-    //"args": ["server", "-m", "stream"],
-    //// customize filetypes to your needs
-    //"filetypes": [
-    //"typescript",
-    //"typescriptreact",
-    //"graphql",
-    //"javascript",
-    //"javascriptreact"
-    //]
-    //},
-    "dockerfile": {
-      "command": "docker-langserver",
-      "filetypes": ["dockerfile"],
-      "args": ["--stdio"]
-    }
-    // install failed
-    //"sql": {
-    //"command": "sql-language-server",
-    //"args" : ["up", "--method", "stdio"],
-    //"filetypes": ["sql", "mysql"]
-    //}
-  }
+	"emmet.includeLanguages": {
+		"javascript": "javascriptreact",
+		"typescript": "typescriptreact"
+	},
 
-  // import-cost
-  //"codeLens.enable": true,
-  //"importCost.debug": true,
-  //"importCost.typescriptExtensions": [
-  //"\\.tsx?$"
-  //]
+	// git lens
+	//"git.addGBlameToVirtualText": true,
 
-  // explorer
-  // "explorer.width": 30,
-  // "explorer.icon.enableNerdfont": true,
-  // "explorer.icon.enableVimDevicons": true,
-  // "explorer.previewAction.onHover": true,
-  // "explorer.position": "right",
-  // "explorer.keyMappings": {
-  //   "yp": "copyFilepath",
-  //   "yn": "copyFilename",
-  //   "yy": "copyFile",
-  //   "dd": "cutFile",
-  //   "p": "pasteFile",
-  //   "df": "delete",
-  //   "dF": "deleteForever",
+	"languageserver": {
+		"terraform": {
+			"command": "terraform-ls",
+			"args": ["serve"],
+			"filetypes": ["terraform", "tf", "hcl"],
+			"initializationOptions": {},
+			"settings": {}
+		},
+		// already included in coc-sh
+		//"bash": {
+		//"command": "bash-language-server",
+		//"args": ["start"],
+		//"filetypes": ["sh"]
+		//},
+		// kinda clunky with monorepos
+		"graphql": {
+			"command": "graphql-lsp",
+			"trace.server": "verbose",
+			"args": ["server", "-m", "stream"],
+			// customize filetypes to your needs
+			"filetypes": [
+				"typescript",
+				"typescriptreact",
+				"graphql",
+				"javascript",
+				"javascriptreact",
+				"gql"
+			]
+		},
+		"dockerfile": {
+			"command": "docker-langserver",
+			"filetypes": ["dockerfile"],
+			"args": ["--stdio"]
+		},
+		// install failed
+		"sql": {
+			"command": "sql-language-server",
+			"args": ["up", "--method", "stdio"],
+			"filetypes": ["sql", "mysql"]
+		}
+	}
 
-  //   "a": "addFile",
-  //   "A": "addDirectory",
-  //   "r": "rename",
+	// import-cost
+	//"codeLens.enable": true,
+	//"importCost.debug": true,
+	//"importCost.typescriptExtensions": [
+	//"\\.tsx?$"
+	//]
 
-  //   "zh": "toggleHidden",
-  //   "g<dot>": "toggleHidden",
-  //   "R": "refresh",
+	// explorer
+	// "explorer.width": 30,
+	// "explorer.icon.enableNerdfont": true,
+	// "explorer.icon.enableVimDevicons": true,
+	// "explorer.previewAction.onHover": true,
+	// "explorer.position": "right",
+	// "explorer.keyMappings": {
+	//   "yp": "copyFilepath",
+	//   "yn": "copyFilename",
+	//   "yy": "copyFile",
+	//   "dd": "cutFile",
+	//   "p": "pasteFile",
+	//   "df": "delete",
+	//   "dF": "deleteForever",
 
-  //   "?": "help",
-  //   "q": "quit",
-  //   "<esc>": "esc",
-  //   "X": "systemExecute",
-  //   "gd": "listDrive",
+	//   "a": "addFile",
+	//   "A": "addDirectory",
+	//   "r": "rename",
 
-  //   "f": "search",
-  //   "F": "searchRecursive",
+	//   "zh": "toggleHidden",
+	//   "g<dot>": "toggleHidden",
+	//   "R": "refresh",
 
-  //   "gf": "gotoSource:file",
-  //   "gb": "gotoSource:buffer"
-  // },
-  // "explorer.keyMappings.global": {
-  //   "<cr>": ["expandable?", "expand", "open"],
-  //   "t": "open:vsplit",
-  //   "s": "open:split"
-  // },
-  // "explorer.keyMappings.global": {
-  //   "<cr>": ["expandable?", ["expanded?", "collapse", "expand"], "open"]
-  // },
-  // "explorer.file.showHiddenFiles": true
+	//   "?": "help",
+	//   "q": "quit",
+	//   "<esc>": "esc",
+	//   "X": "systemExecute",
+	//   "gd": "listDrive",
+
+	//   "f": "search",
+	//   "F": "searchRecursive",
+
+	//   "gf": "gotoSource:file",
+	//   "gb": "gotoSource:buffer"
+	// },
+	// "explorer.keyMappings.global": {
+	//   "<cr>": ["expandable?", "expand", "open"],
+	//   "t": "open:vsplit",
+	//   "s": "open:split"
+	// },
+	// "explorer.keyMappings.global": {
+	//   "<cr>": ["expandable?", ["expanded?", "collapse", "expand"], "open"]
+	// },
+	// "explorer.file.showHiddenFiles": true
 }
