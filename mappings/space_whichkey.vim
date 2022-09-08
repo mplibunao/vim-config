@@ -72,6 +72,12 @@ let g:which_key_map.f = {
       \ 'R': [':PlugClean'                                , 'Remove unused plugs'],
       \ 'v': [':e $MYVIMRC'                               , 'open VIM init file']
     \ },
+    \ 'y': {
+      \ 'name': '+yabai',
+      \ 'c': [':e /Users/mp/vimwiki/TIL/macos/yabai.md'   , 'cheatsheet'],
+      \ 's': [':e ~/.config/skhd/skhdrc'                  , 'skhdrc'],
+      \ 'y': [':e ~/.config/yabai/yabairc'                , 'yabairc'],
+    \ },
     \ 'z': {
       \ 'name': '+zsh',
       \ 'a': [':e ~/.zsh_config/aliases.zsh'              , 'open zsh aliases'],
