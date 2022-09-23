@@ -38,12 +38,10 @@ snippet consolelog "console.log" b
 console.log('$1', $1)
 endsnippet
 
-snippet tsxeaf "typecript type react exported arrow function" b
-import React from 'react'
-
+snippet tsxteaf "typecript type react exported arrow function" b
 export type $1Props = {}
 
-export const $1 = (_props: $1Props): JSX.Element => {
+export const $1 = (_props: $1Props): React.ReactNode => {
 	return <div>$1</div>
 }
 
@@ -51,38 +49,40 @@ export default $1
 endsnippet
 
 snippet tsxieaf "typecript interface react exported arrow function" b
-import React from 'react'
-
 export interface $1Props {}
 
-export const $1 = (_props: $1Props): JSX.Element => {
+export const $1 = (_props: $1Props): React.ReactNode => {
 	return <div>$1</div>
 }
 
 export default $1 
 endsnippet
 
-snippet tsxieaf "typecript interface react.fc" b
-import React from 'react'
+#snippet tsxieaf "typecript interface react.fc" b
+#import React from 'react'
 
-export interface $1Props {}
+#export interface $1Props {}
 
-export const $1: React.FC<$1Props> = () => {
-	return <div>$1</div>
-}
+#export const $1: React.FC<$1Props> = () => {
+	#return <div>$1</div>
+#}
 
-export default $1 
-endsnippet
+#export default $1 
+#endsnippet
 
-snippet impc "es6 Import const" b
+snippet importnamed "es6 named imports" b
 import { $2 } from '$1';
 endsnippet
 
-snippet impd "es6 Import default" b
+snippet importdefault "es6 Import default" b
 import $2 from '$1';
 endsnippet
 
-snippet exp "named export" b
+snippet importmodule "es6 Import default" b
+import * as $2 from '$1';
+endsnippet
+
+snippet barrelexports "barrel exports" b
 export * from './$1'
 endsnippet
 
@@ -90,7 +90,7 @@ snippet react "import react" b
 import React from 'react'
 endsnippet
 
-snippet tsxasync "export async function" b
+snippet asyncfunctrycatch "export async function with try catch" b
 export const $1 = async () => {
 	try {
 
@@ -110,28 +110,28 @@ snippet tsignore "ts-ignore" b
 // @ts-ignore
 endsnippet
 
-snippet sct "Self Closing tag"
+snippet selfclosingtag "Self Closing tag"
 <$1 />
 endsnippet
 
-snippet oct "Open Close tag"
+snippet openclosetag "Open Close tag"
 <$1>
 	$2
 </$1>
 endsnippet
 
-snippet apollomutation "Apollo mutation" b
-const [$1, { loading }] = useMutation($2)
-endsnippet
+#snippet apollomutation "Apollo mutation" b
+#const [$1, { loading }] = useMutation($2)
+#endsnippet
 
-snippet apolloquery "Apollo useQuery" b
-const { data, loading } = useQuery($1)
-endsnippet
+#snippet apolloquery "Apollo useQuery" b
+#const { data, loading } = useQuery($1)
+#endsnippet
 
-snippet apollosubscription "Apollo useSubscription" b
-const { data } = useSubscription($1)
-endsnippet
+#snippet apollosubscription "Apollo useSubscription" b
+#const { data } = useSubscription($1)
+#endsnippet
 
-snippet jsthrow "Throw new error" b
+snippet throwerror "Throw new error" b
 throw new Error($1)
 endsnippet

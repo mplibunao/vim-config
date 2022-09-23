@@ -32,16 +32,20 @@
 
 	// tsserver
 	// should be shortest but on backend it keeps giving me alias path even though I've removed it
-	"typescript.preferences.importModuleSpecifier": "non-relative",
+	"typescript.preferences.importModuleSpecifier": "shortest",
 
 	// tw
 	"tailwindCSS.emmetCompletions": true,
 
 	// prettier config
-	"prettier.semi": true,
+	"prettier.semi": false,
 	"prettier.singleQuote": true,
 	"prettier.jsxSingleQuote": true,
 	"prettier.useTabs": true,
+
+	// eslint
+	"eslint.autoFixOnSave": true,
+	"eslint.run": "onSave",
 
 	// bigger diagnostic windows
 	// https://github.com/neoclide/coc.nvim/blob/master/doc/coc.txt
@@ -97,21 +101,26 @@
 			"command": "docker-langserver",
 			"filetypes": ["dockerfile"],
 			"args": ["--stdio"]
-		},
-		// install failed
-		"sql": {
-			"command": "sql-language-server",
-			"args": ["up", "--method", "stdio"],
-			"filetypes": ["sql", "mysql"]
 		}
+		// install failed
+		//"sql": {
+		//"command": "sql-language-server",
+		//"args": ["up", "--method", "stdio"],
+		//"filetypes": ["sql", "mysql"]
+		//}
 	}
 
 	// import-cost
 	//"codeLens.enable": true,
 	//"importCost.debug": true,
 	//"importCost.typescriptExtensions": [
-	//"\\.tsx?$"
-	//]
+	//"\\.tsx?$",
+	//"\\.ts?$"
+	//],
+	// Which bundle size to display
+	//"importCost.bundleSizeDecoration": "both",
+	// Display the 'calculating' decoration
+	//"importCost.showCalculatingDecoration": true
 
 	// explorer
 	// "explorer.width": 30,

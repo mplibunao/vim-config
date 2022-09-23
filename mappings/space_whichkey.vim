@@ -131,6 +131,7 @@ let g:which_key_map.l = {
     \ 'n': ['<Plug>(coc-diagnostic-prev)'                          , 'next diagnostic (,[)'],
   \ },
   \ 'e': [':CocList extensions'                                    , 'manage extensions'],
+  \ 'E': [':CocCommand eslint.restart', 'Restart eslint'],
   \ 'g': {
     \ 'name': '+go to',
     \ 'd': ['<Plug>(coc-definition)'                               , 'go to definition (,d)'],

@@ -43,7 +43,7 @@ Plug 'yaegassy/coc-ansible', {'do': 'yarn install --frozen-lockfile'}
 
 " Auto pairs for () [] {}
 Plug 'jiangmiao/auto-pairs'
-"Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'junegunn/rainbow_parentheses.vim'
 
 " Theme
 Plug 'joshdick/onedark.vim'
@@ -66,7 +66,7 @@ Plug 'airblade/vim-rooter'
 Plug 'HerringtonDarkholme/yats.vim'
 
 " Color
-"Plug 'norcalli/nvim-colorizer.lua'
+Plug 'norcalli/nvim-colorizer.lua'
 
 " Home screen and sessions
 Plug 'mhinz/vim-startify'
@@ -125,9 +125,11 @@ Plug 'https://github.com/szw/vim-maximizer'
 
 " Tailwind-coc seems to be archived
 Plug 'yaegassy/coc-tailwindcss3', {'do': 'yarn install --frozen-lockfile'}
+Plug 'github/copilot.vim'
 
 "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 "Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+
 
 call plug#end()

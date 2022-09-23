@@ -25,3 +25,13 @@ vnoremap ,l y<esc>oconsole.log("<c-r>"", <c-r>"); // eslint-disable-line no-cons
 nnoremap <silent> <Space>tf @=(foldlevel('.')?'za':"\<Space>")<CR>
 "vnoremap <Space>tf zf
 vnoremap <Space>tf za
+
+
+" Copilot
+" Cycle through suggestions
+imap <C-]> <Plug>(copilot-next)
+imap <C-[> <Plug>(copilot-previous)
+" Disable tab so it doesn't conflict with completion/snippets
+imap <silent><script><expr> <C-a> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
+imap <C-`> <Plug>(copilot-dismiss)

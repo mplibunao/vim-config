@@ -1,4 +1,5 @@
 " coc config
+
 let g:coc_global_extensions = [
       \ 'coc-json',
       \ 'coc-elixir',
@@ -12,14 +13,15 @@ let g:coc_global_extensions = [
       \ 'coc-marketplace',
       \ 'coc-yank',
       "\ 'coc-tailwindcss',
+      "\ '@yaegassy/coc-tailwindcss3',
       \ 'coc-emmet',
       \ 'coc-react-refactor',
-      \ 'coc-tabnine',
+      "\ 'coc-tabnine',
       \ 'coc-markdownlint',
       \ 'coc-css',
       \ 'coc-pyright',
       "\ 'coc-import-cost',
-      \ 'coc-sql',
+      "\ 'coc-sql',
       "\ 'coc-git'
    \ ]
 
