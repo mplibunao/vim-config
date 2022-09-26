@@ -125,7 +125,13 @@ Plug 'https://github.com/szw/vim-maximizer'
 
 " Tailwind-coc seems to be archived
 Plug 'yaegassy/coc-tailwindcss3', {'do': 'yarn install --frozen-lockfile'}
+
 Plug 'github/copilot.vim'
+
+Plug 'yardnsm/vim-import-cost', { 'do': 'npm install --production' }
+
+" Indent guides
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 

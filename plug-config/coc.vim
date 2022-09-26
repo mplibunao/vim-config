@@ -20,6 +20,8 @@ let g:coc_global_extensions = [
       \ 'coc-markdownlint',
       \ 'coc-css',
       \ 'coc-pyright',
+      \ 'coc-svg',
+      \ 'coc-lightbulb',
       "\ 'coc-import-cost',
       "\ 'coc-sql',
       "\ 'coc-git'
@@ -118,6 +120,7 @@ augroup mygroup
     autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
     " organize import
     autocmd FileType typescript BufWritePre * :call CocAction('runCommand', 'editor.action.organizeImport')
+    autocmd FileType scss setl iskeyword+=@-@
 augroup end
 
 " Map function and class text objects

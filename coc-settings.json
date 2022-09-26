@@ -36,6 +36,7 @@
 
 	// tw
 	"tailwindCSS.emmetCompletions": true,
+	"tailwindCSS.hover": true,
 
 	// prettier config
 	"prettier.semi": false,

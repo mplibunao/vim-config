@@ -54,6 +54,9 @@ set whichwrap+=<,>,h,l                  " move left/right on end of the line goe
 autocmd BufRead,BufNewFile *.md setlocal spell " Spell check
 autocmd FileType gitcommit setlocal spell      " spell check
 set complete+=kspell                           " Autocomplete
+" I think this conflicts with indent-blackline.lua as is overrides everything instead of appending
+"set listchars=tab:·\ ,trail:·,precedes:←,extends:→,nbsp:·
+
 
 "set regexpengine=1                     " For performance
 set lazyredraw                         " redraw as few times as possible (for performance)
