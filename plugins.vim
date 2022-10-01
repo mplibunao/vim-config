@@ -124,7 +124,7 @@ Plug 'mattn/emmet-vim'
 Plug 'https://github.com/szw/vim-maximizer'
 
 " Tailwind-coc seems to be archived
-Plug 'yaegassy/coc-tailwindcss3', {'do': 'yarn install --frozen-lockfile'}
+"Plug 'yaegassy/coc-tailwindcss3', {'do': 'yarn install --frozen-lockfile'}
 
 Plug 'github/copilot.vim'
 

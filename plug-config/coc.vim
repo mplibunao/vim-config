@@ -13,7 +13,7 @@ let g:coc_global_extensions = [
       \ 'coc-marketplace',
       \ 'coc-yank',
       "\ 'coc-tailwindcss',
-      "\ '@yaegassy/coc-tailwindcss3',
+      \ '@yaegassy/coc-tailwindcss3',
       \ 'coc-emmet',
       \ 'coc-react-refactor',
       "\ 'coc-tabnine',

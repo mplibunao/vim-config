@@ -37,8 +37,13 @@
 	"typescript.preferences.importModuleSpecifier": "shortest",
 
 	// tw
+	"tailwindCSS.enable": true,
 	"tailwindCSS.emmetCompletions": true,
 	"tailwindCSS.hover": true,
+	"tailwindCSS.includeLanguages": {
+		"javascript": "javascriptreact",
+		"typescript": "typescriptreact"
+	},
 
 	// prettier config
 	"prettier.semi": false,

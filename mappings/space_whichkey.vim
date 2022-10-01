@@ -122,7 +122,12 @@ let g:which_key_map.l = {
     \ 'n': [':CocNext'                                             , 'do default action for next item'],
     \ 'p': [':CocPrev'                                             , 'do default action for previous item'],
   \ },
-  \ 'c': [':CocList commands'                                      , 'show commands'],
+  \ 'c': {
+    \ 'name': '+coc',
+    \ 'c': [':CocList commands'                                      , 'show commands'],
+    \ 's': [':CocList services'                                      , 'show services'],
+    \ 'o': [':CocCommand tailwindCSS.showOutput'                     , 'debug (tailwind)'],
+  \ },
   \ 'C': [':CocConfig'                                             , 'coc config'],
   \ 'd': {
     \ 'name': '+diagnostics',
