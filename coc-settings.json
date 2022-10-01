@@ -19,6 +19,8 @@
 		"python",
 		"docker",
 		"md"
+		"html",
+		"svg"
 	],
 
 	// snippets
