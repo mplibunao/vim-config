@@ -40,11 +40,14 @@
 	// tw
 	"tailwindCSS.enable": true,
 	"tailwindCSS.emmetCompletions": true,
-	"tailwindCSS.hover": true,
+	"tailwindCSS.hovers": true,
 	"tailwindCSS.includeLanguages": {
 		"javascript": "javascriptreact",
 		"typescript": "typescriptreact"
 	},
+	"tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+	],
 
 	// prettier config
 	"prettier.semi": false,
