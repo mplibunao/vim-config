@@ -26,7 +26,7 @@ let g:coc_global_extensions = [
       "\ 'coc-import-cost',
       "\ 'coc-sql',
       "\ 'coc-git'
-   \ ]
+\ ]
 
 " Commands
 " prettier command for coc
@@ -97,7 +97,9 @@ endif
 "nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
+" Shows types, tailwind classes wtf didn't know this
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -120,6 +122,7 @@ augroup mygroup
     " Update signature help on jump placeholder
     autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
     " organize import
+    " I don't know wtf is wrong but I inconsistently get errors on tsx files
     autocmd FileType typescript BufWritePre * :call CocAction('runCommand', 'editor.action.organizeImport')
     autocmd FileType scss setl iskeyword+=@-@
     " To format on save prisma files
