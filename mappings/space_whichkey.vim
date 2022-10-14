@@ -126,7 +126,7 @@ let g:which_key_map.l = {
     \ 'name': '+coc',
     \ 'c': [':CocList commands'                                      , 'show commands'],
     \ 's': [':CocList services'                                      , 'show services'],
-    \ 'o': [':CocCommand tailwindCSS.showOutput'                     , 'debug (tailwind)'],
+    \ 'l': [':CocListResume'                                         , 'resume latest coc list'],
   \ },
   \ 'C': [':CocConfig'                                             , 'coc config'],
   \ 'd': {
@@ -144,7 +144,11 @@ let g:which_key_map.l = {
     \ 'i': ['<Plug>(coc-implementation)'                           , 'implementation (,i)'],
     \ 'r': ['<Plug>(coc-references)'                               , 'references (,r)'],
   \ },
-  \ 'l': [':CocListResume'                                         , 'resume latest coc list'],
+  \ 'l': {
+    \ 'name': '+languages',
+    \ 't': [':CocCommand tailwindCSS.showOutput'                     , 'debug (tailwind)'],
+    \ 'o': [':CocCommand workspace.showOutput'                      , 'Show output'],
+  \ },
   \ 'i': ["CocAction('runCommand', 'editor.action.organizeImport')", 'organize imports'],
   \ 'O': ['<C-u>CocList outline<cr>'                               , 'find symbol of current document'],
   \ 'p': [':CocCommand prettier.formatFile'                        , 'format file (:Prettier)'],
@@ -226,10 +230,10 @@ let g:which_key_map.S = {
 " t is for toggle
 let g:which_key_map.t = {
   \ 'name': '+toggle',
-  \ 'b': [':BlamerToggle'                       , 'toggle blamer (git lens)'],
+  \ 'b': [':BlamerToggle'               , 'toggle blamer (git lens)'],
   \ 'c': [':Codi'                       , 'turn on codi'],
   \ 'C': [':Codi!'                      , 'turn off codi'],
-  \ 'g': [':MaximizerToggle'        , 'golden-ratio'],
+  \ 'g': [':MaximizerToggle'            , 'golden-ratio'],
   "\ 'g': [':Goyo'                      , 'goyo'],
   "\ 'G': [':Goyo 100%x85'               , 'goyo 100%'],
   \ 'l': ['ChangeLineNumbering()'       , 'line number'],
