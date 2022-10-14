@@ -148,6 +148,7 @@ let g:which_key_map.l = {
   \ 'i': ["CocAction('runCommand', 'editor.action.organizeImport')", 'organize imports'],
   \ 'O': ['<C-u>CocList outline<cr>'                               , 'find symbol of current document'],
   \ 'p': [':CocCommand prettier.formatFile'                        , 'format file (:Prettier)'],
+  \ 'P': [':Format'                                                , 'format file :Format (Use for prisma)'],
   \ 'r': ["CocAction('runCommand', 'editor.action.restart')"       , 'restart (f2)'],
   "\ 'r': ['<Plug>(coc-rename)'                                     , 'rename (f2)'],
   \ 'R': [':CocCommand workspace.renameCurrentFile'                , 'rename current file'],

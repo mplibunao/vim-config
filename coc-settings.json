@@ -20,7 +20,8 @@
 		"docker",
 		"md",
 		"html",
-		"svg"
+		"svg",
+		"prisma"
 	],
 
 	// snippets

@@ -22,6 +22,7 @@ let g:coc_global_extensions = [
       \ 'coc-pyright',
       \ 'coc-svg',
       \ 'coc-lightbulb',
+      \ 'coc-prisma'
       "\ 'coc-import-cost',
       "\ 'coc-sql',
       "\ 'coc-git'
@@ -121,6 +122,8 @@ augroup mygroup
     " organize import
     autocmd FileType typescript BufWritePre * :call CocAction('runCommand', 'editor.action.organizeImport')
     autocmd FileType scss setl iskeyword+=@-@
+    " To format on save prisma files
+    autocmd FileType prisma BufWritePost * call CocActionAsync('format')
 augroup end
 
 " Map function and class text objects

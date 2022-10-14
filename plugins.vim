@@ -133,6 +133,9 @@ Plug 'yardnsm/vim-import-cost', { 'do': 'npm install --production' }
 " Indent guides
 Plug 'lukas-reineke/indent-blankline.nvim'
 
+" Syntax highlighting and file detection
+Plug 'pantharshit00/vim-prisma'
+
 "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 "Plug 'JoosepAlviste/nvim-ts-context-commentstring'
