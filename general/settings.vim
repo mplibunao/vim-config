@@ -31,7 +31,7 @@ set autoindent                          " Good auto indent
 set cindent                             " Automaticall indent braces
 set laststatus=0                        " Always display the status line
 set nonumber                            " No Line numbers
-set norelativenumber                    " No relative line numbers (adds lag)
+set relativenumber                      " No relative line numbers (adds lag)
 set nocursorline                        " Enable highlighting of the current line (Adds lag)
 set background=dark                     " tell vim what the background color looks like
 set showtabline=2                       " Always show tabs
