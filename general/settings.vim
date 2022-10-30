@@ -3,6 +3,7 @@ let g:mapleader = "\<Space>"
 
 syntax on                               " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
+set autowriteall " auto save?
 set wrap                                " Wrap lines visually
 "set linebreak                           " don't wrap in the middle of a word
 "set nolist                              " For wrapping as well
