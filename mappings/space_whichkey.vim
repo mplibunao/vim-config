@@ -95,19 +95,20 @@ let g:which_key_map.f = {
 " g is for git 
 let g:which_key_map.g = {
   \ 'name': '+git',
-  \ 'b': [':Git blame'     ,'git blame'],
-  \ 'c': [':Git commit'    , 'git commit'],
-  \ 'd': [':Git diff'      , 'git diff'],
-  \ 'l': [':Git log'       , 'git log'],
-  \ 'r': [':Git rebase -i' , 'git rebase'],
-  \ 's': [':LazyGit'       , 'lazygit'],
-  \ 'B': [':GBrowse'       , 'open in browser'],
-  \ 'h': [':Commits'       , 'git history'],
-  \ 'H': [':BCommit!'      , 'git history for the file'],
-  \ 'p': [':Git push'      , 'git push'],
-  \ 'f': [':GFiles'        , 'show all git files'],
-  \ 'm': [':GFiles?'       , 'modified git files'],
-  \ 'C': [':LazyGitConfig' , 'lazygit config']
+  \ 'b': [':Git blame'        ,'git blame'],
+  \ 'c': [':Git commit'       , 'git commit'],
+  \ 'd': [':Git diff'         , 'git diff'],
+  \ 'l': [':Git log'          , 'git log'],
+  \ 'r': [':Git rebase -i'    , 'git rebase'],
+  \ 's': [':LazyGit'          , 'lazygit'],
+  \ 'S': [':SignifyEnableAll' , 'Enable signify to all buffers'],
+  \ 'B': [':GBrowse'          , 'open in browser'],
+  \ 'h': [':Commits'          , 'git history'],
+  \ 'H': [':BCommit!'         , 'git history for the file'],
+  \ 'p': [':Git push'         , 'git push'],
+  \ 'f': [':GFiles'           , 'show all git files'],
+  \ 'm': [':GFiles?'          , 'modified git files'],
+  \ 'C': [':LazyGitConfig'    , 'lazygit config']
 \ }
 
 
@@ -239,7 +240,6 @@ let g:which_key_map.t = {
   \ 'l': ['ChangeLineNumbering()'       , 'line number'],
   \ 'p': ['<M-p>'                       , 'auto-pairs'],
   \ 'q': [':QuickScopeToggle'           , 'quick scope highlight'],
-  \ 's': [':SignifyToggle'              , 'toggle vim signify (hunks)'],
   "\ 't': [':Twilight'                   , 'twilight']
 \ }
 
