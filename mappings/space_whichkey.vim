@@ -239,6 +239,7 @@ let g:which_key_map.t = {
   \ 'l': ['ChangeLineNumbering()'       , 'line number'],
   \ 'p': ['<M-p>'                       , 'auto-pairs'],
   \ 'q': [':QuickScopeToggle'           , 'quick scope highlight'],
+  \ 's': [':SignifyToggle'              , 'toggle vim signify (hunks)'],
   "\ 't': [':Twilight'                   , 'twilight']
 \ }
 
