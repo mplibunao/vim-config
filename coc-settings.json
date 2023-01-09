@@ -46,7 +46,7 @@
 		"typescript": "typescriptreact"
 	},
 	"tailwindCSS.experimental.classRegex": [
-    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+		["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
 	],
 
 	// prettier config
@@ -87,6 +87,13 @@
 			"filetypes": ["terraform", "tf", "hcl"],
 			"initializationOptions": {},
 			"settings": {}
+		},
+
+		"tflint": {
+			"command": "tflint",
+			"args": ["--langserver"],
+			"filetypes": ["terraform", "tf"],
+      "rootPatterns": ["main.tf", "Makefile", ".git"]
 		},
 		// already included in coc-sh
 		//"bash": {

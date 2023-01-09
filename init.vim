@@ -8,6 +8,7 @@ source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/themes/airline.vim
 "source $HOME/.config/nvim/themes/statusline.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
+"luafile $HOME/.config/nvim/lua/tabnine.lua
 luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 source $HOME/.config/nvim/plug-config/rainbow.vim
 "source $HOME/.config/nvim/lua/treesitter.vim
@@ -20,7 +21,6 @@ source $HOME/.config/nvim/plug-config/snippets.vim
 source $HOME/.config/nvim/plug-config/vimwiki.vim
 source $HOME/.config/nvim/plug-config/fzf-project.vim
 source $HOME/.config/nvim/plug-config/markdown-preview.vim
-source $HOME/.config/nvim/plug-config/import-cost.vim
 source $HOME/.config/nvim/plug-config/copilot.vim
 luafile $HOME/.config/nvim/lua/indent-blackline.lua
 

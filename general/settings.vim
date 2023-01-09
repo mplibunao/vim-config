@@ -31,14 +31,18 @@ set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
 set cindent                             " Automaticall indent braces
 set laststatus=0                        " Always display the status line
-set nonumber                            " No Line numbers
-set relativenumber                      " No relative line numbers (adds lag)
+set number                              " Enable line number
+"set nonumber                           " No Line numbers
+"set relativenumber                     " No relative line numbers (adds lag)
+set nu                                 " Enable line number
 set nocursorline                        " Enable highlighting of the current line (Adds lag)
 set background=dark                     " tell vim what the background color looks like
 set showtabline=2                       " Always show tabs
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
+"set undodir=~/.config/nvim/undodir      " set an undo directory
+"set undofile                            " enable persistent undo
 set updatetime=300                      " Faster completion
 set timeoutlen=100                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
@@ -51,9 +55,14 @@ set noswapfile                          " Disable swapfiles
 set incsearch                           " Highlight the searching string while typing
 set nocompatible                        " For vim wiki
 filetype plugin on                      " For vim wiki, nerdcommenter
+set scrolloff=8                         " Make it so there are always eight lines below my cursor
 set whichwrap+=<,>,h,l                  " move left/right on end of the line goes to next line
-autocmd BufRead,BufNewFile *.md setlocal spell " Spell check
-autocmd FileType gitcommit setlocal spell      " spell check
+augroup spellcheck
+  autocmd!
+  autocmd BufRead,BufNewFile *.md setlocal spell " Spell check
+  autocmd FileType gitcommit setlocal spell      " spell check
+  autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+augroup END
 set complete+=kspell                           " Autocomplete
 " I think this conflicts with indent-blackline.lua as is overrides everything instead of appending
 "set listchars=tab:·\ ,trail:·,precedes:←,extends:→,nbsp:·

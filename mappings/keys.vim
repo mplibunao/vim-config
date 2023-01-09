@@ -27,8 +27,8 @@ nnoremap <silent> <Space>tf @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space>tf za
 
 " Ctrl + s to save on insert mode
-inoremap <c-s> <esc>:w!<cr>
-vnoremap <C-s> :w!<CR>
-nnoremap <C-s> :w!<CR>
+inoremap <silent><c-s> <esc>:w!<cr>
+vnoremap <silent><c-s> :w!<cr>
+nnoremap <silent><c-s> :w!<cr>
 
 

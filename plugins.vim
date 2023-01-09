@@ -127,8 +127,9 @@ Plug 'https://github.com/szw/vim-maximizer'
 "Plug 'yaegassy/coc-tailwindcss3', {'do': 'yarn install --frozen-lockfile'}
 
 Plug 'github/copilot.vim'
+"Plug 'codota/tabnine-nvim', { 'do': './dl_binaries.sh' }
 
-Plug 'yardnsm/vim-import-cost', { 'do': 'npm install --production' }
+"Plug 'yardnsm/vim-import-cost', { 'do': 'npm install --production' }
 
 " Indent guides
 Plug 'lukas-reineke/indent-blankline.nvim'
@@ -140,5 +141,8 @@ Plug 'pantharshit00/vim-prisma'
 
 "Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
+" LSP stuff for tw
+"Plug 'neovim/nvim-lspconfig'
+"Plug 'kabouzeid/nvim-lspinstall'
 
 call plug#end()
