@@ -110,6 +110,8 @@ function! s:show_documentation()
 endfunction
 
 " Highlight symbol under cursor on CursorHold
+" Note: Don't change this to <SID>show_documentation() as it keeps opening
+" random stuff even when mouse is off-screen
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word

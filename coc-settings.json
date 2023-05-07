@@ -36,6 +36,11 @@
 	// tsserver
 	// should be shortest but on backend it keeps giving me alias path even though I've removed it
 	"typescript.preferences.importModuleSpecifier": "shortest",
+	// use typescript from node_modules
+	"tsserver.tsdk": "node_modules/typescript/lib",
+	// use tsserver from ts module in workspace. Ignore tsserver.tsdk
+	"tsserver.useLocalTsdk": true,
+	"typescript.inlayHints.functionLikeReturnTypes.enabled": true,
 
 	// tw
 	"tailwindCSS.enable": true,
@@ -101,21 +106,22 @@
 		//"args": ["start"],
 		//"filetypes": ["sh"]
 		//},
+
 		// kinda clunky with monorepos
-		"graphql": {
-			"command": "graphql-lsp",
-			"trace.server": "verbose",
-			"args": ["server", "-m", "stream"],
-			// customize filetypes to your needs
-			"filetypes": [
-				"typescript",
-				"typescriptreact",
-				"graphql",
-				"javascript",
-				"javascriptreact",
-				"gql"
-			]
-		},
+		//"graphql": {
+			//"command": "graphql-lsp",
+			//"trace.server": "verbose",
+			//"args": ["server", "-m", "stream"],
+			//// customize filetypes to your needs
+			//"filetypes": [
+				//"typescript",
+				//"typescriptreact",
+				//"graphql",
+				//"javascript",
+				//"javascriptreact",
+				//"gql"
+			//]
+		//},
 		"dockerfile": {
 			"command": "docker-langserver",
 			"filetypes": ["dockerfile"],

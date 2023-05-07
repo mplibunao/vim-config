@@ -1,6 +1,7 @@
 " set leader key
 let g:mapleader = "\<Space>"
 
+set nocompatible                        " For vim wiki
 syntax on                               " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set autowriteall " auto save?
@@ -30,7 +31,6 @@ set smarttab                            " Makes tabbing smarter will realize you
 set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
 set cindent                             " Automaticall indent braces
-set laststatus=0                        " Always display the status line
 set number                              " Enable line number
 "set nonumber                           " No Line numbers
 "set relativenumber                     " No relative line numbers (adds lag)
@@ -38,7 +38,8 @@ set nu                                 " Enable line number
 set nocursorline                        " Enable highlighting of the current line (Adds lag)
 set background=dark                     " tell vim what the background color looks like
 set showtabline=2                       " Always show tabs
-set noshowmode                          " We don't need to see things like -- INSERT -- anymore
+set noshowmode                         " We don't need to see things like -- INSERT -- anymore
+set laststatus=0                        " Always display the status line
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 "set undodir=~/.config/nvim/undodir      " set an undo directory
@@ -53,7 +54,6 @@ set noerrorbells                        " Disable error bells
 set vb t_vb=                            " Disable error bells
 set noswapfile                          " Disable swapfiles
 set incsearch                           " Highlight the searching string while typing
-set nocompatible                        " For vim wiki
 filetype plugin on                      " For vim wiki, nerdcommenter
 set scrolloff=8                         " Make it so there are always eight lines below my cursor
 set whichwrap+=<,>,h,l                  " move left/right on end of the line goes to next line
