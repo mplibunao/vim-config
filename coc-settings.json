@@ -36,6 +36,7 @@
 	// tsserver
 	// should be shortest but on backend it keeps giving me alias path even though I've removed it
 	"typescript.preferences.importModuleSpecifier": "shortest",
+	//"typescript.preferences.importModuleSpecifier": "relative",
 	// use typescript from node_modules
 	"tsserver.tsdk": "node_modules/typescript/lib",
 	// use tsserver from ts module in workspace. Ignore tsserver.tsdk
