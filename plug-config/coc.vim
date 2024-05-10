@@ -16,12 +16,13 @@ let g:coc_global_extensions = [
       \ '@yaegassy/coc-tailwindcss3',
       \ 'coc-emmet',
       \ 'coc-react-refactor',
-      "\ 'coc-tabnine',
+      \ 'coc-tabnine',
       \ 'coc-markdownlint',
       \ 'coc-css',
       \ 'coc-pyright',
       \ 'coc-svg',
       \ 'coc-lightbulb',
+      \ 'coc-diagnostic',
       \ 'coc-prisma'
       "\ 'coc-import-cost',
       "\ 'coc-sql',
@@ -125,8 +126,9 @@ augroup mygroup
     autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
     " organize import
     " I don't know wtf is wrong but I inconsistently get errors on tsx files
-    autocmd FileType typescript BufWritePre * :call CocAction('runCommand', 'editor.action.organizeImport')
+    "autocmd FileType typescript BufWritePre * :call CocAction('runCommand', 'editor.action.organizeImport')
     autocmd FileType scss setl iskeyword+=@-@
+    autocmd FileType css setl iskeyword+=-
     " To format on save prisma files
     autocmd FileType prisma BufWritePost * call CocActionAsync('format')
 augroup end

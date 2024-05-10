@@ -10,14 +10,23 @@ vnoremap > >gv
 " Space tab in normal mode will move to text buffer
 nnoremap <space><tab> <C-^>
 
-" Console.log whole line
-" ,l
-nnoremap ,l 0v$hy<esc>oconsole.info(<c-r>", "<c-r>"")<esc>
+" Logger mappings contains 2 versions:
+" - whole line
+" - visual mode which only logs the selected
+" you can also add custom loggers and custom levels (info, error)
+" I kept console to just log since you would usually use a custom logger like pino if levels are important to you but you can add more as well
 
-" Console.log selected text
-" ,l on visual mode
+" JS/TS
+" ,l = console.log
+nnoremap ,l 0v$hy<esc>oconsole.log(<c-r>", "<c-r>"")<esc>
 "vnoremap ,l y<esc>oconsole.log("<c-r>"", <c-r>")<esc>
-vnoremap ,l y<esc>oconsole.info(<c-r>", "<c-r>"")<esc>
+vnoremap ,l y<esc>oconsole.log(<c-r>", "<c-r>"")<esc>
+
+" Elixir logging
+" ,e = IO.inpect
+nnoremap ,e 0v$hy<esc>oIO.inspect(<C-r>=substitute(@", '\n', '', 'g')<CR>, label:"
+vnoremap ,e y<Esc>oIO.inspect(<C-r>=substitute(@", '\n', '', 'g')<CR>, label:"
+"vnoremap ,e y<esc>oIO.inspect(<esc>*", label:"<esc>
 
 " search
 "nnoremap <space>/ :Rg<CR>

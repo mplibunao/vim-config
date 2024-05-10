@@ -62,6 +62,12 @@ export default function $1 (_props: $1Props): JSX.Element {
 }
 endsnippet
 
+snippet tsxedf "typescript react exported default function" b
+export default function $1 (): JSX.Element {
+	return <div>$1</div>
+}
+endsnippet
+
 #snippet tsxieaf "typecript interface react.fc" b
 #import React from 'react'
 
@@ -104,6 +110,15 @@ export const $1 = async () => {
 }
 endsnippet
 
+snippet trycatch "trycatch with err (for pino)" b
+try {
+	$1
+} catch (err) {
+
+}
+endsnippet
+
+
 snippet tsxfunc "export function" b
 export const $1 = () => {
 	$2
@@ -138,4 +153,68 @@ endsnippet
 
 snippet throwerror "Throw new error" b
 throw new Error($1)
+endsnippet
+
+# Remix snippets
+
+#import type { DataFunctionArgs } from '@remix-run/node'
+snippet remixloader "Remix loader" b
+export const loader = async ($1: DataFunctionArgs) => {
+	$2
+}
+endsnippet
+
+#import { useLoaderData } from '@remix-run/react'
+snippet remixuseloaderdata "Remix useLoaderData" b
+const $1 = useLoaderData<typeof loader>() 
+endsnippet
+
+#import type { ActionArgs } from '@remix-run/node'
+snippet remixaction "Remix action" b
+export const action = async ($1: ActionArgs) => {
+	$2
+}
+endsnippet
+
+#import { useActionData } from '@remix-run/react'
+snippet remixuseactiondata "Remix useActionData" b
+const $1 = useActionData<typeof action>()
+endsnippet
+
+#import type { HeadersFunction } from '@remix-run/node'
+snippet remixheaders "Remix headers" b
+export const headers: HeadersFunction = ({ loaderHeaders }) => ({
+	'Cache-Control': loaderHeaders.get('Cache-Control') ?? '',
+})
+endsnippet
+
+#import type { LinksFunction } from '@remix-run/node'
+snippet remixlinks "Remix links" b
+export const links: LinksFunction = () {
+	return [
+		$1
+	]
+}
+endsnippet
+
+#import type { V2_MetaFunction } from '@remix-run/node'
+snippet remixmeta "Remix meta" b
+export const meta: V2_MetaFunction<typeof loader> = ({ data }) => [{
+	title: $1,
+}]
+endsnippet
+
+#import type { ShouldRevalidateFunction } from '@remix-run/react'
+snippet remixshouldrevalidate "Remix should revalidate" b
+export const shouldRevalidate: ShouldRevalidateFunction = ({
+	defaultShouldRevalidate
+}) => {
+	return defaultShouldRevalidate
+}
+endsnippet
+
+snippet remixstylesurface "Remix surface styles" b
+import $2 from '$3'
+
+export const $1Links: LinkDescriptor[] = [{ rel: 'stylesheet', href: $2 }]
 endsnippet

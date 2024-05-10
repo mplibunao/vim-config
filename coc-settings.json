@@ -12,6 +12,7 @@
 		"markdown",
 		"scss",
 		"less",
+		"elixir",
 		"terraform",
 		"tf",
 		"yaml",
@@ -33,6 +34,26 @@
 		"vimwiki": ["markdown"]
 	},
 
+	"markdownlint.config": {
+		"MD013": false,
+		"MD033": false,
+		"MD041": false
+	},
+
+	// elixir
+	// point to release distribution for lsp to have the same elixir version as your project
+	// need to compile and create release using the correct elixir version
+	// https://www.youtube.com/watch?v=FXpsUh0Hs9Y
+	// https://arusahni.net/blog/2020/08/elixir-vim.html
+	"elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
+  "diagnostic-languageserver.filetypes": {
+    "elixir": ["mix_credo", "mix_credo_compile"],
+    "eelixir": ["mix_credo", "mix_credo_compile"]
+  },
+  "diagnostic-languageserver.formatFiletypes": {
+    "elixir": "mix_format",
+    "eelixir": "mix_format"
+  },
 	// tsserver
 	// should be shortest but on backend it keeps giving me alias path even though I've removed it
 	"typescript.preferences.importModuleSpecifier": "shortest",
@@ -42,6 +63,12 @@
 	// use tsserver from ts module in workspace. Ignore tsserver.tsdk
 	"tsserver.useLocalTsdk": true,
 	"typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+	"typescript.preferences.autoImportFileExcludePatterns": [
+		"@remix-run/server-runtime",
+		"@remix-run/router",
+		"react-router",
+		"@radix-ui"
+	],
 
 	// tw
 	"tailwindCSS.enable": true,
