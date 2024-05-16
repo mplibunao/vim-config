@@ -26,7 +26,9 @@ vnoremap ,l y<esc>oconsole.log(<c-r>", "<c-r>"")<esc>
 " ,e = IO.inpect
 nnoremap ,e 0v$hy<esc>oIO.inspect(<C-r>=substitute(@", '\n', '', 'g')<CR>, label:"
 vnoremap ,e y<Esc>oIO.inspect(<C-r>=substitute(@", '\n', '', 'g')<CR>, label:"
-"vnoremap ,e y<esc>oIO.inspect(<esc>*", label:"<esc>
+" ,b = IO.inspect binding()
+nnoremap ,b 0v$hy<esc>oIO.inspect binding()<esc>
+
 
 " search
 "nnoremap <space>/ :Rg<CR>
