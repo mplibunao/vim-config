@@ -110,6 +110,11 @@
 		"typescript": "typescriptreact"
 	},
 
+	// disables tabnine completion for elixir since do->end relies on lsp which is slow resulting in bad ux
+	// also tabnine completion for elixir isn't good in the first place
+	// we know use end-wise so might as well bring it back
+	//"tabnine.disable_file_regex": ["[.]ex$", "[.]exs$"],
+
 	// git lens
 	//"git.addGBlameToVirtualText": true,
 
@@ -161,10 +166,11 @@
 		//"args": ["up", "--method", "stdio"],
 		//"filetypes": ["sql", "mysql"]
 		//}
-	}
+	},
 
 	// import-cost
-	//"codeLens.enable": true,
+	// elixir @spec suggestions
+	"codeLens.enable": true
 	//"importCost.debug": true,
 	//"importCost.typescriptExtensions": [
 	//"\\.tsx?$",

@@ -123,6 +123,8 @@ Plug 'mattn/emmet-vim'
 " Fill entire screen with split (toggle)
 Plug 'https://github.com/szw/vim-maximizer'
 
+Plug 'tpope/vim-endwise'
+
 " Tailwind-coc seems to be archived
 "Plug 'yaegassy/coc-tailwindcss3', {'do': 'yarn install --frozen-lockfile'}
 

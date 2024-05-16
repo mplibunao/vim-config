@@ -58,7 +58,7 @@ endif
 inoremap <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#_select_confirm() :
       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      \ CheckBackSpace() ? "\<TAB>" :
+      \ CheckBackSpace() ? EndwiseCheck() :
       \ coc#refresh()
 
 
@@ -67,6 +67,15 @@ inoremap <expr><S-TAB> coc#pum#visible() ? "\<C-p>" : "\<C-h>"
 function! CheckBackSpace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1] =~# '\s'
+endfunction
+
+" Function to check if endwise should be triggered
+" So we don't rely on lsp for matching do-end blocks since those are slower and ruins the dx
+function! EndwiseCheck() abort
+  if &filetype == 'elixir'
+    return "\<C-r>=endwise#apply('<CR>')\<CR>"
+  endif
+  return "\<Tab>"
 endfunction
 
 let g:coc_snippet_next = '<tab>'
@@ -118,10 +127,16 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " Remap for rename current word
 nmap <F2> <Plug>(coc-rename)
 
-augroup mygroup
+augroup lsp
     autocmd!
     " Setup formatexpr specified filetype(s).
     autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+
+    "disables other completion sources for elixir since do->end completion relies on lsp which is slow ruining the dx
+    "https://github.com/neoclide/coc.nvim/wiki/Completion-with-sources#completion-sources
+    "we instead use vim-endwise for this. much faster and doesn't impose limitations
+    "autocmd FileType elixir let b:coc_disabled_sources = ['around', 'buffer', 'file']
+
     " Update signature help on jump placeholder
     autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
     " organize import
