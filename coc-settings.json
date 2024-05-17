@@ -107,7 +107,8 @@
 
 	"emmet.includeLanguages": {
 		"javascript": "javascriptreact",
-		"typescript": "typescriptreact"
+		"typescript": "typescriptreact",
+		"eelixir": "html"
 	},
 
 	// disables tabnine completion for elixir since do->end relies on lsp which is slow resulting in bad ux
