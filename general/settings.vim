@@ -63,6 +63,14 @@ augroup spellcheck
   autocmd FileType gitcommit setlocal spell      " spell check
   autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 augroup END
+
+augroup filetypes
+  autocmd!
+  au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
+  au BufRead,BufNewFile *.eex,*.heex,*.leex,*.sface,*.lexs set filetype=eelixir
+  au BufRead,BufNewFile mix.lock set filetype=elixir
+augroup END
+
 set complete+=kspell                           " Autocomplete
 " I think this conflicts with indent-blackline.lua as is overrides everything instead of appending
 "set listchars=tab:·\ ,trail:·,precedes:←,extends:→,nbsp:·
