@@ -61,7 +61,7 @@ inoremap <silent><expr> <TAB>
       \ CheckBackSpace() ? EndwiseCheck() :
       \ coc#refresh()
 
-
+" Updated <S-Tab> mapping for backward navigation in completion
 inoremap <expr><S-TAB> coc#pum#visible() ? "\<C-p>" : "\<C-h>"
 
 function! CheckBackSpace() abort
@@ -73,7 +73,7 @@ endfunction
 " So we don't rely on lsp for matching do-end blocks since those are slower and ruins the dx
 function! EndwiseCheck() abort
   if &filetype == 'elixir'
-    return "\<C-r>=endwise#apply('<CR>')\<CR>"
+    return "\<C-g>u\<Tab>\<C-r>=endwise#apply('<CR>')\<CR>"
   endif
   return "\<Tab>"
 endfunction
@@ -95,10 +95,23 @@ endif
 " inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
-  inoremap <silent><expr> <CR> coc#pum#visible() ? coc#_select_confirm()
-				\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+"inoremap <silent><expr> <CR> coc#pum#visible() ? coc#_select_confirm()
+				"\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <CR> CocOrEndwiseEnter()
 "inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm()
                               "\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" Function to handle <CR> mapping with coc.nvim and vim-endwise
+function! CocOrEndwiseEnter() abort
+  if coc#pum#visible()
+    return coc#_select_confirm()
+  endif
+  "Executes both endwise and enter so we can still use enter outside of block situations like creating space
+  if &filetype == 'elixir'
+    return "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>\<C-r>=endwise#apply('<CR>')\<CR>"
+  endif
+  return "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+endfunction
 
 " Remap keys for gotos
 "nmap <silent> gd <Plug>(coc-definition)
