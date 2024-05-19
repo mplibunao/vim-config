@@ -45,7 +45,7 @@ else
   set signcolumn=yes
 endif
 
-# Fixes endwise not working with coc
+"Fixes endwise not working with coc
 let g:endwise_no_mappings = v:true
 
 " Use tab to trigger completion with characters ahead and navigate
@@ -81,7 +81,7 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
-# This fixes endwise not working with coc
+"This fixes endwise not working with coc
 inoremap <expr> <Plug>CustomCocCR pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 imap <CR> <Plug>CustomCocCR<Plug>DiscretionaryEnd
 
