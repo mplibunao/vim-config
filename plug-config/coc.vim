@@ -45,6 +45,9 @@ else
   set signcolumn=yes
 endif
 
+# Fixes endwise not working with coc
+let g:endwise_no_mappings = v:true
+
 " Use tab to trigger completion with characters ahead and navigate
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 " Adds snippet functinality
@@ -58,7 +61,7 @@ endif
 inoremap <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#_select_confirm() :
       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      \ CheckBackSpace() ? EndwiseCheck() :
+      \ CheckBackSpace() ? "\<Tab>" :
       \ coc#refresh()
 
 " Updated <S-Tab> mapping for backward navigation in completion
@@ -67,15 +70,6 @@ inoremap <expr><S-TAB> coc#pum#visible() ? "\<C-p>" : "\<C-h>"
 function! CheckBackSpace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1] =~# '\s'
-endfunction
-
-" Function to check if endwise should be triggered
-" So we don't rely on lsp for matching do-end blocks since those are slower and ruins the dx
-function! EndwiseCheck() abort
-  if &filetype == 'elixir'
-    return "\<C-g>u\<Tab>\<C-r>=endwise#apply('<CR>')\<CR>"
-  endif
-  return "\<Tab>"
 endfunction
 
 let g:coc_snippet_next = '<tab>'
@@ -87,6 +81,10 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
+# This fixes endwise not working with coc
+inoremap <expr> <Plug>CustomCocCR pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+imap <CR> <Plug>CustomCocCR<Plug>DiscretionaryEnd
+
 " Use <cr> (carriage return i think) to confirm completion, `<C-g> means break
 " undo chain at current position`
 " Coc only does snippet and additional edit on confirm
@@ -97,21 +95,6 @@ endif
 " format on enter, <cr> could be remapped by other vim plugin
 "inoremap <silent><expr> <CR> coc#pum#visible() ? coc#_select_confirm()
 				"\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-inoremap <silent><expr> <CR> CocOrEndwiseEnter()
-"inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm()
-                              "\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-" Function to handle <CR> mapping with coc.nvim and vim-endwise
-function! CocOrEndwiseEnter() abort
-  if coc#pum#visible()
-    return coc#_select_confirm()
-  endif
-  "Executes both endwise and enter so we can still use enter outside of block situations like creating space
-  if &filetype == 'elixir'
-    return "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>\<C-r>=endwise#apply('<CR>')\<CR>"
-  endif
-  return "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-endfunction
 
 " Remap keys for gotos
 "nmap <silent> gd <Plug>(coc-definition)
