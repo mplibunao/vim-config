@@ -23,7 +23,8 @@ let g:coc_global_extensions = [
       \ 'coc-svg',
       \ 'coc-lightbulb',
       \ 'coc-diagnostic',
-      \ 'coc-prisma'
+      \ 'coc-prisma',
+      \ 'coc-pairs'
       "\ 'coc-import-cost',
       "\ 'coc-sql',
       "\ 'coc-git'
