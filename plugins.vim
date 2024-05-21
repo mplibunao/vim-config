@@ -42,7 +42,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'yaegassy/coc-ansible', {'do': 'yarn install --frozen-lockfile'}
 
 " Auto pairs for () [] {}
-"Plug 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/rainbow_parentheses.vim'
 
 " Theme
