@@ -47,14 +47,15 @@
 	// https://www.youtube.com/watch?v=FXpsUh0Hs9Y
 	// https://arusahni.net/blog/2020/08/elixir-vim.html
 	"elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
-  "diagnostic-languageserver.filetypes": {
-    "elixir": ["mix credo", "mix_credo_compile"],
-    "eelixir": ["mix credo", "mix_credo_compile"]
-  },
-  "diagnostic-languageserver.formatFiletypes": {
-    "elixir": "mix format",
-    "eelixir": "mix format"
-  },
+	"diagnostic-languageserver.filetypes": {
+		"elixir": ["mix credo", "mix_credo_compile"],
+		"eelixir": ["mix credo", "mix_credo_compile"]
+	},
+	"diagnostic-languageserver.formatFiletypes": {
+		"elixir": "mix format",
+		"eelixir": "mix format"
+	},
+
 	// tsserver
 	// should be shortest but on backend it keeps giving me alias path even though I've removed it
 	"typescript.preferences.importModuleSpecifier": "shortest",
@@ -134,7 +135,7 @@
 			"command": "tflint",
 			"args": ["--langserver"],
 			"filetypes": ["terraform", "tf"],
-      "rootPatterns": ["main.tf", "Makefile", ".git"]
+			"rootPatterns": ["main.tf", "Makefile", ".git"]
 		},
 		// already included in coc-sh
 		//"bash": {
@@ -145,18 +146,18 @@
 
 		// kinda clunky with monorepos
 		//"graphql": {
-			//"command": "graphql-lsp",
-			//"trace.server": "verbose",
-			//"args": ["server", "-m", "stream"],
-			//// customize filetypes to your needs
-			//"filetypes": [
-				//"typescript",
-				//"typescriptreact",
-				//"graphql",
-				//"javascript",
-				//"javascriptreact",
-				//"gql"
-			//]
+		//"command": "graphql-lsp",
+		//"trace.server": "verbose",
+		//"args": ["server", "-m", "stream"],
+		//// customize filetypes to your needs
+		//"filetypes": [
+		//"typescript",
+		//"typescriptreact",
+		//"graphql",
+		//"javascript",
+		//"javascriptreact",
+		//"gql"
+		//]
 		//},
 		"dockerfile": {
 			"command": "docker-langserver",
