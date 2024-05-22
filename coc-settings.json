@@ -12,7 +12,8 @@
 		"markdown",
 		"scss",
 		"less",
-		//"elixir",
+		"elixir",
+		"eelixir",
 		"terraform",
 		"tf",
 		"yaml",
@@ -47,12 +48,12 @@
 	// https://arusahni.net/blog/2020/08/elixir-vim.html
 	"elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
   "diagnostic-languageserver.filetypes": {
-    "elixir": ["mix_credo", "mix_credo_compile"],
-    "eelixir": ["mix_credo", "mix_credo_compile"]
+    "elixir": ["mix credo", "mix_credo_compile"],
+    "eelixir": ["mix credo", "mix_credo_compile"]
   },
   "diagnostic-languageserver.formatFiletypes": {
-    "elixir": "mix_format",
-    "eelixir": "mix_format"
+    "elixir": "mix format",
+    "eelixir": "mix format"
   },
 	// tsserver
 	// should be shortest but on backend it keeps giving me alias path even though I've removed it
