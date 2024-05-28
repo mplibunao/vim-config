@@ -1,0 +1,146 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+snippet lv "LiveView Module" b
+defmodule $1Web.$2 do
+  use $1Web, :live_view
+  $3
+end
+endsnippet
+
+snippet lv "LiveComponent Module" b
+defmodule $1Web.$2 do
+  use $1Web, :live_component
+  $3
+end
+endsnippet
+
+snippet mount "LiveView mount function" b
+def mount(_params, _session, socket) do
+  socket =
+    assign(socket,
+      $1: $2
+    )
+
+  {:ok, socket}
+end
+endsnippet
+
+snippet rend "LiveView render function" b
+def render(assigns) do
+  ~H"""
+  $1
+  """
+end
+endsnippet
+
+snippet fc "LiveView function component" b
+def $1(assigns) do
+  ~H"""
+  $2
+  """
+end
+endsnippet
+
+snippet he "LiveView handle_event function" b
+def handle_event($1, _params, socket) do
+  {:noreply, socket}
+end
+endsnippet
+
+snippet he1 "LiveView handle_event function1" b
+def handle_event($1, _params, socket) do
+  socket = assign(socket, $2: $3)
+  {:noreply, socket}
+end
+endsnippet
+
+snippet he2 "LiveView handle_event function2" b
+def handle_event($1, _params, socket) do
+  socket =
+    assign(socket,
+      $2: $3
+    )
+
+  {:noreply, socket}
+end
+endsnippet
+
+snippet hi "LiveView handle_info function" b
+def handle_info($1, socket) do
+  {:noreply, socket}
+end
+endsnippet
+
+snippet hi1 "LiveView handle_info function1" b
+def handle_info($1, socket) do
+  socket = assign(socket, $2: $3)
+  {:noreply, socket}
+end
+endsnippet
+
+snippet hi2 "LiveView handle_info function2" b
+def handle_info($1, socket) do
+  socket =
+    assign(socket,
+      $2: $3
+    )
+
+  {:noreply, socket}
+end
+endsnippet
+
+snippet hp "LiveView handle_params function" b
+def handle_params($1, _uri, socket) do
+  {:noreply, socket}
+end
+endsnippet
+
+snippet h "LiveView HEEx template" b
+~H"""
+$1
+"""
+endsnippet
+
+snippet assign "LiveView assign" b
+socket = assign(socket, $1: $2)
+endsnippet
+
+snippet insp "Inspect process with a label" b
+IO.inspect(self(), label: "$1")
+endsnippet
+
+snippet m "Elixir map" b
+%{"$1" => $2}
+endsnippet
+
+snippet hexp "<% HEEx expression %>" b
+<% $1 %>
+endsnippet
+
+snippet hval "<%= HEEx value %>" b
+<%= $1 %>
+endsnippet
