@@ -80,6 +80,7 @@
 		"javascript": "javascriptreact",
 		"typescript": "typescriptreact"
 	},
+	// I think this is for cva
 	"tailwindCSS.experimental.classRegex": [
 		["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
 	],
