@@ -111,8 +111,10 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
-  else
+  elseif CocAction('hasProvider', 'hover')
     call CocAction('doHover')
+  else
+    call feedkeys('K', 'in')
   endif
 endfunction
 
