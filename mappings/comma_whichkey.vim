@@ -7,6 +7,8 @@ let g:comma_which_key_map = {
   \ '[': ['<Plug>(coc-diagnostic-prev)'                          , 'next diagnostic (,[)'],
   \ 'o': ['<c-o>'                                                , 'go to prev jump <C-O>'],
   \ 'i': ['<c-i>'                                                , 'go to next jump <C-I>'],
+  \ 'K': ["CocAction('jumpDefinition', v:false)"                 , 'peek definition'],
+  \ 'I': ["CocAction('jumpImplementation', v:false)"             , 'peek implementation'],
   \ 'd': ['<Plug>(coc-definition)'                               , 'go to definition (,d)'],
   \ 'y': ['<Plug>(coc-type-definition)'                          , 'go to t[Y]pe definition (,y)'],
   \ 'm': ['<Plug>(coc-implementation)'                           , 'go to i[M]plementation (,m)'],
