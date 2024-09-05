@@ -23,6 +23,8 @@ Plug 'ryanoasis/vim-devicons'
 " comment
 Plug 'scrooloose/nerdcommenter'
 
+Plug 'elixir-editors/vim-elixir'
+
 " Git
 Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 " coc-git has this (but is buggy)
@@ -119,7 +121,7 @@ Plug 'https://github.com/moll/vim-bbye'
 
 Plug 'dhruvasagar/vim-table-mode'
 
-Plug 'mattn/emmet-vim'
+"Plug 'mattn/emmet-vim'
 
 " Fill entire screen with split (toggle)
 Plug 'https://github.com/szw/vim-maximizer'

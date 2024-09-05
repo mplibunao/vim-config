@@ -16,7 +16,7 @@ let g:coc_global_extensions = [
       \ '@yaegassy/coc-tailwindcss3',
       \ 'coc-emmet',
       \ 'coc-react-refactor',
-      \ 'coc-tabnine',
+      "\ 'coc-tabnine',
       \ 'coc-markdownlint',
       \ 'coc-css',
       \ 'coc-pyright',

@@ -240,6 +240,7 @@ let g:which_key_map.t = {
   \ 'l': ['ChangeLineNumbering()'       , 'line number'],
   \ 'p': ['<M-p>'                       , 'auto-pairs'],
   \ 'q': [':QuickScopeToggle'           , 'quick scope highlight'],
+  \ 's': ['ToggleSignify()'             , 'toggle signify'],
   "\ 't': [':Twilight'                   , 'twilight']
 \ }
 
@@ -263,7 +264,8 @@ let g:which_key_map.T = {
   \ 'n' : [':FloatermNew node'                               , 'node'],
   \ 't' : [':FloatermToggle'                                 , 'toggle'],
   \ 'b' : [':FloatermNew btm'                                , 'bottom'],
-  \ 's' : [':FloatermNew slack-term'                         , 'slack'],
+  "\ 'S' : [':',                                              , 'text-to-voice selected']
+  "\ 's' : [':FloatermNew slack-term'                         , 'slack'],
   "\ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
   \ 'i' : [':FloatermNew iex'                                , 'iex'],
   \ 'r' : [':FloatermNew ranger'                             , 'ranger'],

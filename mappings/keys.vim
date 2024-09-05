@@ -42,3 +42,7 @@ vnoremap <Space>tf za
 inoremap <silent><c-s> <esc>:w!<cr>
 vnoremap <silent><c-s> :w!<cr>
 nnoremap <silent><c-s> :w!<cr>
+
+
+"Space V while on visual mode for text-to-voice
+vnoremap <leader>V "xy:silent w !say <c-r>x<cr>

@@ -22,9 +22,11 @@ source $HOME/.config/nvim/plug-config/snippets.vim
 source $HOME/.config/nvim/plug-config/vimwiki.vim
 source $HOME/.config/nvim/plug-config/fzf-project.vim
 source $HOME/.config/nvim/plug-config/markdown-preview.vim
-"source $HOME/.config/nvim/plug-config/copilot.vim
+source $HOME/.config/nvim/plug-config/copilot.vim
 luafile $HOME/.config/nvim/lua/indent-blackline.lua
+
 
 " j/k will move virtual lines (lines that wrap)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+

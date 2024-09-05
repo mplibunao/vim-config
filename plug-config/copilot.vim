@@ -1,4 +1,3 @@
-
 " Copilot
 " Cycle through suggestions
 imap <C-]> <Plug>(copilot-next)
@@ -11,3 +10,15 @@ let g:copilot_no_tab_map = v:true
 imap <C-`> <Plug>(copilot-dismiss)
 
 let g:copilot_node_command = "/Users/mp/Library/pnpm/nodejs/16.17.0/bin/node"
+"let g:copilot_node_command = "/Users/mp/Library/pnpm/nodejs/18.20.3/bin/node"
+
+"i  <Plug>(copilot-accept-line) & copilot#AcceptLine()
+"i  <Plug>(copilot-accept-word) & copilot#AcceptWord()
+"i  <Plug>(copilot-suggest)   <Cmd>call copilot#Suggest()<CR>
+"i  <Plug>(copilot-previous)   <Cmd>call copilot#Previous()<CR>
+"i  <Plug>(copilot-next)   <Cmd>call copilot#Next()<CR>
+"i  <Plug>(copilot-dismiss)   <Cmd>call copilot#Dismiss()<CR>
+
+
+" Ensure escape key functionality
+inoremap <Esc> <Esc>

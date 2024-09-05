@@ -55,6 +55,7 @@
 		"elixir": "mix format",
 		"eelixir": "mix format"
 	},
+	"diagnostic-languageserver.mergeConfig": true,
 
 	// tsserver
 	// should be shortest but on backend it keeps giving me alias path even though I've removed it
