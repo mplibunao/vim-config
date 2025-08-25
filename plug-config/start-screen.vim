@@ -10,7 +10,7 @@ let g:startify_lists = [
           \ ]
 
 let g:startify_bookmarks = [
-            \ { 'a': '~/Projects/mg/alam/alam.edu' },
+            \ { 'a': '~/Users/mp/vimwiki/TIL/learning-path/index.md' },
             \ { 'd': '~/Projects/personal/dotfiles' },
             \ { 'D': '~/Desktop' },
             \ { 'n': '~/Projects/personal/notes' },

@@ -131,7 +131,7 @@ Plug 'tpope/vim-endwise'
 " Tailwind-coc seems to be archived
 "Plug 'yaegassy/coc-tailwindcss3', {'do': 'yarn install --frozen-lockfile'}
 
-"Plug 'github/copilot.vim'
+Plug 'github/copilot.vim'
 "Plug 'codota/tabnine-nvim', { 'do': './dl_binaries.sh' }
 
 "Plug 'yardnsm/vim-import-cost', { 'do': 'npm install --production' }

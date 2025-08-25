@@ -1,7 +1,7 @@
 {
 	"suggest.noselect": false,
 	"coc.preferences.formatOnSaveFiletypes": [
-		"javascript",
+		//"javascript",
 		"typescript",
 		"typescriptreact",
 		"json",
@@ -16,7 +16,7 @@
 		"eelixir",
 		"terraform",
 		"tf",
-		"yaml",
+		//"yaml",
 		"yml",
 		"python",
 		"docker",
@@ -90,11 +90,19 @@
 	"prettier.semi": false,
 	"prettier.singleQuote": true,
 	"prettier.jsxSingleQuote": true,
-	"prettier.useTabs": true,
+	"prettier.useTabs": false,
+	"prettier.tabWidth": 2,
+	"prettier.enableDebugLogs": true,
+
+	// wizy
+	"prettier.trailingComma": "all",
+	"prettier.printWidth": 80,
+	"prettier.bracketSpacing": true,
 
 	// eslint
 	"eslint.autoFixOnSave": true,
 	"eslint.run": "onSave",
+	//"eslint.experimental.useFlatConfig": true,
 
 	// bigger diagnostic windows
 	// https://github.com/neoclide/coc.nvim/blob/master/doc/coc.txt
