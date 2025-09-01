@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "additionalDirectories": [
+      "/Users/mp/.config/nvim/"
+    ],
+    "allow": [
+      "mcp__sequential-thinking__sequentialthinking"
+    ]
+  }
+}
