@@ -2,3 +2,8 @@ plugs
 .netrwhist
 autoload
 session
+
+# Claude local settings
+.claude/settings.local.json
+# Or ignore all local settings in .claude
+# .claude/*.local.*
