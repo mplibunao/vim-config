@@ -2,117 +2,94 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Overview
+## Neovim Configuration Overview
 
-This is a Neovim configuration repository built on vim-plug with a modular VimScript/Lua architecture. The configuration includes extensive language support, code completion through CoC (Conquer of Completion), Git integration, and various developer tools.
+This is a modern Neovim configuration using Lua with the lazy.nvim plugin manager. The configuration uses a modular structure where plugins are organized as separate Lua modules.
 
 ## Architecture
 
-### Configuration Loading Order
-The main entry point `init.vim` sources configuration files in this order:
-1. `plugins.vim` - Plugin declarations using vim-plug
-2. `functions/index.vim` - Custom Vim functions
-3. `general/settings.vim` - Core Neovim settings
-4. `mappings/index.vim` - Key mappings (space and comma as leaders)
-5. Theme files (`themes/onedark.vim`, `themes/airline.vim`)
-6. Plugin configurations (`plug-config/*.vim`)
-7. Lua modules (`lua/*.lua`)
+### Plugin Management
+- **Plugin Manager**: lazy.nvim (`lua/config/lazy.lua`)
+- **Plugin Definitions**: Individual plugin configurations in `lua/config/plugins/*.lua`
+- **Lock File**: `lazy-lock.json` tracks exact plugin versions
 
-### Key Directories
-- `plug-config/` - Individual plugin configurations
-- `mappings/` - WhichKey configurations for space and comma leaders
-- `functions/` - Custom Vim functions
-- `lua/` - Lua-based configurations (colorizer, indent guides)
-- `snips/` - User snippets directory
-- `themes/` - Theme and statusline configurations
+### Core Components
+1. **LSP Configuration**: `lua/config/plugins/lsp.lua` - Uses nvim-lspconfig with lua_ls configured
+2. **Completion**: `lua/config/plugins/completion.lua` - Blink.cmp for autocompletion (preferred over nvim-cmp)
+3. **File Explorer**: `lua/config/plugins/oil.lua` - Oil.nvim for file navigation (bound to `-`)
+4. **Fuzzy Finding**: `lua/config/plugins/telescope.lua` - Telescope with custom multigrep implementation
+5. **Syntax Highlighting**: `lua/config/plugins/treesitter.lua` - Tree-sitter with common language parsers
+6. **Status Line**: `lua/config/plugins/mini.lua` - Mini.statusline for minimal status display
 
-## Common Development Commands
+### Key Mappings
+- **Leader Key**: Space (` `)
+- **Local Leader**: Backslash (`\`)
+- **Important Bindings**:
+  - `<space>fd`: Find files
+  - `<leader>fg`: Live multigrep (search content and filter by file pattern)
+  - `<space>en`: Find files in Neovim config
+  - `<space>ep`: Find files in lazy plugin directory
+  - `-`: Open Oil file explorer
+  - `<space>st`: Open small terminal at bottom
+
+## Development Commands
 
 ### Plugin Management
-```vim
-:PlugInstall    " Install plugins
-:PlugUpdate     " Update plugins
-:PlugClean      " Remove unused plugins
-:checkhealth    " Check Neovim health and dependencies
+```bash
+# Update plugins - run in Neovim
+:Lazy update
+
+# Install new plugins - add to lua/config/plugins/*.lua, then
+:Lazy sync
+
+# Check plugin status
+:Lazy
 ```
 
-### CoC Commands
+### LSP Commands
 ```vim
-:CocInstall {extension}    " Install CoC extension
-:CocList extensions        " List installed extensions
-:CocConfig                 " Edit coc-settings.json
-:CocRestart               " Restart CoC service
+" Check LSP status
+:LspInfo
+
+" Format current buffer
+:lua vim.lsp.buf.format()
 ```
 
-### Key Leader Mappings
-- **Space Leader**: Primary actions (files, buffers, git, terminal)
-- **Comma Leader**: Secondary actions and toggles
-- Check `mappings/space_whichkey.vim` and `mappings/comma_whichkey.vim` for full mappings
+### Testing Changes
+```vim
+" Reload current Lua file
+:source %
 
-## Language Support
+" Execute current line as Lua
+<space>x
 
-### Primary Languages
-- **TypeScript/JavaScript**: Full LSP support via CoC-tsserver
-- **Elixir**: ElixirLS with custom path configuration
-- **Python**: pynvim integration required
-- **Terraform**: terraform-ls and tflint
-- **Docker**: docker-langserver
+" Execute visual selection as Lua
+<space>x (in visual mode)
+```
 
-### Formatting Configuration
-Auto-format on save is enabled for: TypeScript, JavaScript, JSON, GraphQL, CSS, Markdown, SCSS, Elixir, Terraform, Python, Docker, HTML, Prisma
+## Code Style Guidelines
 
-## Important Settings
+### Lua Files
+- **Indentation**: 2 spaces (defined in .editorconfig)
+- **Module Structure**: Each plugin gets its own file in `lua/config/plugins/`
+- **Plugin Spec Format**: Return a table with plugin specifications
+- **LSP Capabilities**: Always pass blink.cmp capabilities to LSP servers
 
-### Tab/Indentation
-- Tab width: 2 spaces
-- Expand tabs to spaces
-- Smart indenting enabled
+### Adding New Plugins
+1. Create a new file in `lua/config/plugins/` or add to existing category file
+2. Return a table with the plugin specification
+3. Use lazy loading sparingly (Oil.nvim explicitly sets `lazy = false`)
+4. Run `:Lazy sync` to install
 
-### CoC Settings (`coc-settings.json`)
-- Prettier configuration: no semicolons, single quotes, trailing commas
-- TypeScript: prefer shortest import paths, use local tsdk
-- Tailwind CSS: enabled with experimental class regex for cva
-- ESLint: auto-fix on save
+### Custom Functionality
+- **Custom Commands**: Place in `plugin/` directory as Lua files
+- **Telescope Extensions**: Add to `lua/config/telescope/` as separate modules
+- **Ftplugin**: Language-specific settings in `after/ftplugin/`
 
-## Dependencies
-
-Required system tools:
-- `ripgrep` - Fast text search
-- `lazygit` - Git TUI
-- `ranger` - File manager
-- `pbcopy/xclip` - Clipboard integration
-- `python3` with `pynvim`
-- `node` with `neovim` package
-
-## Plugin Ecosystem
-
-### Core Plugins
-- **neoclide/coc.nvim**: Intellisense and LSP support
-- **junegunn/fzf.vim**: Fuzzy finder integration
-- **github/copilot.vim**: AI code completion
-- **vim-airline**: Status line
-
-### Git Integration
-- **lazygit.nvim**: Git interface
-- **vim-signify**: Git diff indicators
-- **vim-fugitive**: Git commands
-
-### Development Tools
-- **vim-floaterm**: Floating terminal
-- **vim-which-key**: Key binding hints
-- **nerdcommenter**: Code commenting
-- **vim-polyglot**: Language pack
-
-## Working with This Config
-
-When modifying configurations:
-1. Plugin declarations go in `plugins.vim`
-2. Plugin-specific configs go in `plug-config/{plugin}.vim`
-3. Key mappings should be added to appropriate WhichKey config
-4. Lua modules go in `lua/` directory
-5. Follow existing indentation patterns (2 spaces)
-
-When adding new language support:
-1. Add CoC extension or language server to `coc-settings.json`
-2. Add file type detection in `general/settings.vim` if needed
-3. Add format-on-save filetype to `coc-settings.json` if desired
+## Important Notes
+- Blink.cmp is preferred over nvim-cmp for completion
+- The configuration auto-formats on save if LSP supports it
+- Terminal mode escape is mapped to `<esc><esc>`
+- Floating terminal available via `:Floaterm` command
+- Multigrep in Telescope uses double space to separate pattern from file filter
+- be verbose and detailed in explaining to the user what you're trying to do
